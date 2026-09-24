@@ -1,7 +1,7 @@
 # XEE-WP-001 — Project Bootstrap
 
 **SESSION:** SAME_SESSION_RECOMMENDED
-**STATUS:** ACTIVE
+**STATUS:** COMPLETE
 **Prompt profile:** Lean (B1)
 **Type:** docs-only / project-bootstrap
 **Date:** 2026-09-24
@@ -139,3 +139,11 @@ On execution completion report:
 3. open decisions;
 4. risks/notes;
 5. recommended Nova review result.
+
+## Completion record
+
+- **Human-Maintainer integration commit:** `89959f95aa179ed1e73094a08392dc671871f27d`
+- **Nova review:** `GO WITH NOTES`
+- **Acceptance criteria:** satisfied
+- **Note:** The integrated bootstrap still displayed XEE-WP-001 as `ACTIVE`; that administrative status drift is reconciled by XEE-WP-002 kickoff documentation.
+- **Release effect:** none

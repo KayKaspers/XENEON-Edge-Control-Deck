@@ -26,8 +26,8 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 
 | ID | Title | Priority | Status | Depends on |
 |---|---|---:|---|---|
-| XEE-WP-001 | Project Bootstrap | P0 | ACTIVE | — |
-| XEE-WP-002 | CDS Consumer Integration and XENEON Product Profile | P0 | PLANNED | XEE-WP-001 |
+| XEE-WP-001 | Project Bootstrap | P0 | COMPLETE | — |
+| XEE-WP-002 | CDS Consumer Integration and XENEON Product Profile | P0 | ACTIVE | XEE-WP-001 |
 | XEE-WP-002A | Project Identity — Logo, Banner & Repository Branding | P1 | PLANNED | XEE-WP-002 |
 | XEE-WP-003 | Hardware Baseline | P0 | PLANNED | XEE-WP-001 |
 | XEE-WP-004 | Windows Display and Touch Baseline | P0 | PLANNED | XEE-WP-003 |
@@ -49,11 +49,13 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 
 ## Current Work Package
 
-`XEE-WP-001` is the only authorised Work Package.
+`XEE-WP-002` is the only active Work Package.
 
-Its contract is stored at:
+`XEE-WP-001` is complete and was integrated by the Human Maintainer at commit `89959f95aa179ed1e73094a08392dc671871f27d`.
 
-`project-system/work-packages/XEE-WP-001.md`
+The active contract is stored at:
+
+`project-system/work-packages/XEE-WP-002.md`
 
 ## Queue rules
 

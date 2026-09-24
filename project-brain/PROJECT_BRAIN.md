@@ -13,7 +13,7 @@ The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
 Current active Work Package:
 
-**XEE-WP-001 — Project Bootstrap**
+**XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile**
 
 ## Project objective
 
@@ -143,12 +143,19 @@ Control:
 
 ## Near-term sequence
 
-1. Complete XEE-WP-001.
+1. Execute XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile.
 2. Human Maintainer reviews, commits and pushes if accepted.
 3. Nova reviews the committed GitHub state.
-4. Execute XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile.
-5. Execute XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding.
-6. Begin real-device baseline with XEE-WP-003.
+4. Execute XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding.
+5. Begin real-device baseline with XEE-WP-003.
+
+## Completed Work Packages
+
+### XEE-WP-001 — Project Bootstrap
+
+- Human-Maintainer integration commit: `89959f95aa179ed1e73094a08392dc671871f27d`
+- Nova review: `GO WITH NOTES`
+- Note: content and acceptance criteria passed; status reconciliation is integrated with XEE-WP-002 kickoff.
 
 ## Lessons learned
 

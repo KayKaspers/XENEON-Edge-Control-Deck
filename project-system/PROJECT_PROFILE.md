@@ -181,10 +181,10 @@ Branding must be:
 
 ## Current phase
 
-**Bootstrap / Initial Development**
+**CDS Consumer Integration / Initial Development**
 
-Active Work Package: **XEE-WP-001**
+Active Work Package: **XEE-WP-002**
 
 ## Next milestone
 
-Human-Maintainer acceptance and commit of the bootstrap structure, followed by **XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile**.
+Human-Maintainer acceptance of **XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile**, followed by **XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding**.

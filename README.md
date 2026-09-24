@@ -355,8 +355,8 @@ Work is divided into small NDF-style Work Packages.
 
 | Work Package | Scope | Status |
 |---|---|---|
-| **XEE-WP-001** | Project Bootstrap | ACTIVE |
-| **XEE-WP-002** | CDS Consumer Integration and XENEON Product Profile | PLANNED |
+| **XEE-WP-001** | Project Bootstrap | COMPLETE |
+| **XEE-WP-002** | CDS Consumer Integration and XENEON Product Profile | ACTIVE |
 | **XEE-WP-002A** | Project Identity — Logo, Banner & Repository Branding | PLANNED |
 | **XEE-WP-003** | Hardware Baseline | PLANNED |
 | **XEE-WP-004** | Windows Display and Touch Baseline | PLANNED |
@@ -431,8 +431,8 @@ A technical limitation must not silently redefine the design model. It is docume
 | Design / UX foundation | **Core Design System (CDS)** |
 | CDS usage model | **Target-state assumption** |
 | Hardware | **CORSAIR XENEON EDGE available for implementation** |
-| Current Work Package | **XEE-WP-001 — Project Bootstrap** |
-| Branding | **Deferred to XEE-WP-002A** |
+| Current Work Package | **XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile** |
+| Branding | **Deferred to XEE-WP-002A after Product Profile baseline** |
 | Release | **No project release yet** |
 | Formal CDS conformance | **Not claimed** |
 | License | **Open decision** |
@@ -448,29 +448,41 @@ A technical limitation must not silently redefine the design model. It is docume
 | check current Work Packages / Work Packages prüfen | `project-system/WORK_PACKAGE_QUEUE.md` |
 | see external references / Referenzen prüfen | `project-system/REFERENCES.md` |
 | understand current project context / Projektkontext verstehen | `project-brain/PROJECT_BRAIN.md` |
+| understand CDS integration / CDS-Integration verstehen | `design-system/CDS_INTEGRATION.md` |
+| inspect the XENEON Product Profile / XENEON Product Profile prüfen | `design-system/XENEON_PRODUCT_PROFILE.md` |
+| inspect component mapping / Komponenten-Mapping prüfen | `design-system/COMPONENT_MAPPING.md` |
+| inspect pattern mapping / Pattern-Mapping prüfen | `design-system/PATTERN_MAPPING.md` |
+| inspect consumer extensions / Consumer Extensions prüfen | `design-system/CONSUMER_EXTENSIONS.md` |
 | check public-repository safety / Public-Safety prüfen | `SECURITY.md` |
 
 ## Repository Structure / Repository-Struktur
 
-Current bootstrap structure:
+Current governed structure:
 
 ```text
 XENEON-Edge-Control-Deck/
 ├── README.md
 ├── ROADMAP.md
 ├── SECURITY.md
+├── design-system/
+│   ├── CDS_INTEGRATION.md
+│   ├── XENEON_PRODUCT_PROFILE.md
+│   ├── COMPONENT_MAPPING.md
+│   ├── PATTERN_MAPPING.md
+│   └── CONSUMER_EXTENSIONS.md
 ├── project-system/
 │   ├── PROJECT_MANIFEST.md
 │   ├── PROJECT_PROFILE.md
 │   ├── WORK_PACKAGE_QUEUE.md
 │   ├── REFERENCES.md
 │   └── work-packages/
-│       └── XEE-WP-001.md
+│       ├── XEE-WP-001.md
+│       └── XEE-WP-002.md
 └── project-brain/
     └── PROJECT_BRAIN.md
 ```
 
-Planned structures such as `design-system/`, `branding/`, `docs/`, `profiles/`, `assets/` and `evidence/` are introduced by the Work Packages that own them. Empty directories are not created merely to make the repository look complete.
+Future structures such as `branding/`, `docs/`, `profiles/`, `assets/` and `evidence/` are introduced only by the Work Packages that own them. Empty directories are not created merely to make the repository look complete.
 
 ## Language / Sprache
 

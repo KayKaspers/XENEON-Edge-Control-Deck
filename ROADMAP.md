@@ -70,8 +70,8 @@ READY != RELEASED
 
 ## Milestones
 
-### M1 — Governed project
-Exit when XEE-WP-001 is Human-Maintainer accepted and committed.
+### M1 — Governed project — ACHIEVED
+Achieved at Human-Maintainer integration commit `89959f95aa179ed1e73094a08392dc671871f27d`.
 
 ### M2 — Designed consumer
 Exit when XEE-WP-002 and XEE-WP-002A are accepted and the project has an explicit CDS consumer model plus identity.
