@@ -1,7 +1,7 @@
 # Project Brain — XENEON Edge Control Deck
 
 - **Purpose:** Compact current project context
-- **Status:** Hardware-baseline execution
+- **Status:** Windows display/touch baseline execution
 - **Date:** 2026-09-24
 - **Authority:** Descriptive project memory; does not replace Human-Maintainer decisions
 
@@ -13,7 +13,7 @@ The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
 Current active Work Package:
 
-**XEE-WP-003 — Hardware Baseline**
+**XEE-WP-004 — Windows Display and Touch Baseline**
 
 ## Project objective
 
@@ -144,12 +144,14 @@ Control:
 
 ## Near-term sequence
 
-1. Reconcile XEE-WP-002A to COMPLETE and activate XEE-WP-003.
-2. Record the real device identity and physical installation without publishing serial numbers or other unnecessary identifiers.
-3. Document actual power, display and touch/data cabling as separate physical paths.
-4. Record physical orientation, mounting and cable topology.
-5. Capture sanitised evidence where useful.
-6. Complete XEE-WP-003 before moving operating-system verification to XEE-WP-004 and iCUE/firmware verification to XEE-WP-005.
+1. Reconcile XEE-WP-003 to COMPLETE and activate XEE-WP-004.
+2. Record Windows display enumeration for the real XENEON EDGE.
+3. Verify active resolution and refresh rate without assuming manufacturer values.
+4. Verify Windows display orientation and placement relevant to the current setup.
+5. Verify whether the existing USB-C path carries touch/USB data.
+6. Verify touch maps to the XENEON EDGE rather than another monitor.
+7. Verify practical multi-touch behaviour without changing iCUE or firmware.
+8. Complete XEE-WP-004 before moving vendor-specific capability verification to XEE-WP-005.
 
 ## Completed Work Packages
 
@@ -174,6 +176,14 @@ Control:
 - Human-Maintainer visual approval: granted
 - Acceptance: public identity, banner, social-preview source, logo system, brand guide and repository presentation integrated.
 - Remaining note: GitHub Social Preview must be configured in repository settings separately from the committed image file.
+
+### XEE-WP-003 — Hardware Baseline
+
+- Kickoff commit: `1f68837016c5fe2c4643f08c0f16677c236feaed`
+- Physical-evidence commit: `0bef15a592b79bf632bd34225b20f9caddfaeee2`
+- Nova review: `PASS`
+- Acceptance: real device identity, orientation, stand, physical power path, direct display path, dock/adapter chain and evidence classification documented.
+- Deferred by design: functional USB-C touch/data verification belongs to XEE-WP-004.
 
 ## Lessons learned
 

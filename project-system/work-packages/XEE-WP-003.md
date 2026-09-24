@@ -1,7 +1,7 @@
 # XEE-WP-003 — Hardware Baseline
 
 **SESSION:** SAME_SESSION_RECOMMENDED
-**STATUS:** ACTIVE
+**STATUS:** COMPLETE
 **Prompt profile:** Lean (B1)
 **Type:** real-device / documentation / evidence
 **Date:** 2026-09-24
@@ -112,21 +112,21 @@ Evidence that contains personal environment details or unique device identifiers
 
 ## 6. Acceptance criteria
 
-- [ ] XEE-WP-002A is reconciled to `COMPLETE`.
-- [ ] XEE-WP-003 is the sole active Work Package.
-- [ ] Real-device product identity is recorded without publishing serial numbers or unnecessary unique identifiers.
-- [ ] Manufacturer-declared facts are clearly separated from observed real-device facts.
-- [ ] Actual power path is documented.
-- [ ] Actual display path is documented.
-- [ ] Actual touch/USB data path is documented or explicitly recorded as not yet established.
-- [ ] Any hub, dock or adapter in the real path is documented.
-- [ ] Physical orientation and mounting method are documented.
-- [ ] Unused/unknown physical ports or paths are recorded as unknown/unused rather than inferred.
-- [ ] Evidence classification is recorded: public, sanitised summary, or private-only.
-- [ ] No Windows touch/display conclusions are promoted into WP-003.
-- [ ] No iCUE/firmware conclusions are promoted into WP-003.
-- [ ] No application bindings are performed.
-- [ ] Public-repository safety remains intact.
+- [x] XEE-WP-002A is reconciled to `COMPLETE`.
+- [x] XEE-WP-003 is the sole active Work Package.
+- [x] Real-device product identity is recorded without publishing serial numbers or unnecessary unique identifiers.
+- [x] Manufacturer-declared facts are clearly separated from observed real-device facts.
+- [x] Actual power path is documented.
+- [x] Actual display path is documented.
+- [x] Actual touch/USB data path is documented or explicitly recorded as not yet established.
+- [x] Any hub, dock or adapter in the real path is documented.
+- [x] Physical orientation and mounting method are documented.
+- [x] Unused/unknown physical ports or paths are recorded as unknown/unused rather than inferred.
+- [x] Evidence classification is recorded: public, sanitised summary, or private-only.
+- [x] No Windows touch/display conclusions are promoted into WP-003.
+- [x] No iCUE/firmware conclusions are promoted into WP-003.
+- [x] No application bindings are performed.
+- [x] Public-repository safety remains intact.
 
 ## 7. Non-goals
 
@@ -186,3 +186,13 @@ Expected kickoff commit:
 `docs(hardware): start XENEON hardware baseline`
 
 Expected completion commit will be defined only after real-device evidence has been collected and reviewed.
+
+## 11. Completion record
+
+- **Kickoff commit:** `1f68837016c5fe2c4643f08c0f16677c236feaed`
+- **Physical-evidence commit:** `0bef15a592b79bf632bd34225b20f9caddfaeee2`
+- **Nova review:** `PASS`
+- **Human-Maintainer evidence:** written inspection, classified as `SANITISED SUMMARY`
+- **Acceptance result:** all WP-003 acceptance criteria satisfied
+- **Deferred intentionally:** functional verification of USB-C touch/data role to XEE-WP-004
+- **Release effect:** none

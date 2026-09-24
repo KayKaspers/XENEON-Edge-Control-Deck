@@ -416,8 +416,8 @@ Work is divided into small NDF-style Work Packages.
 | **XEE-WP-001** | Project Bootstrap | COMPLETE |
 | **XEE-WP-002** | CDS Consumer Integration and XENEON Product Profile | COMPLETE |
 | **XEE-WP-002A** | Project Identity — Logo, Banner & Repository Branding | COMPLETE |
-| **XEE-WP-003** | Hardware Baseline | ACTIVE |
-| **XEE-WP-004** | Windows Display and Touch Baseline | PLANNED |
+| **XEE-WP-003** | Hardware Baseline | COMPLETE |
+| **XEE-WP-004** | Windows Display and Touch Baseline | ACTIVE |
 | **XEE-WP-005** | iCUE and Firmware Baseline | PLANNED |
 | **XEE-WP-006** | Base Control Deck | PLANNED |
 | **XEE-WP-007** | Navigation and Deck Architecture | PLANNED |
@@ -489,7 +489,7 @@ A technical limitation must not silently redefine the design model. It is docume
 | Design / UX foundation | **Core Design System (CDS)** |
 | CDS usage model | **Target-state assumption** |
 | Hardware | **CORSAIR XENEON EDGE available for implementation** |
-| Current Work Package | **XEE-WP-003 — Hardware Baseline** |
+| Current Work Package | **XEE-WP-004 — Windows Display and Touch Baseline** |
 | Branding | **Human-Maintainer approved and integrated** |
 | Release | **No project release yet** |
 | Formal CDS conformance | **Not claimed** |
@@ -516,6 +516,8 @@ A technical limitation must not silently redefine the design model. It is docume
 | inspect design-source provenance / Designquellen prüfen | `branding/SOURCE_PROVENANCE.md` |
 | inspect real-device hardware baseline / Hardware-Basis prüfen | `docs/hardware/HARDWARE_BASELINE.md` |
 | inspect WP-003 evidence rules / Evidence-Regeln prüfen | `evidence/XEE-WP-003/README.md` |
+| inspect Windows display/touch baseline / Windows-/Touch-Basis prüfen | `docs/windows/WINDOWS_DISPLAY_TOUCH_BASELINE.md` |
+| inspect WP-004 evidence rules / Evidence-Regeln prüfen | `evidence/XEE-WP-004/README.md` |
 | check public-repository safety / Public-Safety prüfen | `SECURITY.md` |
 
 ## Repository Structure / Repository-Struktur
@@ -544,10 +546,14 @@ XENEON-Edge-Control-Deck/
 │   ├── PATTERN_MAPPING.md
 │   └── CONSUMER_EXTENSIONS.md
 ├── docs/
-│   └── hardware/
-│       └── HARDWARE_BASELINE.md
+│   ├── hardware/
+│   │   └── HARDWARE_BASELINE.md
+│   └── windows/
+│       └── WINDOWS_DISPLAY_TOUCH_BASELINE.md
 ├── evidence/
-│   └── XEE-WP-003/
+│   ├── XEE-WP-003/
+│   │   └── README.md
+│   └── XEE-WP-004/
 │       └── README.md
 ├── project-system/
 │   ├── PROJECT_MANIFEST.md
@@ -558,7 +564,8 @@ XENEON-Edge-Control-Deck/
 │       ├── XEE-WP-001.md
 │       ├── XEE-WP-002.md
 │       ├── XEE-WP-002A.md
-│       └── XEE-WP-003.md
+│       ├── XEE-WP-003.md
+│       └── XEE-WP-004.md
 └── project-brain/
     └── PROJECT_BRAIN.md
 ```
