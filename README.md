@@ -1,9 +1,17 @@
+<p align="center">
+  <img
+    src="branding/assets/png/xee-banner.png"
+    alt="XENEON Edge Control Deck banner"
+    width="100%"
+  />
+</p>
+
 <h1 align="center">XENEON Edge Control Deck</h1>
 
 <p align="center">
   <a href="https://github.com/KayKaspers/Nova-Development-Framework"><img src="https://img.shields.io/badge/governance-NDF%20v1.1.0-2563EB?style=flat-square&labelColor=0B1220" alt="Governance: Nova Development Framework v1.1.0"></a>
   <a href="https://github.com/KayKaspers/Core-Design-System"><img src="https://img.shields.io/badge/design-Core%20Design%20System-2563EB?style=flat-square&labelColor=0B1220" alt="Design: Core Design System"></a>
-  <img src="https://img.shields.io/badge/status-bootstrap-2563EB?style=flat-square&labelColor=0B1220" alt="Project status: Bootstrap">
+  <img src="https://img.shields.io/badge/status-initial%20development-FFD600?style=flat-square&labelColor=0B0B0B" alt="Project status: Initial Development">
   <img src="https://img.shields.io/badge/repository-public-2563EB?style=flat-square&labelColor=0B1220" alt="Repository: Public">
 </p>
 
@@ -14,7 +22,7 @@
 **EN:** XENEON Edge Control Deck is a public project for the structured setup, design and extension of the CORSAIR XENEON EDGE as an interactive control deck for gaming, streaming, communication and system information. The project uses the Nova Development Framework (NDF) for development governance and the Core Design System (CDS) for design, UX and visual consistency.
 
 > [!NOTE]
-> Logo, banner and repository branding are intentionally deferred to **XEE-WP-002A** so that project identity is designed after the CDS consumer contract and XENEON Product Profile are established.
+> The project identity baseline was approved by the Human Maintainer in **XEE-WP-002A** after the CDS consumer contract and XENEON Product Profile were established.
 
 ## Contents / Inhalt
 
@@ -356,8 +364,8 @@ Work is divided into small NDF-style Work Packages.
 | Work Package | Scope | Status |
 |---|---|---|
 | **XEE-WP-001** | Project Bootstrap | COMPLETE |
-| **XEE-WP-002** | CDS Consumer Integration and XENEON Product Profile | ACTIVE |
-| **XEE-WP-002A** | Project Identity — Logo, Banner & Repository Branding | PLANNED |
+| **XEE-WP-002** | CDS Consumer Integration and XENEON Product Profile | COMPLETE |
+| **XEE-WP-002A** | Project Identity — Logo, Banner & Repository Branding | ACTIVE |
 | **XEE-WP-003** | Hardware Baseline | PLANNED |
 | **XEE-WP-004** | Windows Display and Touch Baseline | PLANNED |
 | **XEE-WP-005** | iCUE and Firmware Baseline | PLANNED |
@@ -425,14 +433,14 @@ A technical limitation must not silently redefine the design model. It is docume
 
 | Item / Punkt | Status |
 |---|---|
-| Project state | **Bootstrap / Initial Development** |
+| Project state | **Design Foundation / Initial Development** |
 | Repository | **Public** |
 | Development governance | **Nova Development Framework (NDF) v1.1.0 baseline** |
 | Design / UX foundation | **Core Design System (CDS)** |
 | CDS usage model | **Target-state assumption** |
 | Hardware | **CORSAIR XENEON EDGE available for implementation** |
-| Current Work Package | **XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile** |
-| Branding | **Deferred to XEE-WP-002A after Product Profile baseline** |
+| Current Work Package | **XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding** |
+| Branding | **Human-Maintainer approved baseline; repository integration active** |
 | Release | **No project release yet** |
 | Formal CDS conformance | **Not claimed** |
 | License | **Open decision** |
@@ -453,6 +461,9 @@ A technical limitation must not silently redefine the design model. It is docume
 | inspect component mapping / Komponenten-Mapping prüfen | `design-system/COMPONENT_MAPPING.md` |
 | inspect pattern mapping / Pattern-Mapping prüfen | `design-system/PATTERN_MAPPING.md` |
 | inspect consumer extensions / Consumer Extensions prüfen | `design-system/CONSUMER_EXTENSIONS.md` |
+| inspect branding rules / Branding-Regeln prüfen | `branding/BRAND_GUIDE.md` |
+| inspect branding assets / Branding-Assets prüfen | `branding/ASSET_MANIFEST.md` |
+| inspect design-source provenance / Designquellen prüfen | `branding/SOURCE_PROVENANCE.md` |
 | check public-repository safety / Public-Safety prüfen | `SECURITY.md` |
 
 ## Repository Structure / Repository-Struktur
@@ -464,6 +475,16 @@ XENEON-Edge-Control-Deck/
 ├── README.md
 ├── ROADMAP.md
 ├── SECURITY.md
+├── branding/
+│   ├── README.md
+│   ├── BRAND_GUIDE.md
+│   ├── ASSET_MANIFEST.md
+│   ├── SOURCE_PROVENANCE.md
+│   └── assets/
+│       └── png/
+│           ├── xee-banner.png
+│           ├── xee-social-preview.png
+│           └── xee-logo-system.png
 ├── design-system/
 │   ├── CDS_INTEGRATION.md
 │   ├── XENEON_PRODUCT_PROFILE.md
@@ -477,12 +498,13 @@ XENEON-Edge-Control-Deck/
 │   ├── REFERENCES.md
 │   └── work-packages/
 │       ├── XEE-WP-001.md
-│       └── XEE-WP-002.md
+│       ├── XEE-WP-002.md
+│       └── XEE-WP-002A.md
 └── project-brain/
     └── PROJECT_BRAIN.md
 ```
 
-Future structures such as `branding/`, `docs/`, `profiles/`, `assets/` and `evidence/` are introduced only by the Work Packages that own them. Empty directories are not created merely to make the repository look complete.
+Future structures such as `docs/`, `profiles/` and `evidence/` are introduced only by the Work Packages that own them. Empty directories are not created merely to make the repository look complete.
 
 ## Language / Sprache
 

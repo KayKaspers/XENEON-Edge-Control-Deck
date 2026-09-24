@@ -74,7 +74,10 @@ READY != RELEASED
 Achieved at Human-Maintainer integration commit `89959f95aa179ed1e73094a08392dc671871f27d`.
 
 ### M2 — Designed consumer
-Exit when XEE-WP-002 and XEE-WP-002A are accepted and the project has an explicit CDS consumer model plus identity.
+
+XEE-WP-002 is complete at Human-Maintainer integration commit `986ef1bc9719143469632c51e0bb25c4ff8a0020`.
+
+XEE-WP-002A has Human-Maintainer visual approval and is active for repository integration. M2 is achieved only after the WP-002A repository state is accepted and integrated.
 
 ### M3 — Verified device baseline
 Exit when hardware, Windows and iCUE behaviour are documented from the real device.

@@ -149,14 +149,37 @@ Application-specific behaviour must not redefine CDS core semantics.
 
 ## Branding
 
-Logo, banner and repository identity are deliberately deferred to **XEE-WP-002A**.
+The project identity baseline was visually approved by the Human Maintainer during **XEE-WP-002A**.
 
-Branding must be:
+Brand direction:
 
-- independent from official CORSAIR branding;
-- recognizable as an independent community project;
-- aligned with the CDS consumer model established by XEE-WP-002;
-- suitable for public GitHub presentation.
+- technical;
+- functional;
+- premium;
+- community-friendly;
+- dark, high-contrast and restrained;
+- independent from official CORSAIR branding.
+
+Baseline palette:
+
+- `#0B0B0B` — XENEON Dark
+- `#1A1A1A` — Surface
+- `#2A2F36` — Slate
+- `#FFFFFF` — White
+- `#FFD600` — Accent Yellow
+
+Typography direction:
+
+- Exo 2 — display / branding
+- Inter — UI / documentation
+
+Image rule:
+
+- use the real XENEON Edge product image when rights/provenance permit;
+- do not AI-regenerate substitute hardware for official project branding;
+- omit the product image rather than invent a replacement.
+
+The project mark remains an independent geometric X/edge identity and must not incorporate the CORSAIR logo.
 
 ## Known risks
 
@@ -181,10 +204,10 @@ Branding must be:
 
 ## Current phase
 
-**CDS Consumer Integration / Initial Development**
+**Project Identity Integration / Initial Development**
 
-Active Work Package: **XEE-WP-002**
+Active Work Package: **XEE-WP-002A**
 
 ## Next milestone
 
-Human-Maintainer acceptance of **XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile**, followed by **XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding**.
+Human-Maintainer integration and Nova review of **XEE-WP-002A**, followed by **XEE-WP-003 — Hardware Baseline**.

@@ -1,7 +1,7 @@
 # Project Brain — XENEON Edge Control Deck
 
 - **Purpose:** Compact current project context
-- **Status:** Bootstrap baseline
+- **Status:** Project identity integration baseline
 - **Date:** 2026-09-24
 - **Authority:** Descriptive project memory; does not replace Human-Maintainer decisions
 
@@ -13,7 +13,7 @@ The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
 Current active Work Package:
 
-**XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile**
+**XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding**
 
 ## Project objective
 
@@ -96,10 +96,13 @@ CDS ── design / UX authority ─┘
 4. XENEON is a **CDS consumer**.
 5. Application-specific behaviour stays a **Consumer Extension** unless separately accepted elsewhere.
 6. CDS is treated as fully operational in target-state planning, without claiming formal current conformance.
-7. Branding is deferred until after the CDS consumer/Product Profile contract.
-8. Logo and banner will be created in **XEE-WP-002A**.
-9. CORSAIR branding will not be embedded into the independent project mark in a way that implies official affiliation.
-10. No future directory is created merely to make the repository look complete.
+7. XEE-WP-002 established the CDS consumer/Product Profile contract.
+8. The XEE-WP-002A visual identity was approved by the Human Maintainer.
+9. Branding uses a dark technical baseline with white and restrained `#FFD600` accent.
+10. Exo 2 is the display/brand direction; Inter is the UI/documentation direction.
+11. Real XENEON Edge imagery may be used when provenance/rights permit; AI-regenerated substitute hardware is not used for official project branding.
+12. CORSAIR branding is not embedded into the independent project mark in a way that implies official affiliation.
+13. No future directory is created merely to make the repository look complete.
 
 ## Hardware facts currently evidenced
 
@@ -134,8 +137,6 @@ Control:
 
 - project license
 - CI / automated public quality checks
-- exact CDS Product Profile contents
-- final logo/mark/banner direction
 - exact iCUE capabilities and limitations
 - profile/export format and backup strategy
 - automation technology, if any
@@ -143,10 +144,10 @@ Control:
 
 ## Near-term sequence
 
-1. Execute XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile.
+1. Integrate XEE-WP-002A branding assets and documentation.
 2. Human Maintainer reviews, commits and pushes if accepted.
 3. Nova reviews the committed GitHub state.
-4. Execute XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding.
+4. Reconcile XEE-WP-002A to COMPLETE.
 5. Begin real-device baseline with XEE-WP-003.
 
 ## Completed Work Packages
@@ -156,6 +157,13 @@ Control:
 - Human-Maintainer integration commit: `89959f95aa179ed1e73094a08392dc671871f27d`
 - Nova review: `GO WITH NOTES`
 - Note: content and acceptance criteria passed; status reconciliation is integrated with XEE-WP-002 kickoff.
+
+### XEE-WP-002 — CDS Consumer Integration and XENEON Product Profile
+
+- Human-Maintainer integration commit: `986ef1bc9719143469632c51e0bb25c4ff8a0020`
+- Nova review: `GO WITH NOTES`
+- Acceptance: CDS consumer boundary, Product Profile, component mapping, pattern mapping and Consumer Extensions established.
+- Notes reconciled by XEE-WP-002A: Project Brain status label and obsolete Product Profile open decision.
 
 ## Lessons learned
 
