@@ -418,8 +418,8 @@ Work is divided into small NDF-style Work Packages.
 | **XEE-WP-002A** | Project Identity — Logo, Banner & Repository Branding | COMPLETE |
 | **XEE-WP-003** | Hardware Baseline | COMPLETE |
 | **XEE-WP-004** | Windows Display and Touch Baseline | COMPLETE |
-| **XEE-WP-005** | iCUE and Firmware Baseline | ACTIVE |
-| **XEE-WP-006** | Base Control Deck | PLANNED |
+| **XEE-WP-005** | iCUE and Firmware Baseline | COMPLETE |
+| **XEE-WP-006** | Base Control Deck | ACTIVE |
 | **XEE-WP-007** | Navigation and Deck Architecture | PLANNED |
 | **XEE-WP-008** | Discord Integration | PLANNED |
 | **XEE-WP-009** | OBS Studio Integration | PLANNED |
@@ -483,13 +483,13 @@ A technical limitation must not silently redefine the design model. It is docume
 
 | Item / Punkt | Status |
 |---|---|
-| Project state | **Design Foundation / Initial Development** |
+| Project state | **Base Interaction Architecture / Initial Development** |
 | Repository | **Public** |
 | Development governance | **Nova Development Framework (NDF) v1.1.0 baseline** |
 | Design / UX foundation | **Core Design System (CDS)** |
 | CDS usage model | **Target-state assumption** |
 | Hardware | **CORSAIR XENEON EDGE available for implementation** |
-| Current Work Package | **XEE-WP-005 — iCUE and Firmware Baseline** |
+| Current Work Package | **XEE-WP-006 — Base Control Deck** |
 | Branding | **Human-Maintainer approved and integrated** |
 | Release | **No project release yet** |
 | Formal CDS conformance | **Not claimed** |
@@ -520,6 +520,8 @@ A technical limitation must not silently redefine the design model. It is docume
 | inspect WP-004 evidence rules / Evidence-Regeln prüfen | `evidence/XEE-WP-004/README.md` |
 | inspect iCUE/firmware baseline / iCUE-/Firmware-Basis prüfen | `docs/icue/ICUE_FIRMWARE_BASELINE.md` |
 | inspect WP-005 evidence rules / Evidence-Regeln prüfen | `evidence/XEE-WP-005/README.md` |
+| inspect Base Control Deck | `docs/control-deck/BASE_CONTROL_DECK.md` |
+| inspect WP-006 evidence rules | `evidence/XEE-WP-006/README.md` |
 | check public-repository safety / Public-Safety prüfen | `SECURITY.md` |
 
 ## Repository Structure / Repository-Struktur

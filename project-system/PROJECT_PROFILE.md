@@ -204,10 +204,10 @@ The project mark remains an independent geometric X/edge identity and must not i
 
 ## Current phase
 
-**iCUE and Firmware Baseline / Initial Development**
+**Base Control Deck / Initial Development**
 
-Active Work Package: **XEE-WP-005**
+Active Work Package: **XEE-WP-006**
 
 ## Next milestone
 
-Human-Maintainer completion of **XEE-WP-005 — iCUE and Firmware Baseline**, followed by **XEE-WP-006 — Base Control Deck**.
+Human-Maintainer completion of **XEE-WP-006 — Base Control Deck**, followed by **XEE-WP-007 — Navigation and Deck Architecture**.

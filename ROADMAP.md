@@ -81,8 +81,10 @@ XEE-WP-002A branding was integrated at `6f896f8c358cc2073541e274acc49d54cdd7da88
 
 The project now has an explicit CDS consumer model and an integrated public identity.
 
-### M3 — Verified device baseline
-Exit when hardware, Windows and iCUE behaviour are documented from the real device.
+### M3 — Verified device baseline — ACHIEVED
+Achieved after the real-device hardware, Windows/touch and iCUE/device baselines were documented and accepted.
+
+XEE-WP-005 evidence was integrated at Human-Maintainer commit `039e208240f0de99c91779725bb3887d504d6eb1` and received Nova review `PASS`. Human-Maintainer acceptance was granted on 2026-09-24.
 
 ### M4 — Functional control deck
 Exit when the reusable base deck and navigation model work on-device.

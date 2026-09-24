@@ -1,7 +1,7 @@
 # XEE-WP-005 — iCUE and Firmware Baseline
 
 **SESSION:** SAME_SESSION_RECOMMENDED
-**STATUS:** ACTIVE
+**STATUS:** COMPLETE
 **Prompt profile:** Lean (B1)
 **Type:** vendor-software / firmware / evidence
 **Date:** 2026-09-24
@@ -140,23 +140,23 @@ WP-005 may record what export/profile mechanisms exist, but does not build the c
 
 ## 6. Acceptance criteria
 
-- [ ] XEE-WP-004 is reconciled to `COMPLETE`.
-- [ ] XEE-WP-005 is the sole active Work Package.
-- [ ] Installed iCUE version is recorded from the real system.
-- [ ] iCUE startup state is recorded.
-- [ ] XENEON EDGE detection in iCUE is recorded.
-- [ ] Public-safe device name shown by iCUE is recorded.
-- [ ] XENEON EDGE firmware/device version exposed by iCUE is recorded or explicitly unavailable.
-- [ ] iCUE software update availability is checked and recorded.
-- [ ] XENEON EDGE firmware/device update availability is checked and recorded.
-- [ ] No firmware/device update is applied without a Human-Maintainer update gate.
-- [ ] XENEON-specific settings actually exposed by iCUE are inventoried.
-- [ ] Widget/screen control surfaces actually exposed by iCUE are inventoried.
-- [ ] Desktop/monitor vs iCUE-widget mode behaviour is recorded where exposed.
-- [ ] Version-sensitive manufacturer references are separated from installed observations.
-- [ ] No Star Citizen, OBS or Discord bindings are implemented.
-- [ ] No project-specific Base Control Deck is built.
-- [ ] Public-repository safety remains intact.
+- [x] XEE-WP-004 is reconciled to `COMPLETE`.
+- [x] XEE-WP-005 is the sole active Work Package.
+- [x] Installed iCUE version is recorded from the real system.
+- [x] iCUE startup state is recorded.
+- [x] XENEON EDGE detection in iCUE is recorded.
+- [x] Public-safe device name shown by iCUE is recorded.
+- [x] XENEON EDGE firmware/device version exposed by iCUE is recorded or explicitly unavailable.
+- [x] iCUE software update availability is checked and recorded.
+- [x] XENEON EDGE firmware/device update availability is checked and recorded.
+- [x] No firmware/device update is applied without a Human-Maintainer update gate.
+- [x] XENEON-specific settings actually exposed by iCUE are inventoried.
+- [x] Widget/screen control surfaces actually exposed by iCUE are inventoried.
+- [x] Desktop/monitor vs iCUE-widget mode behaviour is recorded where exposed.
+- [x] Version-sensitive manufacturer references are separated from installed observations.
+- [x] No Star Citizen, OBS or Discord bindings are implemented.
+- [x] No project-specific Base Control Deck is built.
+- [x] Public-repository safety remains intact.
 
 ## 7. Non-goals
 
@@ -225,3 +225,19 @@ Expected kickoff commit:
 `docs(icue): start XENEON iCUE and firmware baseline`
 
 The evidence/completion commit is defined after the real iCUE/device state is inspected.
+
+## 11. Completion record
+
+- **Kickoff commit:** `82e8d56ec0530991dee8eeea70daf87723a2b199`
+- **Evidence commit:** `039e208240f0de99c91779725bb3887d504d6eb1`
+- **Nova review:** `PASS`
+- **Human-Maintainer acceptance:** granted on 2026-09-24
+- **Installed iCUE:** 5.51.42
+- **XENEON device version:** `LCD-Touchscreen, v. 5.51.1`
+- **Update result:** no iCUE or XENEON update reported available; no update applied
+- **Verified vendor surfaces:** XENEON settings, multiple widget pages, custom `.icuewidget` import, Stream Deck widget, Desktop/iCUE-Widgets switching
+- **Persistence result:** widgets and touch remain operational after closing the iCUE foreground window
+- **Public evidence:** `SANITISED SUMMARY`; raw screenshots remain `PRIVATE-ONLY`
+- **Acceptance result:** all XEE-WP-005 acceptance criteria satisfied
+- **Milestone effect:** enables M3 - Verified device baseline to be reconciled to `ACHIEVED`
+- **Release effect:** none

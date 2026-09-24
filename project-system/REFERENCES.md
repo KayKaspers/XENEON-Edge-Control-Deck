@@ -113,9 +113,32 @@ DOCUMENTED_CAPABILITY != VERIFIED_LOCAL_CAPABILITY
 UPDATE_AVAILABLE != UPDATE_AUTHORISED
 ```
 
-Installed versions and actually exposed capabilities are recorded from the real system during XEE-WP-005.
+XEE-WP-005 recorded installed iCUE 5.51.42, XENEON LCD-Touchscreen 5.51.1, update status and the vendor surfaces actually exposed by the real device.
 
 No capability is considered implemented merely because it appears in marketing material or release notes.
+
+### XENEON custom widget development
+
+Primary implementation references for XEE-WP-006:
+
+- CORSAIR custom-widget guide: https://www.corsair.com/us/en/explorer/diy-builder/accessories/how-to-create-a-custom-widget-for-the-xeneon-edge/
+- canonical iCUE widget technical documentation: https://docs.elgato.com/icue/widgets/
+- CORSAIR Labs WidgetBuilder skill/repository: https://github.com/Corsair-Labs/icue-widget-builder
+
+Manufacturer-documented implementation model:
+
+- custom widgets use HTML, CSS and JavaScript;
+- the runtime uses a Chromium-based QtWebEngine environment;
+- `index.html` and `manifest.json` are required structural files;
+- CORSAIR's WidgetBuilder CLI can scaffold, validate and package .icuewidget files;
+- real-device validation remains required after successful packaging/import.
+
+```text
+SOURCE EXISTS != VALIDATED
+VALIDATED != DEVICE_TESTED
+DOCUMENTED WIDGET SIZE != VALIDATED TOUCH USABILITY
+```
+
 
 ## Application consumers
 
