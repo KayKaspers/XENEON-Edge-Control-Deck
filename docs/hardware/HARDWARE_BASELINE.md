@@ -46,68 +46,97 @@ These values are references only. WP-003 does not promote them to real-device ob
 
 | Item | Observation | Class | Evidence |
 |---|---|---|---|
-| Product name | `TODO` | UNKNOWN | — |
-| Model / part number | `TODO` | UNKNOWN | — |
+| Product name | CORSAIR XENEON EDGE | OBSERVED | HW-EV-001 |
+| Model / part number | not recorded during current inspection | UNKNOWN | — |
 | Serial number | **DO NOT RECORD PUBLICLY** | — | private-only if ever needed |
-| Physical colour/finish | `TODO` | UNKNOWN | — |
-| Stand / mounting hardware | `TODO` | UNKNOWN | — |
-| Current orientation | `TODO` | UNKNOWN | — |
+| Physical colour/finish | not recorded during current inspection | UNKNOWN | — |
+| Stand / mounting hardware | original CORSAIR stand | OBSERVED | HW-EV-001 |
+| Current orientation | horizontal | OBSERVED | HW-EV-001 |
 
 ## 4. Actual physical connection topology
 
 ### 4.1 Power path
 
 ```text
-TODO
+USB-C dock
+   │
+   └── USB-C cable
+          │
+          ▼
+   CORSAIR XENEON EDGE
 ```
 
 | From | Cable / adapter | To | Class |
 |---|---|---|---|
-| `TODO` | `TODO` | XENEON EDGE | UNKNOWN |
+| USB-C dock | USB-C cable | XENEON EDGE | OBSERVED |
+
+The dock is currently used as the power source/path for the XENEON EDGE. WP-003 does not infer additional USB data behaviour from this physical connection.
 
 ### 4.2 Display path
 
 ```text
-TODO
+Graphics card
+   │
+   └── DisplayPort output
+          │
+          └── DisplayPort-to-HDMI cable
+                 │
+                 ▼
+          HDMI input on XENEON EDGE
 ```
 
 | From | Cable / adapter | To | Class |
 |---|---|---|---|
-| `TODO` | `TODO` | XENEON EDGE | UNKNOWN |
+| Graphics card DisplayPort output | DisplayPort-to-HDMI cable | XENEON EDGE HDMI input | OBSERVED |
+
+The display connection is direct between the graphics card and the XENEON EDGE. The USB-C dock is not in the observed display-signal path.
 
 ### 4.3 Touch / USB data path
 
 ```text
-TODO
+USB-C dock
+   │
+   └── USB-C cable
+          │
+          ▼
+   CORSAIR XENEON EDGE
+          │
+          └── touch / USB data role: NOT YET VERIFIED
 ```
 
 | From | Cable / adapter | To | Class |
 |---|---|---|---|
-| `TODO` | `TODO` | XENEON EDGE | UNKNOWN |
+| USB-C dock | USB-C cable | XENEON EDGE | OBSERVED |
+| USB-C connection | possible touch / USB data transport | XENEON EDGE | UNKNOWN |
 
-If the data path has not yet been established, record `NOT YET ESTABLISHED` rather than inferring it.
+The Human Maintainer suspects that the same USB-C connection used for power also carries the touch/USB data path. This is **not yet verified** and is therefore not promoted to `OBSERVED` or `DERIVED`.
+
+Functional touch/data verification belongs to XEE-WP-004.
 
 ### 4.4 Hub / dock / adapter chain
 
 | Component | Role | In actual path? | Class |
 |---|---|---:|---|
-| `TODO` | `TODO` | `TODO` | UNKNOWN |
+| USB-C dock | power path to XENEON EDGE; possible data path not yet verified | yes | OBSERVED |
+| DisplayPort-to-HDMI cable | direct graphics-card-to-display signal conversion/connection | yes | OBSERVED |
+| Additional display dock/hub | none reported | no | OBSERVED |
 
 ### 4.5 Unused / unknown physical connections
 
 | Port / path | State | Note |
 |---|---|---|
-| `TODO` | UNKNOWN | `TODO` |
+| Unused physical connections | none reported by Human Maintainer | No unused connection currently identified |
+| Touch / USB data role of USB-C path | UNKNOWN | physical USB-C connection exists; functional data role not yet verified |
 
 ## 5. Physical installation
 
 | Item | Observation | Class |
 |---|---|---|
-| Orientation | `TODO` | UNKNOWN |
-| Position | `TODO` | UNKNOWN |
-| Stand / mount | `TODO` | UNKNOWN |
-| Cable routing relevant to reproducibility | `TODO` | UNKNOWN |
-| Direct PC connection or intermediate device | `TODO` | UNKNOWN |
+| Orientation | horizontal | OBSERVED |
+| Position | below the main monitor | OBSERVED |
+| Stand / mount | original CORSAIR stand | OBSERVED |
+| Cable routing relevant to reproducibility | USB-C cable to dock; DisplayPort-to-HDMI cable directly to graphics card | OBSERVED |
+| Direct PC connection or intermediate device | display path direct to graphics card; USB-C path uses dock | OBSERVED |
 
 ## 6. Supplied and actually used accessories
 
@@ -115,7 +144,9 @@ Do not assume that an included accessory is part of the real setup.
 
 | Accessory / cable | Supplied | Actually used | Observation |
 |---|---:|---:|---|
-| `TODO` | `TODO` | `TODO` | `TODO` |
+| USB-C cable | yes | yes | used between USB-C dock and XENEON EDGE |
+| DisplayPort-to-HDMI cable | yes | yes | used directly between graphics card and XENEON EDGE |
+| Other supplied accessories | not recorded during current inspection | unknown | UNKNOWN |
 
 ## 7. Real-device observations
 
@@ -123,7 +154,14 @@ Record only physical observations here.
 
 | ID | Observation | Class | Evidence reference |
 |---|---|---|---|
-| HW-OBS-001 | `TODO` | UNKNOWN | — |
+| HW-OBS-001 | Device is identified as CORSAIR XENEON EDGE | OBSERVED | HW-EV-001 |
+| HW-OBS-002 | Device is installed horizontally | OBSERVED | HW-EV-001 |
+| HW-OBS-003 | Device uses the original stand and is positioned below the main monitor | OBSERVED | HW-EV-001 |
+| HW-OBS-004 | USB-C cable connects the XENEON EDGE to a USB-C dock used for the power path | OBSERVED | HW-EV-001 |
+| HW-OBS-005 | Display path is graphics card DisplayPort directly to XENEON EDGE HDMI via a DisplayPort-to-HDMI cable | OBSERVED | HW-EV-001 |
+| HW-OBS-006 | No additional hub/dock is present in the observed display path | OBSERVED | HW-EV-001 |
+| HW-OBS-007 | Human Maintainer reports no unused physical connection in the current setup | OBSERVED | HW-EV-001 |
+| HW-OBS-008 | Touch/USB data transport over the USB-C connection is suspected but not yet verified | UNKNOWN | HW-EV-001 |
 
 ## 8. Unknowns / deferred verification
 
@@ -134,6 +172,7 @@ The following belong to later Work Packages unless they can be answered purely b
 | Does Windows enumerate the device correctly? | XEE-WP-004 | DEFERRED |
 | Is 2560 × 720 active in Windows? | XEE-WP-004 | DEFERRED |
 | Is 60 Hz active? | XEE-WP-004 | DEFERRED |
+| Does the USB-C connection actually carry touch/USB data? | XEE-WP-004 | DEFERRED |
 | Does touch map to the correct display? | XEE-WP-004 | DEFERRED |
 | How many simultaneous touch points work in practice? | XEE-WP-004 | DEFERRED |
 | Does iCUE detect the unit? | XEE-WP-005 | DEFERRED |
@@ -144,19 +183,31 @@ The following belong to later Work Packages unless they can be answered purely b
 
 | Evidence ID | Type | Public status | Description |
 |---|---|---|---|
-| `TODO` | `TODO` | `PUBLIC / SANITISED SUMMARY / PRIVATE-ONLY` | `TODO` |
+| HW-EV-001 | Human-Maintainer written inspection | SANITISED SUMMARY | Public-safe written description of device identity, orientation, mounting, physical cable paths and currently unknown touch/data role. No serial number or unique identifier recorded. |
 
 ## 10. WP-003 completion checklist
 
-- [ ] public-safe device identity recorded
-- [ ] power path documented
-- [ ] display path documented
-- [ ] touch/data path documented or explicitly unresolved
-- [ ] hub/dock/adapter chain documented
-- [ ] orientation and mounting documented
-- [ ] used accessories/cables documented
-- [ ] observed vs manufacturer facts separated
-- [ ] evidence classified for public safety
-- [ ] Windows questions deferred to WP-004
-- [ ] iCUE/firmware questions deferred to WP-005
-- [ ] no serial number or unique device identifier committed
+- [x] public-safe device identity recorded
+- [x] power path documented
+- [x] display path documented
+- [x] touch/data path documented or explicitly unresolved
+- [x] hub/dock/adapter chain documented
+- [x] orientation and mounting documented
+- [x] used accessories/cables documented
+- [x] observed vs manufacturer facts separated
+- [x] evidence classified for public safety
+- [x] Windows questions deferred to WP-004
+- [x] iCUE/firmware questions deferred to WP-005
+- [x] no serial number or unique device identifier committed
+
+## 11. Current WP-003 assessment
+
+The physical hardware baseline is sufficiently documented for Nova review.
+
+The only unresolved connection-level question is whether the observed USB-C path also carries touch/USB data. That question is intentionally deferred to XEE-WP-004 because it requires functional operating-system verification rather than physical inspection.
+
+```text
+PHYSICAL HARDWARE BASELINE = DOCUMENTED
+TOUCH / USB DATA ROLE = NOT YET VERIFIED
+WP-004 REQUIRED FOR FUNCTIONAL VERIFICATION
+```
