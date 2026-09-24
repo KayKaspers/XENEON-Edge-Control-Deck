@@ -1,7 +1,7 @@
 # Project Brain — XENEON Edge Control Deck
 
 - **Purpose:** Compact current project context
-- **Status:** Windows display/touch baseline execution
+- **Status:** iCUE and firmware baseline execution
 - **Date:** 2026-09-24
 - **Authority:** Descriptive project memory; does not replace Human-Maintainer decisions
 
@@ -13,7 +13,7 @@ The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
 Current active Work Package:
 
-**XEE-WP-004 — Windows Display and Touch Baseline**
+**XEE-WP-005 — iCUE and Firmware Baseline**
 
 ## Project objective
 
@@ -137,21 +137,23 @@ Control:
 
 - project license
 - CI / automated public quality checks
-- exact iCUE capabilities and limitations
+- exact iCUE capabilities and limitations currently being verified
 - profile/export format and backup strategy
 - automation technology, if any
 - versioning/release policy before v1.0
 
 ## Near-term sequence
 
-1. Reconcile XEE-WP-003 to COMPLETE and activate XEE-WP-004.
-2. Record Windows display enumeration for the real XENEON EDGE.
-3. Verify active resolution and refresh rate without assuming manufacturer values.
-4. Verify Windows display orientation and placement relevant to the current setup.
-5. Verify whether the existing USB-C path carries touch/USB data.
-6. Verify touch maps to the XENEON EDGE rather than another monitor.
-7. Verify practical multi-touch behaviour without changing iCUE or firmware.
-8. Complete XEE-WP-004 before moving vendor-specific capability verification to XEE-WP-005.
+1. Reconcile XEE-WP-004 to COMPLETE and activate XEE-WP-005.
+2. Record the installed iCUE version before any software update.
+3. Verify that iCUE detects the real XENEON EDGE and record the public-safe device name shown by iCUE.
+4. Record the XENEON EDGE firmware/device version exposed by iCUE before any update.
+5. Check update availability without silently applying an update.
+6. Compare the installed iCUE version with the current official CORSAIR release reference.
+7. Inventory the XENEON-specific device settings and widget/control surfaces actually exposed by the installed version.
+8. Record the Desktop/Widget display-mode behaviour and persistence relevant to later control-deck work.
+9. Stop for a Human-Maintainer decision before applying a firmware update if one is offered.
+10. Complete XEE-WP-005 before starting XEE-WP-006 — Base Control Deck.
 
 ## Completed Work Packages
 
@@ -184,6 +186,16 @@ Control:
 - Nova review: `PASS`
 - Acceptance: real device identity, orientation, stand, physical power path, direct display path, dock/adapter chain and evidence classification documented.
 - Deferred by design: functional USB-C touch/data verification belongs to XEE-WP-004.
+
+### XEE-WP-004 — Windows Display and Touch Baseline
+
+- Kickoff commit: `fb34cf6269c3a11671db90da13c3c199d4f04391`
+- Evidence commit: `e93c41c82b033fb9ee37bd88cf3297ae9577ddbc`
+- Nova review: `PASS`
+- Human-Maintainer acceptance: granted on 2026-09-24
+- Acceptance: Windows display enumeration, 2560×720 active mode, 60 Hz, 100% scaling, landscape orientation, corrected touch mapping and practical five-point multi-touch are documented.
+- USB-C touch/data role: established as `DERIVED` from working touch, observed two-cable topology and CORSAIR manufacturer documentation.
+- Deferred by design: iCUE detection, installed iCUE version, firmware/device version, updates and vendor-specific controls belong to XEE-WP-005.
 
 ## Lessons learned
 

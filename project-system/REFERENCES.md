@@ -93,13 +93,29 @@ Hardware behaviour discovered during this project must be distinguished from pub
 
 ### CORSAIR iCUE
 
-Primary source:
+Primary sources:
 
-Official CORSAIR documentation and the installed application itself.
+- official CORSAIR XENEON EDGE quick-start documentation
+- official CORSAIR iCUE release notes
+- the installed iCUE application itself
 
-Version-specific capabilities will be recorded during XEE-WP-005.
+Current public reference at XEE-WP-005 kickoff:
 
-No capability is considered implemented merely because it appears in marketing material.
+- latest CORSAIR iCUE release identified on 2026-09-24: `5.51.42`, published 2026-09-16;
+- CORSAIR's XENEON EDGE Stream Deck widget guidance requires iCUE `5.48.58` or newer and an XENEON EDGE version `5.48.1` or newer for that specific integration;
+- the XENEON EDGE quick-start guide documents iCUE device detection, screen settings, widget configuration and switching between iCUE widget control and normal desktop/monitor use.
+
+These are manufacturer references only.
+
+```text
+LATEST_PUBLIC_VERSION != INSTALLED_VERSION
+DOCUMENTED_CAPABILITY != VERIFIED_LOCAL_CAPABILITY
+UPDATE_AVAILABLE != UPDATE_AUTHORISED
+```
+
+Installed versions and actually exposed capabilities are recorded from the real system during XEE-WP-005.
+
+No capability is considered implemented merely because it appears in marketing material or release notes.
 
 ## Application consumers
 

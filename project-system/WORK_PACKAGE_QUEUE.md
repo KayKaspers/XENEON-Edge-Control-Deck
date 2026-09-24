@@ -30,8 +30,8 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 | XEE-WP-002 | CDS Consumer Integration and XENEON Product Profile | P0 | COMPLETE | XEE-WP-001 |
 | XEE-WP-002A | Project Identity — Logo, Banner & Repository Branding | P1 | COMPLETE | XEE-WP-002 |
 | XEE-WP-003 | Hardware Baseline | P0 | COMPLETE | XEE-WP-001 |
-| XEE-WP-004 | Windows Display and Touch Baseline | P0 | ACTIVE | XEE-WP-003 |
-| XEE-WP-005 | iCUE and Firmware Baseline | P0 | PLANNED | XEE-WP-003 |
+| XEE-WP-004 | Windows Display and Touch Baseline | P0 | COMPLETE | XEE-WP-003 |
+| XEE-WP-005 | iCUE and Firmware Baseline | P0 | ACTIVE | XEE-WP-003 |
 | XEE-WP-006 | Base Control Deck | P0 | PLANNED | XEE-WP-002, XEE-WP-004, XEE-WP-005 |
 | XEE-WP-007 | Navigation and Deck Architecture | P0 | PLANNED | XEE-WP-006 |
 | XEE-WP-008 | Discord Integration | P2 | PLANNED | XEE-WP-007 |
@@ -49,7 +49,7 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 
 ## Current Work Package
 
-`XEE-WP-004` is the only active Work Package.
+`XEE-WP-005` is the only active Work Package.
 
 Completed integration commits:
 
@@ -59,10 +59,12 @@ Completed integration commits:
 - README branding/integration follow-up: `fe76e225541b23889b4ef3ebbdd076d5c0e10a1f`
 - XEE-WP-003 kickoff: `1f68837016c5fe2c4643f08c0f16677c236feaed`
 - XEE-WP-003 evidence: `0bef15a592b79bf632bd34225b20f9caddfaeee2`
+- XEE-WP-004 kickoff: `fb34cf6269c3a11671db90da13c3c199d4f04391`
+- XEE-WP-004 evidence: `e93c41c82b033fb9ee37bd88cf3297ae9577ddbc`
 
 The active contract is stored at:
 
-`project-system/work-packages/XEE-WP-004.md`
+`project-system/work-packages/XEE-WP-005.md`
 
 ## Queue rules
 

@@ -204,10 +204,10 @@ The project mark remains an independent geometric X/edge identity and must not i
 
 ## Current phase
 
-**Windows Display and Touch Baseline / Initial Development**
+**iCUE and Firmware Baseline / Initial Development**
 
-Active Work Package: **XEE-WP-004**
+Active Work Package: **XEE-WP-005**
 
 ## Next milestone
 
-Human-Maintainer completion of **XEE-WP-004 — Windows Display and Touch Baseline**, followed by **XEE-WP-005 — iCUE and Firmware Baseline**.
+Human-Maintainer completion of **XEE-WP-005 — iCUE and Firmware Baseline**, followed by **XEE-WP-006 — Base Control Deck**.

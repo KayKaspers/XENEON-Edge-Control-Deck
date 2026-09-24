@@ -1,7 +1,7 @@
 # XEE-WP-004 — Windows Display and Touch Baseline
 
 **SESSION:** SAME_SESSION_RECOMMENDED
-**STATUS:** ACTIVE
+**STATUS:** COMPLETE
 **Prompt profile:** Lean (B1)
 **Type:** windows / display / touch / evidence
 **Date:** 2026-09-24
@@ -97,22 +97,22 @@ The Work Package does not need to prove every manufacturer-advertised gesture; i
 
 ## 6. Acceptance criteria
 
-- [ ] XEE-WP-003 is reconciled to `COMPLETE`.
-- [ ] XEE-WP-004 is the sole active Work Package.
-- [ ] Windows display detection is recorded.
-- [ ] Active resolution is verified.
-- [ ] Active refresh rate is verified.
-- [ ] Windows display orientation is verified.
-- [ ] Windows display-layout position is recorded.
-- [ ] Scaling is recorded if exposed/relevant.
-- [ ] Touch functionality is verified as working or not working.
-- [ ] Touch is mapped to the correct physical display or the mapping problem is explicitly documented.
-- [ ] The USB-C touch/data role is verified or explicitly unresolved after safe testing.
-- [ ] Practical multi-touch behaviour is recorded.
-- [ ] Manufacturer facts remain separated from Windows-observed facts.
-- [ ] No iCUE or firmware conclusions are promoted into WP-004.
-- [ ] No application bindings are performed.
-- [ ] Public-repository safety remains intact.
+- [x] XEE-WP-003 is reconciled to `COMPLETE`.
+- [x] XEE-WP-004 is the sole active Work Package.
+- [x] Windows display detection is recorded.
+- [x] Active resolution is verified.
+- [x] Active refresh rate is verified.
+- [x] Windows display orientation is verified.
+- [x] Windows display-layout position is recorded.
+- [x] Scaling is recorded if exposed/relevant.
+- [x] Touch functionality is verified as working or not working.
+- [x] Touch is mapped to the correct physical display or the mapping problem is explicitly documented.
+- [x] The USB-C touch/data role is verified or explicitly unresolved after safe testing.
+- [x] Practical multi-touch behaviour is recorded.
+- [x] Manufacturer facts remain separated from Windows-observed facts.
+- [x] No iCUE or firmware conclusions are promoted into WP-004.
+- [x] No application bindings are performed.
+- [x] Public-repository safety remains intact.
 
 ## 7. Non-goals
 
@@ -171,3 +171,16 @@ Expected kickoff commit:
 `docs(windows): start XENEON display and touch baseline`
 
 Completion commit will be defined after Windows evidence has been collected and reviewed.
+
+## 11. Completion record
+
+- **Kickoff commit:** `fb34cf6269c3a11671db90da13c3c199d4f04391`
+- **Evidence commit:** `e93c41c82b033fb9ee37bd88cf3297ae9577ddbc`
+- **Nova review:** `PASS`
+- **Human-Maintainer acceptance:** granted on 2026-09-24
+- **Acceptance result:** all XEE-WP-004 acceptance criteria satisfied
+- **Verified Windows baseline:** Display 3, Extended, 2560×720 active and signal resolution, 60 Hz, 100% scale, Landscape
+- **Verified touch baseline:** touch operational, mapping corrected to XENEON EDGE, five simultaneous touch points practically observed
+- **USB-C data role:** established as `DERIVED`, not by ambiguous power-loss cable isolation
+- **Deferred intentionally:** iCUE and firmware/device-version verification to XEE-WP-005
+- **Release effect:** none
