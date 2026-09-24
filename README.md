@@ -17,9 +17,9 @@
 
 <p align="center"><strong>NDF-governed · CDS-designed · Human-controlled · Documentation-first</strong></p>
 
-**DE:** XENEON Edge Control Deck ist ein öffentliches Projekt zur strukturierten Einrichtung, Gestaltung und Erweiterung des CORSAIR XENEON EDGE als interaktives Control Deck für Gaming, Streaming, Kommunikation und Systeminformationen. Das Projekt nutzt das Nova Development Framework (NDF) für Entwicklung und Governance sowie das Core Design System (CDS) für Design, UX und visuelle Konsistenz.
+**DE:** XENEON Edge Control Deck ist ein öffentliches Projekt zur strukturierten Einrichtung, Gestaltung und Erweiterung des CORSAIR XENEON EDGE als interaktives Control Deck für Gaming, Streaming, Kommunikation und Systeminformationen. Das Projekt nutzt das [Nova Development Framework (NDF)](https://github.com/KayKaspers/Nova-Development-Framework) für Entwicklung und Governance sowie das [Core Design System (CDS)](https://github.com/KayKaspers/Core-Design-System) für Design, UX und visuelle Konsistenz.
 
-**EN:** XENEON Edge Control Deck is a public project for the structured setup, design and extension of the CORSAIR XENEON EDGE as an interactive control deck for gaming, streaming, communication and system information. The project uses the Nova Development Framework (NDF) for development governance and the Core Design System (CDS) for design, UX and visual consistency.
+**EN:** XENEON Edge Control Deck is a public project for the structured setup, design and extension of the CORSAIR XENEON EDGE as an interactive control deck for gaming, streaming, communication and system information. The project uses the [Nova Development Framework (NDF)](https://github.com/KayKaspers/Nova-Development-Framework) for development governance and the [Core Design System (CDS)](https://github.com/KayKaspers/Core-Design-System) for design, UX and visual consistency.
 
 > [!NOTE]
 > The project identity baseline was approved by the Human Maintainer in **XEE-WP-002A** after the CDS consumer contract and XENEON Product Profile were established.
@@ -28,7 +28,7 @@
 
 - **Start:** [What is XENEON Edge Control Deck?](#what-is-xeneon-edge-control-deck--was-ist-xeneon-edge-control-deck) · [Quick Start](#quick-start--schnellstart) · [Project Goals](#project-goals--projektziele)
 - **Architecture / Architektur:** [Project Model](#project-model--projektmodell) · [NDF & CDS](#ndf--cds) · [CDS Consumer Model](#cds-consumer-model)
-- **Use Cases / Anwendungsfälle:** [Star Citizen](#star-citizen) · [OBS Studio](#obs-studio) · [Discord](#discord) · [System & Telemetry](#system--telemetry)
+- **Integrations / Integrationen:** [Target Integrations](#target-integrations--zielintegrationen) · [Star Citizen](#star-citizen) · [OBS Studio](#obs-studio) · [Discord](#discord) · [System & Telemetry](#system--telemetry)
 - **Development / Entwicklung:** [Governed Workflow](#governed-workflow--gesteuerter-arbeitsablauf) · [Roles & Authority](#roles--authority--rollen--autorität) · [Work Packages](#work-packages)
 - **Reference / Referenz:** [Security & Public Repository](#security--public-repository) · [Current Status](#current-status--aktueller-status) · [Documentation Map](#documentation-map--dokumentationsübersicht) · [Repository Structure](#repository-structure--repository-struktur) · [Language](#language--sprache)
 
@@ -62,7 +62,7 @@ The initial focus is:
 
 ## Hardware Baseline / Hardware-Basis
 
-The target hardware is the **CORSAIR XENEON EDGE 14.5-inch LCD touchscreen**.
+The target hardware is the **[CORSAIR XENEON EDGE 14.5-inch LCD touchscreen](https://www.corsair.com/eu/de/p/monitors/cc-9011306-ww/xen)**.
 
 Manufacturer-documented baseline:
 
@@ -72,6 +72,56 @@ Manufacturer-documented baseline:
 - display input via **HDMI** or **USB-C DisplayPort Alt Mode**
 - horizontal and vertical orientation
 - CORSAIR iCUE support
+
+### Product & Price Links / Produkt & Preisvergleich
+
+- **Official product page / Offizielle Produktseite:** [CORSAIR XENEON EDGE](https://www.corsair.com/eu/de/p/monitors/cc-9011306-ww/xen)
+- **Price comparison / Preisvergleich:** [CORSAIR XENEON EDGE on idealo.de](https://www.idealo.de/preisvergleich/OffersOfProduct/208531710_-xeneon-edge-corsair.html)
+
+> [!TIP]
+> Prices, variants and availability change over time. The price-comparison link is provided as a convenience and is not a project recommendation or fixed price reference.
+
+## Target Integrations / Zielintegrationen
+
+The XENEON Edge Control Deck is intended to control or surface functions from several applications and platforms. The integrations below link to the respective official product pages.
+
+<table>
+  <tr>
+    <td align="center" width="25%">
+      <a href="https://robertsspaceindustries.com/en/Star-Your-Adventure">
+        <img src="https://robertsspaceindustries.com/media/dtnzqn8gr0646r/slideshow_pager/CS_42_STAR_CITIZEN_FINAL_01A-1.png" width="72" alt="Star Citizen logo"><br>
+        <strong>Star Citizen</strong>
+      </a>
+      <br><sub>Flight · Combat · Mining · Salvage · Cargo</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://obsproject.com/">
+        <img src="https://raw.githubusercontent.com/obsproject/obs-studio/master/frontend/cmake/linux/icons/obs-logo-scalable.svg" width="64" alt="OBS Studio logo"><br>
+        <strong>OBS Studio</strong>
+      </a>
+      <br><sub>Scenes · Recording · Streaming · Audio</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://discord.com/">
+        <img src="https://cdn.prod.website-files.com/6257adef93867e50d84d30e2/66e3d7f4ef6498ac018f2c55_Symbol.svg" width="72" alt="Discord logo"><br>
+        <strong>Discord</strong>
+      </a>
+      <br><sub>Mute · Deafen · Voice · Communication</sub>
+    </td>
+    <td align="center" width="25%">
+      <a href="https://www.corsair.com/eu/de/s/downloads">
+        <img src="https://assets.corsair.com/image/upload/f_auto/q_auto/v1776287011/pages/Download%20LP/Revamp%202026/02_Downloads-LP_software_logo.png" width="88" alt="CORSAIR iCUE logo"><br>
+        <strong>CORSAIR iCUE</strong>
+      </a>
+      <br><sub>Device · Profiles · Actions · Vendor Integration</sub>
+    </td>
+  </tr>
+</table>
+
+> [!NOTE]
+> Product logos and trademarks are used only to identify the applications and platforms targeted by this independent project. They remain the property of their respective owners and do not imply sponsorship, endorsement or official affiliation.
+
+**System & Telemetry** remains a project-local integration surface for operating-system and hardware status rather than a separate third-party product integration.
 
 The project treats the XENEON EDGE both as:
 
@@ -171,7 +221,7 @@ The project is currently **not** intended to:
 
 ### Nova Development Framework
 
-**NDF owns development governance.**
+**[NDF](https://github.com/KayKaspers/Nova-Development-Framework) owns development governance.**
 
 NDF defines:
 
@@ -182,13 +232,13 @@ NDF defines:
 - how evidence is recorded;
 - where Human-Maintainer authority is required.
 
-Reference: `KayKaspers/Nova-Development-Framework`
+Reference: [KayKaspers/Nova-Development-Framework](https://github.com/KayKaspers/Nova-Development-Framework)
 
 NDF does **not** define the visual design of the XENEON interface.
 
 ### Core Design System
 
-**CDS owns design and UX direction.**
+**[CDS](https://github.com/KayKaspers/Core-Design-System) owns design and UX direction.**
 
 For this project CDS is used as the authority for:
 
@@ -200,7 +250,7 @@ For this project CDS is used as the authority for:
 - Product Profiles
 - Evidence and Quality
 
-Reference: `KayKaspers/Core-Design-System`
+Reference: [KayKaspers/Core-Design-System](https://github.com/KayKaspers/Core-Design-System)
 
 CDS does **not** define the development workflow or Git authority of this project.
 
@@ -448,7 +498,7 @@ A technical limitation must not silently redefine the design model. It is docume
 ## Documentation Map / Dokumentationsübersicht
 
 | I want to … / Ich möchte … | Start here / Einstieg |
-|---|---|
+|---|---|---|
 | understand the project / Projekt verstehen | `README.md` |
 | see planned development / geplante Entwicklung sehen | `ROADMAP.md` |
 | inspect project identity / Projektidentität prüfen | `project-system/PROJECT_MANIFEST.md` |
@@ -510,19 +560,19 @@ Future structures such as `docs/`, `profiles/` and `evidence/` are introduced on
 
 **DE:** Die zentrale Projektdokumentation wird nach dem Vorbild von NDF grundsätzlich zweisprachig DE/EN geführt, wenn der zusätzliche Pflegeaufwand verhältnismäßig bleibt. Technische Begriffe wie Work Package, Human Maintainer, Consumer Extension und Product Profile bleiben konsistent.
 
-**EN:** Following the NDF model, central project documentation is generally maintained bilingually in DE/EN where the additional maintenance cost remains reasonable. Technical terms such as Work Package, Human Maintainer, Consumer Extension and Product Profile remain consistent.
+**EN:** Following the NDF model, central project documentation is generally maintained bilingually DE/EN where the additional maintenance cost remains reasonable. Technical terms such as Work Package, Human Maintainer, Consumer Extension and Product Profile remain consistent.
 
 ## Project References / Projektreferenzen
 
 The project builds on:
 
-- **Nova Development Framework (NDF)** — development governance
-- **Core Design System (CDS)** — design and UX architecture
-- **CORSAIR XENEON EDGE** — target hardware
-- **CORSAIR iCUE** — primary vendor integration environment
-- **Star Citizen** — gaming consumer
-- **OBS Studio** — streaming consumer
-- **Discord** — communication consumer
+- **[Nova Development Framework (NDF)](https://github.com/KayKaspers/Nova-Development-Framework)** — development governance
+- **[Core Design System (CDS)](https://github.com/KayKaspers/Core-Design-System)** — design and UX architecture
+- **[CORSAIR XENEON EDGE](https://www.corsair.com/eu/de/p/monitors/cc-9011306-ww/xen)** — target hardware
+- **[CORSAIR iCUE](https://www.corsair.com/eu/de/s/downloads)** — primary vendor integration environment
+- **[Star Citizen](https://robertsspaceindustries.com/en/Star-Your-Adventure)** — gaming consumer
+- **[OBS Studio](https://obsproject.com/)** — streaming consumer
+- **[Discord](https://discord.com/)** — communication consumer
 
 Revision-specific and external references are maintained in `project-system/REFERENCES.md`.
 
