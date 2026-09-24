@@ -1,9 +1,9 @@
 # iCUE and Firmware Baseline — CORSAIR XENEON EDGE
 
 - **Work Package:** XEE-WP-005
-- **Status:** Evidence collection active
+- **Status:** Evidence collection complete; ready for Nova review
 - **Date started:** 2026-09-24
-- **Authority:** Real installed iCUE/XENEON observations supplied by the Human Maintainer
+- **Authority:** Real installed iCUE/XENEON observations and practical tests supplied by the Human Maintainer
 - **Public-safety rule:** No serial numbers, unique device IDs or unnecessary account information
 
 ## 1. Evidence semantics
@@ -22,6 +22,7 @@ LATEST_PUBLIC_VERSION != INSTALLED_VERSION
 DOCUMENTED_CAPABILITY != VERIFIED_LOCAL_CAPABILITY
 UPDATE_AVAILABLE != UPDATE_AUTHORISED
 DETECTED != CONFIGURED
+WIDGET_VISIBLE != WIDGET_VALIDATED
 ```
 
 ## 2. Inherited verified baseline
@@ -49,31 +50,36 @@ WP-005 does not reopen those conclusions unless iCUE/vendor behaviour materially
 | XENEON EDGE version prerequisite for Stream Deck widget | 5.48.1 or newer | MANUFACTURER_REFERENCE |
 | XENEON EDGE quick-start guide | iCUE device detection, device settings, widgets and desktop/monitor mode documented | MANUFACTURER_REFERENCE |
 
-These values are references only.
+These values are comparison references only.
 
 ## 4. Installed iCUE baseline
 
-Record before applying updates.
-
 | Item | Observation | Class | Evidence |
 |---|---|---|---|
-| iCUE installed | `TODO` | UNKNOWN | — |
-| iCUE starts normally | `TODO` | UNKNOWN | — |
-| Installed iCUE version | `TODO` | UNKNOWN | — |
-| XENEON EDGE detected by iCUE | `TODO` | UNKNOWN | — |
-| Public-safe device name shown by iCUE | `TODO` | UNKNOWN | — |
+| iCUE installed | yes | ICUE_OBSERVED | W5-EV-001 |
+| iCUE starts normally | yes | TESTED | W5-EV-001 |
+| Installed iCUE version | 5.51.42 | ICUE_OBSERVED | W5-EV-001 |
+| Start with system setting | enabled | ICUE_OBSERVED | W5-EV-001 |
+| XENEON EDGE detected by iCUE | yes | ICUE_OBSERVED | W5-EV-002 |
+| Public-safe device name shown by iCUE | `XENEON EDGE` / update surface `XENON EDGE` | ICUE_OBSERVED | W5-EV-002 |
+
+The installed iCUE version matches the manufacturer release reference recorded at kickoff.
 
 ## 5. XENEON EDGE version / firmware baseline
 
-Preserve the label exactly as iCUE presents it.
+iCUE exposes the XENEON device version on the Software Updates surface as:
+
+```text
+LCD-Touchscreen, v. 5.51.1
+```
 
 | Item | Observation | Class | Evidence |
 |---|---|---|---|
-| Version label shown by iCUE | `TODO` | UNKNOWN | — |
-| Version value | `TODO` | UNKNOWN | — |
-| Firmware/device update offered | `TODO` | UNKNOWN | — |
+| Version label shown by iCUE | `LCD-Touchscreen` | DEVICE_OBSERVED | W5-EV-003 |
+| Version value | 5.51.1 | DEVICE_OBSERVED | W5-EV-003 |
+| Firmware/device update offered | no | DEVICE_OBSERVED | W5-EV-004 |
 
-Do not commit serial numbers, hardware IDs or unique USB paths.
+A preliminary verbal reading of `5.55.1` was explicitly rechecked by the Human Maintainer. The confirmed direct observation used by this baseline is `5.51.1`.
 
 ## 6. Update status
 
@@ -81,72 +87,135 @@ Do not commit serial numbers, hardware IDs or unique USB paths.
 
 | Item | Observation | Class |
 |---|---|---|
-| Update check performed | `TODO` | UNKNOWN |
-| Update available | `TODO` | UNKNOWN |
-| Offered/current version | `TODO` | UNKNOWN |
-| Update applied during WP-005 | `NO — unless separately authorised` | UNKNOWN |
+| Update check performed | yes | TESTED |
+| Update available | no | ICUE_OBSERVED |
+| Installed/current version | 5.51.42 | ICUE_OBSERVED |
+| Automatic download setting | enabled | ICUE_OBSERVED |
+| Update applied during WP-005 | no | TESTED |
 
 ### XENEON EDGE device / firmware
 
 | Item | Observation | Class |
 |---|---|---|
-| Update check performed | `TODO` | UNKNOWN |
-| Update available | `TODO` | UNKNOWN |
-| Offered version | `TODO` | UNKNOWN |
-| Update applied during WP-005 | `NO — Human-Maintainer gate required` | UNKNOWN |
+| Update check performed | yes | TESTED |
+| Update available | no | DEVICE_OBSERVED |
+| Current device version | 5.51.1 | DEVICE_OBSERVED |
+| Update applied during WP-005 | no | TESTED |
+
+The Software Updates surface displayed a `Jetzt neu starten` control. No software or device update offer was reported by the Human Maintainer, the control was not activated, and its presence is not interpreted as evidence of an available XENEON update.
 
 ```text
 CHECK FOR UPDATE != APPLY UPDATE
+UPDATE AVAILABLE != UPDATE AUTHORISED
 ```
 
 ## 7. Observed XENEON EDGE settings in iCUE
 
-Record only what is actually exposed in the installed version.
+Only settings directly visible in the installed version are recorded.
 
 | Setting / surface | Present? | Observed value / note | Class |
 |---|---|---|---|
-| Device/screen settings | `TODO` | `TODO` | UNKNOWN |
-| Automatic rotation | `TODO` | `TODO` | UNKNOWN |
-| Brightness | `TODO` | `TODO` | UNKNOWN |
-| Backlight | `TODO` | `TODO` | UNKNOWN |
-| Contrast | `TODO` | `TODO` | UNKNOWN |
-| Colour controls | `TODO` | `TODO` | UNKNOWN |
-| Device personalisation | `TODO` | `TODO` | UNKNOWN |
-| iCUE widget/screen mode | `TODO` | `TODO` | UNKNOWN |
-| Desktop/monitor mode | `TODO` | `TODO` | UNKNOWN |
-| Display-mode switching control | `TODO` | `TODO` | UNKNOWN |
-| Display-mode switching shortcut | `TODO` | `TODO` | UNKNOWN |
+| Device/screen settings | yes | XENEON-specific device settings surface present | ICUE_OBSERVED |
+| Automatic rotation | yes | enabled | ICUE_OBSERVED |
+| Brightness | yes | slider present; numeric value not exposed | ICUE_OBSERVED |
+| Backlight | yes | separate slider present; numeric value not exposed | ICUE_OBSERVED |
+| Contrast | yes | slider present; numeric value not exposed | ICUE_OBSERVED |
+| Colour controls | yes | RGB controls; observed values R 151 / G 127 / B 139 | ICUE_OBSERVED |
+| Restore default colour settings | yes | control present | ICUE_OBSERVED |
+| Product manual control | yes | control present | ICUE_OBSERVED |
+| Device personalisation | yes | page personalisation surface present | ICUE_OBSERVED |
+| Theme per page | yes | configurable | ICUE_OBSERVED |
+| Device background | yes | configurable | ICUE_OBSERVED |
+| Widget text colour | yes | configurable | ICUE_OBSERVED |
+| Widget accent colour | yes | configurable | ICUE_OBSERVED |
+| Widget background | yes | configurable | ICUE_OBSERVED |
+| Widget transparency | yes | configurable | ICUE_OBSERVED |
+| iCUE widget/screen mode | yes | `iCUE-Widgets` mode present | ICUE_OBSERVED |
+| Desktop/monitor mode | yes | `Desktop` mode present | ICUE_OBSERVED |
+| Display-mode switching control | yes | mode can be switched in Screen Setup | ICUE_OBSERVED |
+| Display-mode switching shortcut | yes | assignable shortcut exposed | ICUE_OBSERVED |
+| Previous display/page shortcut | yes | assignable shortcut exposed | ICUE_OBSERVED |
+| Next display/page shortcut | yes | assignable shortcut exposed | ICUE_OBSERVED |
+| Cursor access blocking | yes | toggle present | ICUE_OBSERVED |
+
+The device-settings surface states that these settings are automatically applied and are not linked to profiles.
 
 ## 8. Widget capability inventory
 
-Do not configure the final Base Control Deck here.
+The installed XENEON integration exposes a dedicated widget editor, multiple pages and page/widget personalisation.
 
 | Capability | Present? | Note | Class |
 |---|---|---|---|
-| Widget creation | `TODO` | `TODO` | UNKNOWN |
-| Multiple widget pages | `TODO` | `TODO` | UNKNOWN |
-| Widget personalisation | `TODO` | `TODO` | UNKNOWN |
-| Sensor/status widgets | `TODO` | `TODO` | UNKNOWN |
-| Touchpad widget | `TODO` | `TODO` | UNKNOWN |
-| Virtual keyboard widget | `TODO` | `TODO` | UNKNOWN |
-| Calendar/clock widgets | `TODO` | `TODO` | UNKNOWN |
-| Custom/uploadable widgets | `TODO` | `TODO` | UNKNOWN |
-| Stream Deck widget | `TODO` | `TODO` | UNKNOWN |
+| Widget creation | yes | add-widget control present | ICUE_OBSERVED |
+| Multiple widget pages | yes | multiple pages plus add-page control visible | ICUE_OBSERVED |
+| Widget personalisation | yes | per-widget personalisation surface present | ICUE_OBSERVED |
+| Sensor/status widgets | yes | sensor diagram, two-sensor and sensor-list surfaces visible | ICUE_OBSERVED |
+| Touchpad / virtual-input widget | present as a truncated virtual-input label | exact full label not expanded from screenshot | ICUE_OBSERVED |
+| Virtual keyboard widget | yes | virtual keyboard label visible in truncated form | ICUE_OBSERVED |
+| Calendar/clock widgets | yes | calendar and clock/chronograph-type widgets visible | ICUE_OBSERVED |
+| Custom/uploadable widgets | yes | `.icuewidget` import supported | ICUE_OBSERVED |
+| Elgato Marketplace path | yes | import dialog links to Elgato Marketplace | ICUE_OBSERVED |
+| Stream Deck widget | yes | visible in widget catalogue | ICUE_OBSERVED |
+| Weather widget | yes | observed and configurable | ICUE_OBSERVED |
+| Web URL widget | yes | visible in widget catalogue | ICUE_OBSERVED |
+| iFrame widget | yes | visible in widget catalogue | ICUE_OBSERVED |
+| Twitch Chat widget | yes | visible in widget catalogue | ICUE_OBSERVED |
+| Application launch widget | yes | visible in widget catalogue | ICUE_OBSERVED |
+| Media widgets | yes | volume/media/image-video categories visible | ICUE_OBSERVED |
+| SimHub widget | yes | visible in widget catalogue | ICUE_OBSERVED |
+| FPS widget | yes | visible in widget catalogue | ICUE_OBSERVED |
 
-If the installed version contains additional relevant first-party XENEON widgets, add them as observed items rather than assuming a fixed catalogue.
+Additional catalogue labels were visible but truncated. This baseline does not expand truncated names without direct confirmation.
+
+### Custom widget import
+
+The installed version exposes a `Widget importieren` dialog that:
+
+- accepts `.icuewidget` files;
+- provides a local file-picker/drop target;
+- links to widget creation guidance;
+- links to Elgato Marketplace;
+- warns that widgets should only be imported from trusted sources.
+
+This establishes a supported custom-widget extension surface without claiming that any third-party widget has been installed or validated.
 
 ## 9. Persistence and operating behaviour
 
+The Human Maintainer performed a practical foreground-window and display-mode test.
+
 | Test | Result | Class |
 |---|---|---|
-| Device settings persist when iCUE main window is closed | `TODO` | UNKNOWN |
-| Desktop/monitor mode can be entered | `TODO` | UNKNOWN |
-| iCUE widget mode can be restored | `TODO` | UNKNOWN |
-| Relevant background iCUE process requirement observed | `TODO` | UNKNOWN |
+| XENEON widgets remain visible after closing the iCUE main window | yes | TESTED |
+| XENEON widgets continue functioning after closing the iCUE main window | yes | TESTED |
+| XENEON touch continues functioning after closing the iCUE main window | yes | TESTED |
+| Desktop/monitor mode can be entered | yes | TESTED |
+| iCUE widget mode can be restored | yes | TESTED |
+| Pages/widgets remain after returning to iCUE widget mode | yes | TESTED |
+| Foreground iCUE window required for widget operation | no | DERIVED |
+| Exact background process/service requirement | not directly inspected | UNKNOWN |
 
-Do not terminate services or alter startup behaviour merely to prove persistence.
+No iCUE service was terminated and no startup behaviour was altered during this test.
 
-## 10. Deferred to later Work Packages
+## 10. Additional iCUE surfaces observed
+
+These are general iCUE capabilities observed during WP-005 and are not promoted into XENEON project functionality merely because they exist.
+
+| Surface | Observation | Class |
+|---|---|---|
+| Dashboard | present with hardware/sensor widgets | ICUE_OBSERVED |
+| Sensor logging | present with selectable motherboard/CPU/GPU sensors | ICUE_OBSERVED |
+| iCUE SDK | enabled | ICUE_OBSERVED |
+| Game SDK | enabled | ICUE_OBSERVED |
+| Third-party plugins | plugin surface visible | ICUE_OBSERVED |
+| Integrations | Philips Hue, Nanoleaf, Govee and NVIDIA Broadcast surfaces visible | ICUE_OBSERVED |
+
+```text
+GENERAL_ICUE_CAPABILITY != XENEON_IMPLEMENTED_CAPABILITY
+SDK_ENABLED != APPLICATION_INTEGRATION_IMPLEMENTED
+PLUGIN_VISIBLE != PLUGIN_INSTALLED
+```
+
+## 11. Deferred to later Work Packages
 
 | Topic | Owner | State |
 |---|---|---|
@@ -158,34 +227,56 @@ Do not terminate services or alter startup behaviour merely to prove persistence
 | Telemetry implementation | XEE-WP-015 | DEFERRED |
 | Final backup/export/recovery workflow | XEE-WP-017 | DEFERRED |
 
-## 11. Evidence index
+## 12. Evidence index
 
 | Evidence ID | Type | Public status | Description |
 |---|---|---|---|
-| W5-EV-001 | Installed iCUE version and startup state | `TODO` | `TODO` |
-| W5-EV-002 | XENEON EDGE detection and public-safe device name | `TODO` | `TODO` |
-| W5-EV-003 | XENEON EDGE firmware/device version | `TODO` | `TODO` |
-| W5-EV-004 | Software/device update status | `TODO` | `TODO` |
-| W5-EV-005 | Device-settings capability inventory | `TODO` | `TODO` |
-| W5-EV-006 | Widget/screen capability inventory | `TODO` | `TODO` |
-| W5-EV-007 | Desktop/Widget mode behaviour | `TODO` | `TODO` |
+| W5-EV-001 | Installed iCUE version and startup state | SANITISED SUMMARY | iCUE starts normally; installed version 5.51.42; start-with-system setting observed enabled. |
+| W5-EV-002 | XENEON EDGE detection and public-safe device name | SANITISED SUMMARY | Real XENEON device detected by iCUE; public-safe XENEON name recorded. |
+| W5-EV-003 | XENEON EDGE device version | SANITISED SUMMARY | iCUE Software Updates surface shows `LCD-Touchscreen, v. 5.51.1`. |
+| W5-EV-004 | Software/device update status | SANITISED SUMMARY | iCUE and XENEON update checks performed; no update reported available; no update applied. |
+| W5-EV-005 | Device-settings capability inventory | SANITISED SUMMARY | Rotation, brightness, backlight, contrast, RGB, page styling and display-mode controls observed. |
+| W5-EV-006 | Widget/screen capability inventory | SANITISED SUMMARY | Multi-page widget editor, sensor/media/web/Stream Deck/custom-widget surfaces and `.icuewidget` import observed. |
+| W5-EV-007 | Desktop/Widget mode behaviour | SANITISED SUMMARY | Widgets and touch continue after foreground window closes; Desktop and iCUE-Widgets modes switch bidirectionally and preserve pages/widgets. |
 
-Allowed public-status values are `PUBLIC`, `SANITISED SUMMARY` or `PRIVATE-ONLY`.
+Raw screenshots supplied during verification remain `PRIVATE-ONLY` because they contain local location, system/hardware and user-path information not required for the public repository.
 
-## 12. Completion checklist
+## 13. Completion checklist
 
-- [ ] installed iCUE version recorded
-- [ ] iCUE startup state recorded
-- [ ] XENEON EDGE detection recorded
-- [ ] public-safe iCUE device name recorded
-- [ ] XENEON EDGE firmware/device version recorded or explicitly unavailable
-- [ ] iCUE update availability checked
-- [ ] XENEON EDGE firmware/device update availability checked
-- [ ] update-authorisation boundary preserved
-- [ ] XENEON-specific device settings inventoried
-- [ ] widget/screen capability surfaces inventoried
-- [ ] Desktop/monitor and iCUE-widget modes recorded where exposed
-- [ ] manufacturer references separated from installed observations
-- [ ] application bindings deferred
-- [ ] Base Control Deck deferred
-- [ ] public repository safety preserved
+- [x] installed iCUE version recorded
+- [x] iCUE startup state recorded
+- [x] XENEON EDGE detection recorded
+- [x] public-safe iCUE device name recorded
+- [x] XENEON EDGE firmware/device version recorded or explicitly unavailable
+- [x] iCUE update availability checked
+- [x] XENEON EDGE firmware/device update availability checked
+- [x] update-authorisation boundary preserved
+- [x] XENEON-specific device settings inventoried
+- [x] widget/screen capability surfaces inventoried
+- [x] Desktop/monitor and iCUE-widget modes recorded where exposed
+- [x] manufacturer references separated from installed observations
+- [x] application bindings deferred
+- [x] Base Control Deck deferred
+- [x] public repository safety preserved
+
+## 14. Current WP-005 assessment
+
+The iCUE and firmware/device baseline is sufficiently documented for Nova review.
+
+```text
+ICUE = 5.51.42
+ICUE STARTUP = NORMAL
+XENEON DETECTED = YES
+XENEON DEVICE VERSION = 5.51.1
+ICUE UPDATE AVAILABLE = NO
+XENEON UPDATE AVAILABLE = NO
+UPDATE APPLIED = NO
+ICUE WIDGET MODE = VERIFIED
+DESKTOP MODE = VERIFIED
+MULTIPLE WIDGET PAGES = PRESENT
+CUSTOM .ICUEWIDGET IMPORT = PRESENT
+STREAM DECK WIDGET = PRESENT
+FOREGROUND ICUE WINDOW REQUIRED = NO
+APPLICATION BINDINGS = DEFERRED
+BASE CONTROL DECK = DEFERRED
+```
