@@ -1,7 +1,7 @@
 # Project Brain — XENEON Edge Control Deck
 
 - **Purpose:** Compact current project context
-- **Status:** Project identity integration baseline
+- **Status:** Hardware-baseline execution
 - **Date:** 2026-09-24
 - **Authority:** Descriptive project memory; does not replace Human-Maintainer decisions
 
@@ -13,7 +13,7 @@ The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
 Current active Work Package:
 
-**XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding**
+**XEE-WP-003 — Hardware Baseline**
 
 ## Project objective
 
@@ -144,11 +144,12 @@ Control:
 
 ## Near-term sequence
 
-1. Integrate XEE-WP-002A branding assets and documentation.
-2. Human Maintainer reviews, commits and pushes if accepted.
-3. Nova reviews the committed GitHub state.
-4. Reconcile XEE-WP-002A to COMPLETE.
-5. Begin real-device baseline with XEE-WP-003.
+1. Reconcile XEE-WP-002A to COMPLETE and activate XEE-WP-003.
+2. Record the real device identity and physical installation without publishing serial numbers or other unnecessary identifiers.
+3. Document actual power, display and touch/data cabling as separate physical paths.
+4. Record physical orientation, mounting and cable topology.
+5. Capture sanitised evidence where useful.
+6. Complete XEE-WP-003 before moving operating-system verification to XEE-WP-004 and iCUE/firmware verification to XEE-WP-005.
 
 ## Completed Work Packages
 
@@ -164,6 +165,15 @@ Control:
 - Nova review: `GO WITH NOTES`
 - Acceptance: CDS consumer boundary, Product Profile, component mapping, pattern mapping and Consumer Extensions established.
 - Notes reconciled by XEE-WP-002A: Project Brain status label and obsolete Product Profile open decision.
+
+### XEE-WP-002A — Project Identity, Logo, Banner & Repository Branding
+
+- Human-Maintainer integration commit: `6f896f8c358cc2073541e274acc49d54cdd7da88`
+- README product/integration follow-up: `fe76e225541b23889b4ef3ebbdd076d5c0e10a1f`
+- Nova review: `GO WITH NOTES`
+- Human-Maintainer visual approval: granted
+- Acceptance: public identity, banner, social-preview source, logo system, brand guide and repository presentation integrated.
+- Remaining note: GitHub Social Preview must be configured in repository settings separately from the committed image file.
 
 ## Lessons learned
 

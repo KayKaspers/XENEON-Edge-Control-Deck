@@ -28,8 +28,8 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 |---|---|---:|---|---|
 | XEE-WP-001 | Project Bootstrap | P0 | COMPLETE | — |
 | XEE-WP-002 | CDS Consumer Integration and XENEON Product Profile | P0 | COMPLETE | XEE-WP-001 |
-| XEE-WP-002A | Project Identity — Logo, Banner & Repository Branding | P1 | ACTIVE | XEE-WP-002 |
-| XEE-WP-003 | Hardware Baseline | P0 | PLANNED | XEE-WP-001 |
+| XEE-WP-002A | Project Identity — Logo, Banner & Repository Branding | P1 | COMPLETE | XEE-WP-002 |
+| XEE-WP-003 | Hardware Baseline | P0 | ACTIVE | XEE-WP-001 |
 | XEE-WP-004 | Windows Display and Touch Baseline | P0 | PLANNED | XEE-WP-003 |
 | XEE-WP-005 | iCUE and Firmware Baseline | P0 | PLANNED | XEE-WP-003 |
 | XEE-WP-006 | Base Control Deck | P0 | PLANNED | XEE-WP-002, XEE-WP-004, XEE-WP-005 |
@@ -49,16 +49,18 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 
 ## Current Work Package
 
-`XEE-WP-002A` is the only active Work Package.
+`XEE-WP-003` is the only active Work Package.
 
 Completed integration commits:
 
 - XEE-WP-001: `89959f95aa179ed1e73094a08392dc671871f27d`
 - XEE-WP-002: `986ef1bc9719143469632c51e0bb25c4ff8a0020`
+- XEE-WP-002A: `6f896f8c358cc2073541e274acc49d54cdd7da88`
+- README branding/integration follow-up: `fe76e225541b23889b4ef3ebbdd076d5c0e10a1f`
 
 The active contract is stored at:
 
-`project-system/work-packages/XEE-WP-002A.md`
+`project-system/work-packages/XEE-WP-003.md`
 
 ## Queue rules
 

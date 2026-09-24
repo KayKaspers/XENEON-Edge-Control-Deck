@@ -73,11 +73,13 @@ READY != RELEASED
 ### M1 — Governed project — ACHIEVED
 Achieved at Human-Maintainer integration commit `89959f95aa179ed1e73094a08392dc671871f27d`.
 
-### M2 — Designed consumer
+### M2 — Designed consumer — ACHIEVED
 
 XEE-WP-002 is complete at Human-Maintainer integration commit `986ef1bc9719143469632c51e0bb25c4ff8a0020`.
 
-XEE-WP-002A has Human-Maintainer visual approval and is active for repository integration. M2 is achieved only after the WP-002A repository state is accepted and integrated.
+XEE-WP-002A branding was integrated at `6f896f8c358cc2073541e274acc49d54cdd7da88` and received Nova review `GO WITH NOTES`. The README product/integration follow-up was integrated at `fe76e225541b23889b4ef3ebbdd076d5c0e10a1f`.
+
+The project now has an explicit CDS consumer model and an integrated public identity.
 
 ### M3 — Verified device baseline
 Exit when hardware, Windows and iCUE behaviour are documented from the real device.
