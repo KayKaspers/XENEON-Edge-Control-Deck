@@ -2,7 +2,8 @@
 
 Version 0.2.0: Template-Derived Base Control Deck, accepted presentation basis.
 Official validation/package and maintainer device checks passed.
-Execution is ready for review; integration/final work-package acceptance remain outstanding.
+WP-006 is COMPLETE. Implementation integrated at b77acfa7863e0d0a03bf6ca50ebe279300a114bc;
+remote equality verified and final Human-Maintainer acceptance granted on 2026-09-25.
 
 ## Presentation contract
 
@@ -76,4 +77,5 @@ Low-light: PASS - maintainer explicitly confirmed v0.2.0 under usual dim lightin
 The measured L slot remains the target. Earlier XL preference is superseded by
 the explicit v0.2.0 brief and accepted L presentation. WP-007 retains ownership
 of final navigation. M4 is not achieved by the base deck alone.
-No commit, push, completed integration or final work-package acceptance is implied.
+The implementation commit is published and WP-006 is accepted. This completion
+record does not authorize WP-007 or imply that M4 is achieved.

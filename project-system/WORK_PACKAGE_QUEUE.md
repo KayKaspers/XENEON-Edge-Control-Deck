@@ -32,7 +32,7 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 | XEE-WP-003 | Hardware Baseline | P0 | COMPLETE | XEE-WP-001 |
 | XEE-WP-004 | Windows Display and Touch Baseline | P0 | COMPLETE | XEE-WP-003 |
 | XEE-WP-005 | iCUE and Firmware Baseline | P0 | COMPLETE | XEE-WP-003 |
-| XEE-WP-006 | Base Control Deck | P0 | REVIEW | XEE-WP-002, XEE-WP-004, XEE-WP-005 |
+| XEE-WP-006 | Base Control Deck | P0 | COMPLETE | XEE-WP-002, XEE-WP-004, XEE-WP-005 |
 | XEE-WP-007 | Navigation and Deck Architecture | P0 | PLANNED | XEE-WP-006 |
 | XEE-WP-008 | Discord Integration | P2 | PLANNED | XEE-WP-007 |
 | XEE-WP-009 | OBS Studio Integration | P1 | PLANNED | XEE-WP-007 |
@@ -49,14 +49,17 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 
 ## Current Work Package
 
-`XEE-WP-006` is in REVIEW; no new Work Package is active.
+`XEE-WP-006` is COMPLETE; no new Work Package is active.
 
 WP-006 v0.2.0: official validation/package and maintainer presentation,
 interaction, edge-touch and iCUE foreground-window continuity checks passed.
 Low-light: PASS - maintainer explicitly confirmed v0.2.0 under usual dim lighting.
-Integration/final acceptance remain outstanding; WP-007 stays PLANNED.
+Implementation integrated and remote-verified at b77acfa7863e0d0a03bf6ca50ebe279300a114bc.
+Human-Maintainer final acceptance was granted on 2026-09-25. WP-007 stays PLANNED.
 
 Completed integration commits:
+
+- XEE-WP-006 implementation/evidence: `b77acfa7863e0d0a03bf6ca50ebe279300a114bc`
 
 - XEE-WP-001: `89959f95aa179ed1e73094a08392dc671871f27d`
 - XEE-WP-002: `986ef1bc9719143469632c51e0bb25c4ff8a0020`
@@ -69,7 +72,7 @@ Completed integration commits:
 - XEE-WP-005 kickoff: `82e8d56ec0530991dee8eeea70daf87723a2b199`
 - XEE-WP-005 evidence: `039e208240f0de99c91779725bb3887d504d6eb1`
 
-The active contract is stored at:
+The completed WP-006 contract is stored at:
 
 `project-system/work-packages/XEE-WP-006.md`
 

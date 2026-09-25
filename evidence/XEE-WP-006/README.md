@@ -2,7 +2,11 @@
 
 ## v0.2.0 - reconciled execution evidence
 
-Presentation basis accepted by the Human Maintainer. Execution ready for REVIEW; integration and final acceptance remain outstanding.
+WP-006 COMPLETE. Presentation and whole-work-package acceptance granted by the
+Human Maintainer. Implementation/evidence commit: b77acfa7863e0d0a03bf6ca50ebe279300a114bc.
+Remote main and local HEAD were verified equal; all reviewed file hashes matched.
+Final acceptance recorded on 2026-09-25. Local review found no blocking issue for
+the accepted physical L target; this was not an independent external review.
 
 | Evidence | Current interpretation |
 |---|---|
