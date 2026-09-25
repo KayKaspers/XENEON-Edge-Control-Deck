@@ -1,8 +1,8 @@
 # Project Brain — XENEON Edge Control Deck
 
 - **Purpose:** Compact current project context
-- **Status:** Base Control Deck implementation
-- **Date:** 2026-09-24
+- **Status:** Navigation and Deck Architecture
+- **Date:** 2026-09-25
 - **Authority:** Descriptive project memory; does not replace Human-Maintainer decisions
 
 ## Project status
@@ -11,9 +11,9 @@ XENEON Edge Control Deck is a newly created public GitHub project.
 
 The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
-Current active Work Package:
+Current Work Package (device-accepted; Git integration pending):
 
-**XEE-WP-006 — Base Control Deck**
+**XEE-WP-007 — Navigation and Deck Architecture — REVIEW**
 
 ## Project objective
 
@@ -137,25 +137,27 @@ Control:
 
 - project license
 - CI / automated public quality checks
-- validated Base Control Deck touch-target dimensions and component composition
+- WP-007 maintainer Git integration after v0.3.1 XL physical acceptance
 - profile/export format and backup strategy
 - automation technology, if any
 - versioning/release policy before v1.0
 
 ## Near-term sequence
 
-1. Reconcile XEE-WP-005 to COMPLETE and mark M3 as ACHIEVED.
-2. Activate XEE-WP-006 as the sole active Work Package.
-3. Use the official CORSAIR custom-widget toolchain as the preferred Base Control Deck implementation path.
-4. Create a project-owned XENEON base widget source with `manifest.json` and `index.html`.
-5. Implement reusable action, stateful, status and selection semantics without application-specific bindings.
-6. Apply the approved project visual baseline and preserve no-colour-only meaning.
-7. Validate the initial 96 px touch-target candidate on the physical XENEON EDGE and adjust if evidence requires.
-8. Validate/package the widget with the official WidgetBuilder CLI and import it into iCUE.
-9. Verify render, touch usability, readability, low-light behaviour and foreground-window persistence on the real device.
-10. Complete XEE-WP-006 before final navigation/deck hierarchy work in XEE-WP-007.
+1. Integrate accepted WP-007 v0.3.1 and its acceptance documentation through the Human Maintainer.
+2. Reconcile COMPLETE and M4 after verified integration.
+3. Preserve accepted v0.2.0 as rollback baseline.
+4. Await explicit authorization before starting a subsequent Work Package.
 
 ## Completed Work Packages
+
+### XEE-WP-006 - Base Control Deck
+
+- Accepted implementation: v0.2.0 at `b77acfa7863e0d0a03bf6ca50ebe279300a114bc`.
+- Completion: `ab71849edfa1209c807969b4668d2f6462c6701d`, accepted 2026-09-25.
+- Physical L 1689x697; full-card controls, readability, low-light and foreground-window continuity accepted.
+- Preserve PHYSICAL READABILITY > PREVIEW DENSITY and TOUCH SURFACE > MICRO CONTROL.
+
 
 ### XEE-WP-001 — Project Bootstrap
 
@@ -222,3 +224,10 @@ This project follows the current canonical specification rather than the stale p
 ## Update rule
 
 Update Project Brain only when material project state changes. Do not duplicate full historical detail that already exists in Git history, completed Work Packages or release notes.
+
+## Latest device acceptance
+
+2026-09-25: maintainer confirmed v0.3.1 XL Home/Back, both pages, edge touches,
+readability, low-light comfort and operation with the iCUE foreground window
+closed. Screenshot shows full-width SC layout. WP-007 remains REVIEW solely
+for pending Git integration; no AI staging, commit or push was performed.

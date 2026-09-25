@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>XEE WP-007 navigation prototype</title>
+<style>
+:root{--layout-unit:1vmin;--pad:calc(var(--layout-unit)*2);--gap:calc(var(--layout-unit)*2);--card-pad:calc(var(--layout-unit)*3.5);--radius:calc(var(--layout-unit)*2.5);--title:calc(var(--layout-unit)*6);--label:calc(var(--layout-unit)*3);--nav-font:calc(var(--layout-unit)*4);--touch:max(96px,calc(var(--layout-unit)*14));--accent:#ffd600;--muted:#b8bdc5;--line:max(1px,calc(var(--layout-unit)*.2));--focus:calc(var(--layout-unit)*.6)}
+*{box-sizing:border-box}html,body{height:100%;margin:0}body{background:#0b0b0b;color:white;font-family:"Segoe UI",sans-serif}main{height:100%;padding:var(--pad);display:grid;grid-template-rows:auto minmax(0,1fr) auto;gap:var(--gap)}button{font:inherit;color:inherit;cursor:pointer;touch-action:manipulation;border:var(--line) solid #555d68;background:#1a1a1a;border-radius:var(--radius);min-width:var(--touch);min-height:var(--touch)}button:active:not(:disabled){background:#2a2f36;border-color:var(--accent)}button:focus-visible{outline:var(--focus) solid var(--accent);outline-offset:calc(var(--focus)*-1)}button:disabled{cursor:default;color:#777;border-color:#333}nav{display:grid;grid-template-columns:auto auto minmax(0,1fr) auto auto;gap:var(--gap);align-items:stretch}nav button{padding:var(--pad);font-weight:700;font-size:var(--nav-font)}.context{min-width:0;align-self:center;padding:0 var(--pad)}h1{font-size:var(--nav-font);margin:0;line-height:1.1;overflow-wrap:anywhere}#page{font-size:var(--label);color:var(--muted);margin-top:var(--pad)}#cards{min-height:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));grid-template-rows:repeat(2,minmax(var(--touch),1fr));gap:var(--gap)}.tile{min-width:0;text-align:left;padding:var(--card-pad);display:flex;flex-direction:column;justify-content:center;gap:var(--pad)}.tile strong{font-size:var(--title);line-height:1.1}.tile span{font-size:var(--label);color:var(--muted)}.tile .open{color:var(--accent);font-weight:700}.placeholder{grid-column:1/-1;grid-row:1/-1;padding:var(--card-pad);border:var(--line) solid #555d68;border-radius:var(--radius);display:flex;flex-direction:column;justify-content:center;gap:var(--pad);background:#1a1a1a}.placeholder strong{font-size:var(--title)}.placeholder p{font-size:var(--nav-font);margin:0}.placeholder .state{color:var(--accent)}footer{font-size:var(--label);color:var(--muted);display:flex;justify-content:space-between;gap:var(--gap)}
+#location:focus{outline:none}
+
+/* WP-007 visual treatment. Lucide icons are original licensed assets. */
+:root {
+  --icon-size: calc(var(--layout-unit) * 19);
+  --icon-nav: calc(var(--layout-unit) * 4);
+  --icon-link: calc(var(--layout-unit) * 3.6);
+  --small: calc(var(--layout-unit) * 2.6);
+  --inset: calc(var(--layout-unit) * 3.5);
+}
+body { background: #0b0b0b; }
+main { background: radial-gradient(ellipse at 75% 0%, #23251e 0%, transparent 45%), #0b0b0b; }
+nav { padding-bottom: var(--gap); border-bottom: var(--line) solid #34382e; }
+nav button { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: calc(var(--gap) * .35); font-size: var(--label); border-radius: calc(var(--radius) * .65); background: linear-gradient(150deg,#252829,#161819); }
+nav button img { width: var(--icon-nav); height: var(--icon-nav); filter: invert(1); }
+nav button:disabled { background: #141617; color: #747a80; border-color: #2c3033; }
+nav button:disabled img { opacity: .35; }
+nav button:not(:disabled):hover { border-color: var(--accent); }
+.context { border-left: calc(var(--line) * 3) solid var(--accent); }
+#page { margin-top: calc(var(--pad) * .5); font-size: var(--small); letter-spacing: .08em; }
+h1 { letter-spacing: .035em; }
+.tile { position: relative; isolation: isolate; overflow: hidden; border-color: #454d55; border-radius: var(--radius); background: linear-gradient(115deg,#25292e 0%,#1a1e22 62%,#111417 100%); gap: calc(var(--pad) * .7); padding: var(--card-pad); box-shadow: inset 0 var(--line) 0 #ffffff12; }
+.tile::before { content: ''; position: absolute; inset: 0 auto 0 0; width: calc(var(--line) * 3); background: var(--accent); opacity: .65; }
+.tile::after { content: ''; z-index: -1; position: absolute; inset: 0; background: radial-gradient(ellipse at 100% 0%,#ffd6000d,transparent 60%); pointer-events: none; }
+.tile:hover { border-color: #8e8761; background: linear-gradient(115deg,#2b3035,#171b1e); }
+.tile:active { border-color: var(--accent); background: #30352d; }
+.tile .tile-icon { position:absolute; pointer-events:none; right:var(--inset); top:50%; transform:translateY(-50%); width:var(--icon-size); height:var(--icon-size); filter:invert(1); opacity:.22; }
+.tile .tile-kicker { color: #c2c7ce; font-size: var(--small); letter-spacing:.13em; font-weight:600; }
+.tile strong { max-width: calc(100% - var(--icon-size) - var(--gap)); font-size:var(--title); line-height:1.06; letter-spacing:.012em; }
+.tile .description { color:#b8bdc5; font-size:var(--small); max-width:calc(100% - var(--icon-size) - var(--gap)); }
+.tile .open { display:flex; align-items:center; gap:var(--pad); margin-top:calc(var(--pad) * .45); font-size:var(--small); letter-spacing:.09em; }
+.tile .open img { width:var(--icon-link); height:var(--icon-link); filter:invert(1); }
+.placeholder { position:relative; overflow:hidden; background:linear-gradient(115deg,#25292e,#141719); border-color:#454d55; }
+.placeholder .placeholder-icon { position:absolute; right:var(--card-pad); width:calc(var(--icon-size)*1.7); height:calc(var(--icon-size)*1.7); filter:invert(1); opacity:.12; pointer-events:none; }
+.placeholder p { max-width:75%; line-height:1.35; }
+footer { font-size:var(--small); }
+@media (prefers-reduced-motion:no-preference) { .tile { transition: background-color 100ms ease, border-color 100ms ease; } }
+
+
+/* Full-width horizontal XL: preserve routes and the two-by-two touch grid. */
+@media (min-aspect-ratio: 3/1) {
+  :root {
+    --title: calc(var(--layout-unit) * 8);
+    --nav-font: calc(var(--layout-unit) * 4.5);
+    --small: calc(var(--layout-unit) * 3);
+    --icon-size: calc(var(--layout-unit) * 22);
+    --card-pad: calc(var(--layout-unit) * 4);
+    --inset: calc(var(--layout-unit) * 4);
+  }
+}
+</style>
+<main>
+ <nav aria-label="Global navigation">
+  <button id="home" type="button"><img src="assets/lucide/house.svg" alt="" aria-hidden="true"><span>HOME</span></button>
+  <button id="back" type="button"><img src="assets/lucide/arrow-left.svg" alt="" aria-hidden="true"><span>BACK</span></button>
+  <div class="context"><h1 id="location" tabindex="-1">HOME</h1><div id="page"></div></div>
+  <button id="prev" type="button" aria-label="Previous page"><img src="assets/lucide/chevron-left.svg" alt="" aria-hidden="true"><span>PREV</span></button>
+  <button id="next" type="button" aria-label="Next page"><img src="assets/lucide/chevron-right.svg" alt="" aria-hidden="true"><span>NEXT</span></button>
+ </nav>
+ <section id="cards" aria-label="Deck destinations"></section>
+ <footer><span id="feedback" role="status" aria-live="polite">Navigation prototype</span><span>LOCAL ONLY / NO APP BINDINGS</span></footer>
+</main>
+<script>
+'use strict';
+const domains=[['sc','STAR CITIZEN'],['obs','OBS STUDIO'],['discord','DISCORD'],['system','SYSTEM']];
+const subdecks=[['sc.flight','FLIGHT'],['sc.combat','COMBAT'],['sc.mining','MINING'],['sc.salvage','SALVAGE'],['sc.cargo','CARGO'],['sc.utility','SHIP UTILITY']];
+const labels=new Map([['home','HOME'],...domains,...subdecks]);
+
+const art={
+ sc:['rocket','Flight, industry & ship operations'],
+ obs:['video','Production & broadcast'],
+ discord:['messages-square','Voice & communication'],
+ system:['cpu','System tools & monitoring'],
+ 'sc.flight':['plane','Flight deck'],
+ 'sc.combat':['swords','Combat deck'],
+ 'sc.mining':['pickaxe','Mining deck'],
+ 'sc.salvage':['recycle','Salvage deck'],
+ 'sc.cargo':['boxes','Cargo & logistics'],
+ 'sc.utility':['settings-2','Ship utility deck']
+};
+function icon(name,cls){const img=document.createElement('img');img.src='assets/lucide/'+name+'.svg';img.alt='';img.setAttribute('aria-hidden','true');img.className=cls;return img;}
+
+let route='home',scPage=1;
+const el=id=>document.getElementById(id);
+function parent(id){return id.startsWith('sc.')?'sc':'home'}
+function render(focusId){
+ el('location').textContent=route.startsWith('sc.')?'STAR CITIZEN / '+labels.get(route):labels.get(route);
+ el('page').textContent=route==='sc'?'PAGE '+scPage+' / 2':route==='home'?'CHOOSE A DECK':'NAVIGATION ONLY';
+ el('home').disabled=route==='home';el('back').disabled=route==='home';
+ el('prev').disabled=route!=='sc'||scPage===1;el('next').disabled=route!=='sc'||scPage===2;
+ el('cards').replaceChildren();
+ const items=route==='home'?domains:route==='sc'?subdecks.slice((scPage-1)*4,scPage*4):[];
+ for(const [id,label] of items){
+  const b=document.createElement('button');b.type='button';b.className='tile';b.dataset.route=id;
+  const kicker=document.createElement('span');kicker.className='tile-kicker';kicker.textContent=route==='home'?'CONTROL DECK':'STAR CITIZEN';
+  const name=document.createElement('strong');name.textContent=label;
+  const hint=document.createElement('span');hint.className='open';hint.textContent='OPEN DECK';
+  const description=document.createElement('span');description.className='description';description.textContent=art[id][1];
+  hint.append(icon('arrow-up-right','link-icon'));
+  b.append(icon(art[id][0],'tile-icon'),kicker,name,description,hint);b.addEventListener('click',()=>navigate(id));el('cards').append(b);
+ }
+ if(!items.length){
+  const panel=document.createElement('div');panel.className='placeholder';
+  const state=document.createElement('strong');state.className='state';state.textContent='NOT CONNECTED';
+  const copy=document.createElement('p');copy.textContent='Navigation destination only. Application controls come later.';
+  panel.append(icon(art[route][0],'placeholder-icon'),state,copy);el('cards').append(panel);
+ }
+ el('feedback').textContent=route==='home'?'Choose a domain.':labels.get(route)+(route==='sc'?' — page '+scPage:' — no application action sent.');
+ const target=focusId&&[...document.querySelectorAll('[data-route]')].find(b=>b.dataset.route===focusId);
+ (target||el('location')).focus({preventScroll:true});
+}
+function navigate(id){route=labels.has(id)?id:'home';if(route==='home')scPage=1;render()}
+el('home').addEventListener('click',()=>navigate('home'));
+el('back').addEventListener('click',()=>{const previous=route;route=parent(route);if(route==='home')scPage=1;render(previous)});
+el('prev').addEventListener('click',()=>{if(route==='sc'&&scPage>1){scPage--;render()}});
+el('next').addEventListener('click',()=>{if(route==='sc'&&scPage<2){scPage++;render()}});
+render();
+</script>
+</html>

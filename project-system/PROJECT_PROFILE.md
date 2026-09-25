@@ -204,10 +204,12 @@ The project mark remains an independent geometric X/edge identity and must not i
 
 ## Current phase
 
-**Base Control Deck / Initial Development**
+**Navigation and Deck Architecture**
 
-Active Work Package: **XEE-WP-006**
+Current Work Package: **XEE-WP-007 - REVIEW; physically accepted, integration pending**
 
 ## Next milestone
 
-Human-Maintainer completion of **XEE-WP-006 — Base Control Deck**, followed by **XEE-WP-007 — Navigation and Deck Architecture**.
+WP-006 is COMPLETE at `ab71849edfa1209c807969b4668d2f6462c6701d`.
+Next: maintainer Git integration of accepted v0.3.1 XL navigation.
+M4 device criteria passed; formal completion awaits integration.

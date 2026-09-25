@@ -1,0 +1,21 @@
+{
+  "author": "XENEON Edge Control Deck",
+  "id": "com.kaykaspers.xee.navigation",
+  "name": "XENEON Edge Navigation Deck",
+  "description": "Local navigation-only candidate for XEE-WP-007. No application bindings.",
+  "version": "0.3.1",
+  "preview_icon": "resources/icon.svg",
+  "min_app_version": "5.47",
+  "min_framework_version": "1.0.0",
+  "os": [
+    {
+      "platform": "windows"
+    }
+  ],
+  "supported_devices": [
+    {
+      "type": "dashboard_lcd"
+    }
+  ],
+  "interactive": true
+}
