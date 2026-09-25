@@ -13,7 +13,7 @@ The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
 Latest completed Work Package:
 
-**XEE-WP-007 — Navigation and Deck Architecture — COMPLETE**
+**XEE-WP-010 — Star Citizen Flight (ATC) — COMPLETE**
 
 ## Project objective
 
@@ -145,7 +145,7 @@ Control:
 ## Near-term sequence
 
 1. Preserve accepted v0.2.0 as rollback baseline.
-2. Establish WP-010 action selection, game bindings and supported transport.
+2. Await explicit maintainer authorization for further scope.
 
 ## Completed Work Packages
 
@@ -239,5 +239,7 @@ Flight v0.4.1 implements one ATC action, standard Left Alt + N, tested in
 Star Citizen 4.10.1. Device and restart checks passed per maintainer.
 Explicitly accepted operating condition: Smart Profiles with game-bound ATC
 and empty default, Stream Deck editor minimized/closed. No unconditional focus
-guard or game telemetry. WP-010 REVIEW; only maintainer Git integration pending.
+guard or game telemetry. WP-010 COMPLETE; maintainer Git integration verified.
 No subsequent WP is authorized. Navigation v0.3.1 remains rollback.
+
+WP-010 integration verified on local and remote main: `c5a97083e91afa03cb3fe6002f69e910ff72695e`.

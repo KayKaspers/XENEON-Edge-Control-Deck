@@ -1,7 +1,7 @@
 # Flight integration - WP-010
 
-Current status: v0.4.1 ATC accepted with Smart Profiles operating condition;
-Git integration pending. Earlier sections record discovery history.
+Current status: v0.4.1 ATC accepted and integrated with Smart Profiles operating
+condition; WP-010 COMPLETE. Earlier sections record discovery history.
 
 The existing native widget implements navigation only. Browser KeyboardEvents
 are not an OS-level input transport. A documented native integration or a reviewed
@@ -64,3 +64,5 @@ now lives in widgets/xee-flight-deck; setup and limitations in its README.
 Final accepted setup: see FOCUS_VERIFICATION.md. Stream Deck editor must be
 minimized/closed. ATC profile bound to StarCitizen.exe; empty default profile.
 Maintainer confirmed restart, no replay, low-light and ATC game operation.
+
+WP-010 integration verified on local and remote main: `c5a97083e91afa03cb3fe6002f69e910ff72695e`.

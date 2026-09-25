@@ -1,6 +1,6 @@
 # XEE-WP-010 - Star Citizen Flight
 
-**STATUS:** REVIEW - maintainer accepted; Git integration pending
+**STATUS:** COMPLETE
 **Authority:** Human Maintainer explicitly selected WP-010 on 2026-09-25.
 **Baseline:** WP-007 COMPLETE at 9f3c9cdd5bcbdd89de05071a687780247aa10482.
 
@@ -62,4 +62,6 @@ original unconditional focus-protection criterion, not evidence that it passed.
 v0.4.1 accepted: connection, one-tap Calculator test, in-game ATC, continued game
 operation, disconnect blocking, restart/mapping retention/no replay, Home/Back,
 low-light and closed iCUE foreground window. Other Flight actions are deferred.
-Git integration remains the sole completion step; AI does not publish.
+Maintainer integration verified. AI did not stage, commit or push.
+
+WP-010 integration verified on local and remote main: `c5a97083e91afa03cb3fe6002f69e910ff72695e`.

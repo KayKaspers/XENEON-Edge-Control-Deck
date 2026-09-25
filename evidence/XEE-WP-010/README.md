@@ -1,7 +1,7 @@
 # WP-010 evidence
 
-Status REVIEW: v0.4.1 single-action ATC accepted by the maintainer with the
-Smart Profiles operating condition; Git integration pending. Baseline:
+Status COMPLETE: v0.4.1 single-action ATC accepted and integrated by the
+maintainer with the Smart Profiles operating condition. Baseline:
 9f3c9cdd5bcbdd89de05071a687780247aa10482.
 Earlier sections below record historical discovery and candidate results.
 
@@ -83,4 +83,6 @@ Maintainer chose option 1 explicitly: accept the tested operating condition
 The original unconditional foreground-protection criterion is replaced with this
 bounded requirement. No separate helper or unconditional focus guard is claimed.
 All reported device tests passed; source/package unchanged by acceptance.
-Review outcome: accepted for maintainer Git integration.
+Review outcome: COMPLETE after verified maintainer Git integration.
+
+WP-010 integration verified on local and remote main: `c5a97083e91afa03cb3fe6002f69e910ff72695e`.

@@ -36,7 +36,7 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 | XEE-WP-007 | Navigation and Deck Architecture | P0 | COMPLETE | XEE-WP-006 |
 | XEE-WP-008 | Discord Integration | P2 | PLANNED | XEE-WP-007 |
 | XEE-WP-009 | OBS Studio Integration | P1 | PLANNED | XEE-WP-007 |
-| XEE-WP-010 | Star Citizen Flight | P0 | REVIEW | XEE-WP-007 |
+| XEE-WP-010 | Star Citizen Flight | P0 | COMPLETE | XEE-WP-007 |
 | XEE-WP-011 | Star Citizen Combat | P1 | PLANNED | XEE-WP-010 |
 | XEE-WP-012 | Star Citizen Mining | P1 | PLANNED | XEE-WP-010 |
 | XEE-WP-013 | Star Citizen Salvage | P1 | PLANNED | XEE-WP-010 |
@@ -49,8 +49,8 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 
 ## Current Work Package
 
-WP-006 and WP-007 are COMPLETE. WP-010 is in REVIEW: v0.4.1 ATC accepted
-with the Smart Profiles operating condition; maintainer Git integration pending.
+WP-006, WP-007 and WP-010 are COMPLETE. v0.4.1 ATC is accepted and integrated
+with the documented Smart Profiles operating condition. No WP is currently active.
 WP-007 completion commit: 9f3c9cdd5bcbdd89de05071a687780247aa10482.
 
 WP-006 v0.2.0: official validation/package and maintainer presentation,
@@ -94,3 +94,5 @@ The completed WP-006 contract is stored at:
 
 Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
 WP-010 was subsequently authorized explicitly; other planned WPs remain inactive.
+
+WP-010 integration verified on local and remote main: `c5a97083e91afa03cb3fe6002f69e910ff72695e`.
