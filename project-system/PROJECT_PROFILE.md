@@ -204,15 +204,16 @@ The project mark remains an independent geometric X/edge identity and must not i
 
 ## Current phase
 
-**Navigation and Deck Architecture**
+**Star Citizen Flight integration**
 
-Current Work Package: **XEE-WP-007 - COMPLETE**
+Current Work Package: **XEE-WP-010 - REVIEW; accepted, Git integration pending**
 
 ## Next milestone
 
 WP-006 is COMPLETE at `ab71849edfa1209c807969b4668d2f6462c6701d`.
 WP-007 integration verified; M4 base deck and navigation criteria satisfied.
-Next: Human Maintainer selects and authorizes a subsequent Work Package.
+Next: maintainer Git integration of accepted v0.4.1 ATC. Smart Profiles requires
+the Stream Deck editor minimized/closed; no unconditional focus guard.
 
 Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
-No subsequent Work Package is authorized by this completion.
+WP-010 subsequently authorized explicitly on 2026-09-25.

@@ -1,7 +1,7 @@
 # Project Brain — XENEON Edge Control Deck
 
 - **Purpose:** Compact current project context
-- **Status:** Navigation and Deck Architecture
+- **Status:** Star Citizen Flight integration
 - **Date:** 2026-09-25
 - **Authority:** Descriptive project memory; does not replace Human-Maintainer decisions
 
@@ -145,7 +145,7 @@ Control:
 ## Near-term sequence
 
 1. Preserve accepted v0.2.0 as rollback baseline.
-2. Await explicit authorization before starting a subsequent Work Package.
+2. Establish WP-010 action selection, game bindings and supported transport.
 
 ## Completed Work Packages
 
@@ -231,4 +231,13 @@ closed. Screenshot shows full-width SC layout. WP-007 is COMPLETE following veri
 No AI staging, commit or push was performed.
 
 Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
-No subsequent Work Package is authorized by this completion.
+WP-010 was subsequently explicitly authorized; discovery active.
+
+## WP-010 acceptance
+
+Flight v0.4.1 implements one ATC action, standard Left Alt + N, tested in
+Star Citizen 4.10.1. Device and restart checks passed per maintainer.
+Explicitly accepted operating condition: Smart Profiles with game-bound ATC
+and empty default, Stream Deck editor minimized/closed. No unconditional focus
+guard or game telemetry. WP-010 REVIEW; only maintainer Git integration pending.
+No subsequent WP is authorized. Navigation v0.3.1 remains rollback.

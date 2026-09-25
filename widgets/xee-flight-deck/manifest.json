@@ -1,0 +1,24 @@
+{
+  "author": "XENEON Edge Control Deck",
+  "id": "com.kaykaspers.xee.flight",
+  "name": "XENEON Edge Flight Deck",
+  "description": "WP-010 ATC transport test candidate. Stream Deck slot 0; game state unconfirmed.",
+  "version": "0.4.1",
+  "preview_icon": "resources/icon.svg",
+  "min_app_version": "5.47",
+  "min_framework_version": "1.0.0",
+  "os": [
+    {
+      "platform": "windows"
+    }
+  ],
+  "supported_devices": [
+    {
+      "type": "dashboard_lcd"
+    }
+  ],
+  "interactive": true,
+  "required_plugins": [
+    "widgetbuilder.streamdeck:StreamDeck:1.0"
+  ]
+}

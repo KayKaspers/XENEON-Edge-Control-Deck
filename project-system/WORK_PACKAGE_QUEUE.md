@@ -36,7 +36,7 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 | XEE-WP-007 | Navigation and Deck Architecture | P0 | COMPLETE | XEE-WP-006 |
 | XEE-WP-008 | Discord Integration | P2 | PLANNED | XEE-WP-007 |
 | XEE-WP-009 | OBS Studio Integration | P1 | PLANNED | XEE-WP-007 |
-| XEE-WP-010 | Star Citizen Flight | P0 | PLANNED | XEE-WP-007 |
+| XEE-WP-010 | Star Citizen Flight | P0 | REVIEW | XEE-WP-007 |
 | XEE-WP-011 | Star Citizen Combat | P1 | PLANNED | XEE-WP-010 |
 | XEE-WP-012 | Star Citizen Mining | P1 | PLANNED | XEE-WP-010 |
 | XEE-WP-013 | Star Citizen Salvage | P1 | PLANNED | XEE-WP-010 |
@@ -49,8 +49,9 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 
 ## Current Work Package
 
-`XEE-WP-006` is COMPLETE. `XEE-WP-007` is the sole active Work Package,
-authorized by the Human Maintainer on 2026-09-25.
+WP-006 and WP-007 are COMPLETE. WP-010 is in REVIEW: v0.4.1 ATC accepted
+with the Smart Profiles operating condition; maintainer Git integration pending.
+WP-007 completion commit: 9f3c9cdd5bcbdd89de05071a687780247aa10482.
 
 WP-006 v0.2.0: official validation/package and maintainer presentation,
 interaction, edge-touch and iCUE foreground-window continuity checks passed.
@@ -92,4 +93,4 @@ The completed WP-006 contract is stored at:
 - Branding is governed by the approved XEE-WP-002A baseline and must not imply official CORSAIR affiliation.
 
 Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
-No subsequent Work Package is authorized by this completion.
+WP-010 was subsequently authorized explicitly; other planned WPs remain inactive.
