@@ -32,7 +32,7 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 | XEE-WP-003 | Hardware Baseline | P0 | COMPLETE | XEE-WP-001 |
 | XEE-WP-004 | Windows Display and Touch Baseline | P0 | COMPLETE | XEE-WP-003 |
 | XEE-WP-005 | iCUE and Firmware Baseline | P0 | COMPLETE | XEE-WP-003 |
-| XEE-WP-006 | Base Control Deck | P0 | ACTIVE | XEE-WP-002, XEE-WP-004, XEE-WP-005 |
+| XEE-WP-006 | Base Control Deck | P0 | REVIEW | XEE-WP-002, XEE-WP-004, XEE-WP-005 |
 | XEE-WP-007 | Navigation and Deck Architecture | P0 | PLANNED | XEE-WP-006 |
 | XEE-WP-008 | Discord Integration | P2 | PLANNED | XEE-WP-007 |
 | XEE-WP-009 | OBS Studio Integration | P1 | PLANNED | XEE-WP-007 |
@@ -49,7 +49,12 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 
 ## Current Work Package
 
-`XEE-WP-006` is the only active Work Package.
+`XEE-WP-006` is in REVIEW; no new Work Package is active.
+
+WP-006 v0.2.0: official validation/package and maintainer presentation,
+interaction, edge-touch and iCUE foreground-window continuity checks passed.
+Low-light: PASS - maintainer explicitly confirmed v0.2.0 under usual dim lighting.
+Integration/final acceptance remain outstanding; WP-007 stays PLANNED.
 
 Completed integration commits:
 

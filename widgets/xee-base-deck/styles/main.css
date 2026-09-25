@@ -1,0 +1,129 @@
+:root {
+  --dark: #0B0B0B;
+  --surface: #1A1A1A;
+  --slate: #2A2F36;
+  --white: #FFFFFF;
+  --accent: #FFD600;
+  --muted: #B8BDC5;
+  --border: #555D68;
+
+  /* One stage baseline. Physical L 1689x697 is authoritative.
+     The floor protects compact labels; there is no preview calibration. */
+  --layout-unit: max(4px, 1vmin);
+  --space-stage: calc(var(--layout-unit) * 2);
+  --space-gap: calc(var(--layout-unit) * 2);
+  --space-card: calc(var(--layout-unit) * 3.5);
+  --space-detail: calc(var(--layout-unit) * 0.8);
+  --font-header: calc(var(--layout-unit) * 4);
+  --font-label: calc(var(--layout-unit) * 3);
+  --font-control: calc(var(--layout-unit) * 5.5);
+  --font-state: calc(var(--layout-unit) * 9.5);
+  --font-secondary: calc(var(--layout-unit) * 2.8);
+  --radius-card: calc(var(--layout-unit) * 2.5);
+  --line-border: max(1px, calc(var(--layout-unit) * 0.2));
+  --line-focus: calc(var(--layout-unit) * 0.6);
+  --touch-min: max(96px, calc(var(--layout-unit) * 14));
+}
+
+* { box-sizing: border-box; }
+html, body { width: 100%; height: 100%; margin: 0; }
+body {
+  background: var(--dark);
+  color: var(--white);
+  font-family: "Segoe UI", system-ui, sans-serif;
+  user-select: none;
+  -webkit-user-select: none;
+}
+#deck {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  gap: var(--space-gap);
+  padding: var(--space-stage);
+  background: var(--dark);
+}
+.topbar, .footerbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--space-gap);
+  min-width: 0;
+}
+h1 {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: var(--font-header);
+  line-height: 1.2;
+  font-weight: 700;
+}
+.runtime-badge { color: var(--accent); font-size: var(--font-label); font-weight: 800; }
+.workspace {
+  min-width: 0;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  grid-template-rows: repeat(2, minmax(var(--touch-min), 1fr));
+  gap: var(--space-gap);
+}
+.control-card {
+  appearance: none;
+  min-width: var(--touch-min);
+  min-height: var(--touch-min);
+  margin: 0;
+  padding: var(--space-card);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--space-detail);
+  border: var(--line-border) solid var(--border);
+  border-radius: var(--radius-card);
+  background: var(--surface);
+  color: var(--white);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+.control-kicker, .control-hint {
+  color: var(--muted);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: 0.08em;
+}
+.control-kicker { font-size: var(--font-label); }
+.control-title { font-size: var(--font-control); font-weight: 600; line-height: 1.15; }
+.control-value {
+  max-width: 100%;
+  font-size: var(--font-state);
+  font-weight: 800;
+  line-height: 1.05;
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+.control-hint { font-size: var(--font-secondary); }
+.control-card:active { background: var(--slate); border-color: var(--accent); }
+.control-card:focus-visible { outline: var(--line-focus) solid var(--accent); outline-offset: calc(var(--line-focus) * -1); }
+#toggle-control[aria-pressed="true"], .state-ready { border-color: var(--accent); }
+#toggle-control[aria-pressed="true"] .control-value, .state-ready .control-value,
+#selection-value { color: var(--accent); }
+.state-attention { border-style: dashed; }
+.state-attention .control-value::before { content: "! "; }
+.state-unknown .control-value { color: var(--muted); }
+.footerbar { color: var(--muted); font-size: var(--font-secondary); line-height: 1.2; }
+#feedback-message { min-width: 0; }
+.boundary { flex-shrink: 0; }
+
+/* Compact landscape: remove secondary content before compressing controls.
+   Macro-grid and touch floor stay intact. Physical L uses the full layout. */
+@media (max-height: 400px) and (min-aspect-ratio: 3/2) {
+  .control-title, .control-hint, .boundary { display: none; }
+}
+@media (max-aspect-ratio: 3/2) {
+  .boundary { display: none; }
+}

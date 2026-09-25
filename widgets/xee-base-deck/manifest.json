@@ -1,0 +1,13 @@
+{
+  "author": "XENEON Edge Control Deck",
+  "id": "com.kaykaspers.xee.basedeck",
+  "name": "XENEON Edge Base Deck",
+  "description": "Local-first base interaction surface for the XENEON Edge Control Deck project.",
+  "version": "0.2.0",
+  "preview_icon": "resources/icon.svg",
+  "min_app_version": "5.47",
+  "min_framework_version": "1.0.0",
+  "os": [{"platform": "windows"}],
+  "supported_devices": [{"type": "dashboard_lcd"}],
+  "interactive": true
+}

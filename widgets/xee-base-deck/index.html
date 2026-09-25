@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>tr('XENEON Edge Base Deck')</title>
+  <link rel="icon" href="resources/icon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles/main.css" />
+  <meta name="x-icue-property" content="deckTitle" data-label="tr('Deck Title')" data-type="textfield" data-default="'BASE CONTROL DECK'" />
+  <meta name="x-icue-property" content="accentColor" data-label="tr('Accent Color')" data-type="color" data-default="'#FFD600'" />
+  <meta name="x-icue-property" content="backgroundColor" data-label="tr('Background')" data-type="color" data-default="'#0B0B0B'" />
+
+  <script id="x-icue-groups" type="application/json">
+  [
+    {"title":"tr('XENEON Edge Base Deck')","properties":["deckTitle"]},
+    {"title":"tr('Widget Personalization')","properties":["accentColor","backgroundColor"]}
+  ]
+  </script>
+</head>
+<body>
+  <main id="deck" aria-label="XENEON Edge Base Control Deck">
+    <header class="topbar">
+      <h1 id="deck-title">BASE CONTROL DECK</h1>
+      <span class="runtime-badge">LOCAL</span>
+    </header>
+    <section class="workspace" aria-label="Local demo controls">
+      <button id="action-control" class="control-card" type="button">
+        <span class="control-kicker">ACTION</span>
+        <span class="control-title">Local action</span>
+        <span id="action-state" class="control-value">NOT SENT</span>
+        <span class="control-hint">TAP TO SEND</span>
+      </button>
+      <button id="toggle-control" class="control-card" type="button" aria-pressed="false">
+        <span class="control-kicker">TOGGLE</span>
+        <span class="control-title">Local toggle</span>
+        <span id="toggle-state" class="control-value">OFF</span>
+        <span class="control-hint">TAP TO TOGGLE</span>
+      </button>
+      <button id="status-control" class="control-card state-unknown" type="button">
+        <span class="control-kicker">STATUS</span>
+        <span class="control-title">Demo status</span>
+        <span id="status-label" class="control-value">UNKNOWN</span>
+        <span class="control-hint">TAP TO CYCLE</span>
+      </button>
+      <button id="selection-control" class="control-card" type="button">
+        <span class="control-kicker">SELECTION</span>
+        <span class="control-title">Local mode</span>
+        <span id="selection-value" class="control-value">A</span>
+        <span class="control-hint">TAP TO CYCLE</span>
+      </button>
+    </section>
+    <footer class="footerbar">
+      <span id="feedback-message" role="status" aria-live="polite" aria-atomic="true">Ready.</span>
+      <span class="boundary">LOCAL ONLY / NO APP BINDINGS</span>
+    </footer>
+  </main>
+
+  <script src="scripts/main.js"></script>
+  <script>
+    window.icueEvents = {
+      onICUEInitialized: function(payload) { applySettings(payload && payload.settings); },
+      onDataUpdated: function(payload) { applySettings(payload && payload.settings); }
+    };
+
+    if (typeof window.iCUE_initialized !== "undefined" && window.iCUE_initialized) {
+      applySettings();
+    }
+  </script>
+</body>
+</html>

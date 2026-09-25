@@ -1,7 +1,7 @@
 # XEE-WP-006 — Base Control Deck
 
 **SESSION:** SAME_SESSION_RECOMMENDED
-**STATUS:** ACTIVE
+**STATUS:** REVIEW
 **Prompt profile:** Standard (B2)
 **Type:** implementation / interaction / CDS consumer
 **Date:** 2026-09-24
@@ -76,13 +76,15 @@ The exact source files are created during execution, not during kickoff.
 
 Preferred first-device target:
 
-**XENEON EDGE horizontal Extra Large widget surface**
+**XENEON EDGE horizontal Large widget surface (measured 1689x697)**
 
 Manufacturer reference documents horizontal XENEON widget sizes up to approximately `2536 × 696`.
 
 This is a manufacturer/runtime reference, not yet a project usability conclusion.
 
-The actual rendered size must be verified on the real device.
+The original XL preference was superseded by the explicit v0.2.0 L-target brief.
+The L layout viewport was measured at 1689x697; the maintainer accepted the
+v0.2.0 presentation. The 2536x696 figure above remains an XL reference only.
 
 ## 5. Base-deck composition
 
@@ -307,32 +309,32 @@ BASE_SURFACE != FINAL_NAVIGATION_ARCHITECTURE
 
 ## 15. Acceptance criteria
 
-- [ ] XEE-WP-005 is reconciled to `COMPLETE`.
-- [ ] M3 — Verified device baseline is reconciled to `ACHIEVED`.
-- [ ] XEE-WP-006 is the sole active Work Package.
-- [ ] official custom-widget development references are recorded.
-- [ ] WidgetBuilder CLI availability/toolchain is recorded.
-- [ ] project-owned base-widget source is created.
-- [ ] `manifest.json` and `index.html` exist.
-- [ ] base widget has no mandatory external runtime/network dependency.
-- [ ] base composition reflects the XENEON Product Profile.
-- [ ] action-control semantics are implemented.
-- [ ] stateful/toggle semantics are implemented.
-- [ ] status semantics including unknown/unverified are implemented.
-- [ ] selection semantics are implemented.
-- [ ] no colour-only critical meaning is used.
-- [ ] candidate touch-target sizing is practically tested and validated or adjusted.
-- [ ] widget passes official validation.
-- [ ] `.icuewidget` package is created.
-- [ ] widget imports successfully into iCUE.
-- [ ] widget renders successfully on the physical XENEON EDGE.
-- [ ] touch interaction is practically verified.
-- [ ] readability is practically verified.
-- [ ] low-light behaviour is observed.
-- [ ] foreground iCUE window is not required for the tested base surface.
-- [ ] no application-specific binding is implemented.
-- [ ] final navigation hierarchy is deferred to XEE-WP-007.
-- [ ] public-repository safety remains intact.
+- [x] XEE-WP-005 is reconciled to `COMPLETE`.
+- [x] M3 — Verified device baseline is reconciled to `ACHIEVED`.
+- [x] XEE-WP-006 is the sole active Work Package.
+- [x] official custom-widget development references are recorded.
+- [x] WidgetBuilder CLI availability/toolchain is recorded.
+- [x] project-owned base-widget source is created.
+- [x] `manifest.json` and `index.html` exist.
+- [x] base widget has no mandatory external runtime/network dependency.
+- [x] base composition reflects the XENEON Product Profile.
+- [x] action-control semantics are implemented.
+- [x] stateful/toggle semantics are implemented.
+- [x] status semantics including unknown/unverified are implemented.
+- [x] selection semantics are implemented.
+- [x] no colour-only critical meaning is used.
+- [x] candidate touch-target sizing is practically tested and validated or adjusted.
+- [x] widget passes official validation.
+- [x] `.icuewidget` package is created.
+- [x] widget imports successfully into iCUE.
+- [x] widget renders successfully on the physical XENEON EDGE.
+- [x] touch interaction is practically verified.
+- [x] readability is practically verified.
+- [x] low-light behaviour is observed.
+- [x] foreground iCUE window is not required for the tested base surface.
+- [x] no application-specific binding is implemented.
+- [x] final navigation hierarchy is deferred to XEE-WP-007.
+- [x] public-repository safety remains intact.
 
 ## 16. STOP conditions
 
@@ -370,3 +372,23 @@ Expected kickoff commit:
 `feat(deck): start CDS-based XENEON base control deck`
 
 The implementation/evidence commit is defined after the first real base widget has been built and tested.
+
+## 18. v0.2.0 execution reconciliation
+
+Evidence authority: evidence/XEE-WP-006/README.md. The official CLI 0.4.47 log
+establishes validation/package PASS. Maintainer feedback accepts presentation,
+four interactions, edge taps, and foreground-window continuity.
+Low-light: PASS - maintainer explicitly confirmed v0.2.0 under usual dim lighting.
+
+The sole-active-WP checklist item describes execution before review transition;
+WP-007 remains PLANNED. WP-005 COMPLETE and M3 ACHIEVED were checked against
+their repository records. The accepted composition is a flat 2x2 macro-grid,
+superseding the illustrative kickoff zones without adding navigation or bindings.
+The implementation uses the project palette with a readability-oriented muted
+text adjustment, not a formal CDS conformance assertion.
+
+Public-safety review covers the widget source and sanitised evidence: no remote
+runtime, credentials, local account paths or raw screenshots were added.
+Historical negative evidence and limits of physical observations remain recorded.
+Status REVIEW means execution evidence is ready for evaluation; it does not mean COMPLETE.
+No staging, commit, push, tag or release is performed by this reconciliation.
