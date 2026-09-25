@@ -1,7 +1,6 @@
 # Evidence - XEE-WP-007
 
-Status REVIEW. Native v0.3.1 XL device acceptance granted on 2026-09-25.
-Maintainer Git integration remains pending.
+Status COMPLETE. Native v0.3.1 XL accepted and integrated on 2026-09-25.
 
 | ID | Evidence | Status |
 |---|---|---|
@@ -72,4 +71,7 @@ In direct response to the grouped device-test question, maintainer answered
 comfortable in dim lighting, usable with the iCUE foreground window closed.
 These results apply to the delivered v0.3.1 package with the hash above.
 Raw screenshot remains private; no new asset or package bytes were changed.
-Review outcome: accepted for integration; COMPLETE requires maintainer integration.
+Review outcome: COMPLETE following verified maintainer integration.
+
+Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
+No subsequent Work Package is authorized by this completion.

@@ -206,10 +206,13 @@ The project mark remains an independent geometric X/edge identity and must not i
 
 **Navigation and Deck Architecture**
 
-Current Work Package: **XEE-WP-007 - REVIEW; physically accepted, integration pending**
+Current Work Package: **XEE-WP-007 - COMPLETE**
 
 ## Next milestone
 
 WP-006 is COMPLETE at `ab71849edfa1209c807969b4668d2f6462c6701d`.
-Next: maintainer Git integration of accepted v0.3.1 XL navigation.
-M4 device criteria passed; formal completion awaits integration.
+WP-007 integration verified; M4 base deck and navigation criteria satisfied.
+Next: Human Maintainer selects and authorizes a subsequent Work Package.
+
+Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
+No subsequent Work Package is authorized by this completion.

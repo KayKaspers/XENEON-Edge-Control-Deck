@@ -107,4 +107,7 @@ tokens from the same layout unit. The 2x2 grid and route/page semantics stay
 unchanged; L retains its previous styling. No manifest size override is invented.
 Reference: https://github.com/Corsair-Labs/icue-widget-builder/blob/main/skills/icue-widget-builder/SKILL.md
 Physical XL readability, touch reach, navigation, dim-room and foreground-window
-continuity accepted by the maintainer on 2026-09-25. Git integration pending.
+continuity accepted by the maintainer on 2026-09-25. Git integration verified.
+
+Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
+No subsequent Work Package is authorized by this completion.

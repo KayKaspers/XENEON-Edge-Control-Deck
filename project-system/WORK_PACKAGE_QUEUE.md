@@ -33,7 +33,7 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 | XEE-WP-004 | Windows Display and Touch Baseline | P0 | COMPLETE | XEE-WP-003 |
 | XEE-WP-005 | iCUE and Firmware Baseline | P0 | COMPLETE | XEE-WP-003 |
 | XEE-WP-006 | Base Control Deck | P0 | COMPLETE | XEE-WP-002, XEE-WP-004, XEE-WP-005 |
-| XEE-WP-007 | Navigation and Deck Architecture | P0 | REVIEW | XEE-WP-006 |
+| XEE-WP-007 | Navigation and Deck Architecture | P0 | COMPLETE | XEE-WP-006 |
 | XEE-WP-008 | Discord Integration | P2 | PLANNED | XEE-WP-007 |
 | XEE-WP-009 | OBS Studio Integration | P1 | PLANNED | XEE-WP-007 |
 | XEE-WP-010 | Star Citizen Flight | P0 | PLANNED | XEE-WP-007 |
@@ -73,7 +73,7 @@ Completed integration commits:
 - XEE-WP-005 kickoff: `82e8d56ec0530991dee8eeea70daf87723a2b199`
 - XEE-WP-005 evidence: `039e208240f0de99c91779725bb3887d504d6eb1`
 
-The accepted, integration-pending WP-007 contract is stored at:
+The completed WP-007 contract is stored at:
 
 `project-system/work-packages/XEE-WP-007.md`
 
@@ -90,3 +90,6 @@ The completed WP-006 contract is stored at:
 - AI roles do not stage, commit, push, tag or release.
 - Public-repository safety applies to every Work Package.
 - Branding is governed by the approved XEE-WP-002A baseline and must not imply official CORSAIR affiliation.
+
+Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
+No subsequent Work Package is authorized by this completion.

@@ -1,6 +1,6 @@
 # XEE-WP-007 - Navigation and Deck Architecture
 
-**STATUS:** REVIEW (device acceptance granted; Git integration pending)
+**STATUS:** COMPLETE
 **Date:** 2026-09-25
 **Authority:** Human Maintainer explicitly started WP-007 in the current task.
 **Baseline:** WP-006 COMPLETE at ab71849edfa1209c807969b4668d2f6462c6701d.
@@ -43,7 +43,7 @@ Do not modify CDS authority files or claim formal conformance.
 Do not stage, commit, push, tag or release. Physical import/testing belongs to the
 Human Maintainer. Browser prototype success is not physical acceptance.
 M4 device criteria are satisfied by WP-006 and the confirmed WP-007 XL test;
-formal completion remains pending maintainer Git integration.
+integration is verified and M4 base deck/navigation criteria are satisfied.
 WP-008 and later are not started by this work package.
 
 ## Maintainer acceptance - 2026-09-25
@@ -53,4 +53,7 @@ without apparent clipping. Maintainer explicitly answered "ja" to Home/Back,
 both pages, edge touches, readability, dim-room comfort and continued operation
 with the iCUE foreground window closed. This is maintainer-reported physical
 evidence, separate from automated browser checks. No background-process claims.
-Implementation and acceptance documentation await maintainer Git integration.
+Implementation and acceptance documentation were integrated by the maintainer.
+
+Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
+No subsequent Work Package is authorized by this completion.

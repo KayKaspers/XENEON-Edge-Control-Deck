@@ -11,9 +11,9 @@ XENEON Edge Control Deck is a newly created public GitHub project.
 
 The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
-Current Work Package (device-accepted; Git integration pending):
+Latest completed Work Package:
 
-**XEE-WP-007 — Navigation and Deck Architecture — REVIEW**
+**XEE-WP-007 — Navigation and Deck Architecture — COMPLETE**
 
 ## Project objective
 
@@ -144,10 +144,8 @@ Control:
 
 ## Near-term sequence
 
-1. Integrate accepted WP-007 v0.3.1 and its acceptance documentation through the Human Maintainer.
-2. Reconcile COMPLETE and M4 after verified integration.
-3. Preserve accepted v0.2.0 as rollback baseline.
-4. Await explicit authorization before starting a subsequent Work Package.
+1. Preserve accepted v0.2.0 as rollback baseline.
+2. Await explicit authorization before starting a subsequent Work Package.
 
 ## Completed Work Packages
 
@@ -229,5 +227,8 @@ Update Project Brain only when material project state changes. Do not duplicate 
 
 2026-09-25: maintainer confirmed v0.3.1 XL Home/Back, both pages, edge touches,
 readability, low-light comfort and operation with the iCUE foreground window
-closed. Screenshot shows full-width SC layout. WP-007 remains REVIEW solely
-for pending Git integration; no AI staging, commit or push was performed.
+closed. Screenshot shows full-width SC layout. WP-007 is COMPLETE following verified maintainer integration.
+No AI staging, commit or push was performed.
+
+Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
+No subsequent Work Package is authorized by this completion.
