@@ -11,7 +11,7 @@
 <p align="center">
   <a href="https://github.com/KayKaspers/Nova-Development-Framework"><img src="https://img.shields.io/badge/governance-NDF%20v1.1.0-2563EB?style=flat-square&labelColor=0B1220" alt="Governance: Nova Development Framework v1.1.0"></a>
   <a href="https://github.com/KayKaspers/Core-Design-System"><img src="https://img.shields.io/badge/design-Core%20Design%20System-2563EB?style=flat-square&labelColor=0B1220" alt="Design: Core Design System"></a>
-  <img src="https://img.shields.io/badge/status-initial%20development-FFD600?style=flat-square&labelColor=0B0B0B" alt="Project status: Initial Development">
+  <img src="https://img.shields.io/badge/status-v0.8.0%20candidate-FFD600?style=flat-square&labelColor=0B0B0B" alt="Project status: v0.8.0 candidate">
   <img src="https://img.shields.io/badge/repository-public-2563EB?style=flat-square&labelColor=0B1220" alt="Repository: Public">
 </p>
 
@@ -26,7 +26,7 @@
 
 ## Contents / Inhalt
 
-- **Start:** [What is XENEON Edge Control Deck?](#what-is-xeneon-edge-control-deck--was-ist-xeneon-edge-control-deck) · [Quick Start](#quick-start--schnellstart) · [Project Goals](#project-goals--projektziele)
+- **Start:** [What is XENEON Edge Control Deck?](#what-is-xeneon-edge-control-deck--was-ist-xeneon-edge-control-deck) · [Quick Start](#quick-start--schnellstart) · [Current Candidate](#current-candidate--aktueller-kandidat) · [Project Goals](#project-goals--projektziele)
 - **Architecture / Architektur:** [Project Model](#project-model--projektmodell) · [NDF & CDS](#ndf--cds) · [CDS Consumer Model](#cds-consumer-model)
 - **Integrations / Integrationen:** [Target Integrations](#target-integrations--zielintegrationen) · [Star Citizen](#star-citizen) · [OBS Studio](#obs-studio) · [Discord](#discord) · [System & Telemetry](#system--telemetry)
 - **Development / Entwicklung:** [Governed Workflow](#governed-workflow--gesteuerter-arbeitsablauf) · [Roles & Authority](#roles--authority--rollen--autorität) · [Work Packages](#work-packages)
@@ -92,7 +92,7 @@ The XENEON Edge Control Deck is intended to control or surface functions from se
         <img src="https://robertsspaceindustries.com/media/dtnzqn8gr0646r/slideshow_pager/CS_42_STAR_CITIZEN_FINAL_01A-1.png" width="72" alt="Star Citizen logo"><br>
         <strong>Star Citizen</strong>
       </a>
-      <br><sub>Flight · Combat · Mining · Salvage · Cargo</sub>
+      <br><sub>Flight · Combat · Mining · Salvage · Cargo · Utility</sub>
     </td>
     <td align="center" width="25%">
       <a href="https://obsproject.com/">
@@ -145,9 +145,16 @@ Hardware specifications are tracked against the manufacturer reference listed in
 
 ## Quick Start / Schnellstart
 
-**DE:** Das Projekt wird schrittweise aufgebaut. Nicht alle geplanten Funktionen existieren bereits.
+**DE:** Das Projekt wird schrittweise aufgebaut. Der aktuelle Kandidat ist der
+Star-Citizen-Set-Batch **v0.8.0**. Die Quellen, Browser-Checks und die
+Einrichtungshilfe sind vorbereitet; die native 8x8-Matrix, die tatsächlichen
+Spielbelegungen und die abschließende Lesbarkeitsprüfung am XENEON bleiben ein
+gemeinsamer physischer Test.
 
-**EN:** The project is built incrementally. Not all planned functionality exists yet.
+**EN:** The project is built incrementally. The current candidate is the
+**v0.8.0 Star Citizen set batch**. Sources, browser checks and the preparation
+plan are ready; native 8x8 capacity, in-game bindings and final XENEON
+readability remain a joint physical test.
 
 | Path / Pfad | Goal / Ziel | Start here / Einstieg |
 |---|---|---|
@@ -158,6 +165,35 @@ Hardware specifications are tracked against the manufacturer reference listed in
 | **E** | Aktuelle Arbeitspakete / Current Work Packages | `project-system/WORK_PACKAGE_QUEUE.md` |
 | **F** | Externe Referenzen / External references | `project-system/REFERENCES.md` |
 | **G** | Aktuellen Projektkontext verstehen / Understand current project context | `project-brain/PROJECT_BRAIN.md` |
+| **H** | Star-Citizen-Kandidat einrichten / Prepare the Star Citizen candidate | `docs/flight/SETUP_PREPARATION.md` |
+| **I** | Set- und Slotumfang prüfen / Inspect sets and slots | `docs/flight/STAR_CITIZEN_SETS.md` · `docs/flight/STREAM_DECK_SLOTS.csv` |
+
+## Current Candidate / Aktueller Kandidat
+
+The repository currently contains the source for **Star Citizen Deck v0.8.0**.
+It is a review candidate, not a formal project release. The package is built
+around the existing 0.7.1 cockpit presentation and adds six independent sets:
+Flight, Combat, Mining, Salvage, Cargo and Ship Utility. Each set has four
+pages; every page uses four large full-surface controls. The candidate defines
+24 pages and 54 named control slots in a requested 8 × 8 virtual Stream Deck
+matrix. Slots 18/19 and 56–63 remain reserved or empty.
+
+The Flight set keeps its accepted slot meanings. An explicit Flight → Combat
+request sends direct `SET SCM`; an explicit return from Combat, Mining,
+Salvage, Cargo or Utility sends direct `SET NAV`. Ordinary page navigation
+sends no game-mode command. These are input requests, not proof of the
+resulting game state.
+
+The 0.7.1 cockpit design is retained as the visual baseline. The acceptance
+order is **PHYSICAL READABILITY > PREVIEW DENSITY** and **TOUCH SURFACE >
+MICRO CONTROL**. GameGlass was used as a reference for set organization and
+keybind coverage only; the repository contains no GameGlass software, profile,
+logo or artwork.
+
+The current candidate has no live Star Citizen telemetry bridge. It reports a
+submitted action as a request and does not claim live NAV/SCM, gear, shield,
+mining or salvage state. See [Star Citizen telemetry notes](docs/flight/TELEMETRY_OPTIONS.md)
+and the [joint setup plan](docs/flight/SETUP_PREPARATION.md).
 
 ## Project Goals / Projektziele
 
@@ -214,7 +250,8 @@ The project is currently **not** intended to:
               ├── Combat
               ├── Mining
               ├── Salvage
-              └── Industrial / Cargo
+              ├── Cargo
+              └── Ship Utility
 ```
 
 ## NDF & CDS
@@ -305,20 +342,23 @@ A Star Citizen control, OBS action or Discord action therefore does not become p
 
 ## Star Citizen
 
-Star Citizen is expected to become the largest application-specific area of the project.
+Star Citizen is the first application-specific area with a complete review
+candidate. The v0.8.0 source keeps the accepted Flight deck and adds Combat,
+Mining, Salvage, Cargo and Ship Utility as separate sets. Cargo remains
+separate from Mining, and the fleet-specific notes cover the maintainer's
+Golem, Prospector, MOLE, Salvation, Vulture, MOTH, Ironclad, Hull A and Hull B.
 
-```text
-STAR CITIZEN
-│
-├── FLIGHT
-├── COMBAT
-├── MINING
-├── SALVAGE
-├── INDUSTRIAL / CARGO
-└── SYSTEM / UTILITY
-```
+The deck uses one permanent numeric slot map. It does not switch profiles or
+reuse a physical position for a different command when a page changes. The
+source, slot CSV and ship notes are maintained in
+[`docs/flight/`](docs/flight/).
 
-Concrete bindings are defined only after hardware, Windows, iCUE and base interaction layers are validated.
+The current boundary is deliberate: iCUE submits native virtual Stream Deck
+key events, while the game bindings remain a separate preparation and test
+step. The widget cannot prove that Star Citizen received a key, that the
+current workplace supports it, or that a requested action changed state.
+Preparation can therefore be completed without starting the game, followed by
+one joint binding and physical-readability session.
 
 ## OBS Studio
 
@@ -353,7 +393,8 @@ Credentials, private server information and tokens must never be embedded in pub
 
 ## System & Telemetry
 
-Potential information surfaces include:
+The project separates operating-system telemetry from application control.
+Potential local information surfaces include:
 
 - CPU metrics
 - GPU metrics
@@ -364,7 +405,16 @@ Potential information surfaces include:
 - application state
 - time and system information
 
-Telemetry is treated separately from control actions so that display-only functionality does not automatically gain control authority.
+Telemetry is treated separately from control actions so that display-only
+functionality does not automatically gain control authority.
+
+For Star Citizen, no documented public cockpit-state interface was found for
+reliably reading live NAV/SCM, gear, shields, mining power or salvage state.
+The v0.8.0 candidate therefore shows submitted actions as requests and does
+not present remembered button presses as telemetry. A future WP-015 may inspect
+selected local log events or evaluate HUD observation, but neither is an
+implemented state bridge. See
+[`docs/flight/TELEMETRY_OPTIONS.md`](docs/flight/TELEMETRY_OPTIONS.md).
 
 ## Governed Workflow / Gesteuerter Arbeitsablauf
 
@@ -419,15 +469,15 @@ Work is divided into small NDF-style Work Packages.
 | **XEE-WP-003** | Hardware Baseline | COMPLETE |
 | **XEE-WP-004** | Windows Display and Touch Baseline | COMPLETE |
 | **XEE-WP-005** | iCUE and Firmware Baseline | COMPLETE |
-| **XEE-WP-006** | Base Control Deck | ACTIVE |
-| **XEE-WP-007** | Navigation and Deck Architecture | PLANNED |
+| **XEE-WP-006** | Base Control Deck | COMPLETE |
+| **XEE-WP-007** | Navigation and Deck Architecture | COMPLETE |
 | **XEE-WP-008** | Discord Integration | PLANNED |
 | **XEE-WP-009** | OBS Studio Integration | PLANNED |
-| **XEE-WP-010** | Star Citizen Flight | PLANNED |
-| **XEE-WP-011** | Star Citizen Combat | PLANNED |
-| **XEE-WP-012** | Star Citizen Mining | PLANNED |
-| **XEE-WP-013** | Star Citizen Salvage | PLANNED |
-| **XEE-WP-014** | Star Citizen Industrial / Cargo | PLANNED |
+| **XEE-WP-010** | Star Citizen Flight | COMPLETE |
+| **XEE-WP-011** | Star Citizen set batch / mode boundary | ACTIVE |
+| **XEE-WP-012** | Star Citizen Mining (0.8.0 slice) | REVIEW |
+| **XEE-WP-013** | Star Citizen Salvage (0.8.0 slice) | REVIEW |
+| **XEE-WP-014** | Star Citizen Cargo (0.8.0 slice) | REVIEW |
 | **XEE-WP-015** | Telemetry and System Status | PLANNED |
 | **XEE-WP-016** | CDS Visual and UX Review | PLANNED |
 | **XEE-WP-017** | Backup, Export and Recovery | PLANNED |
@@ -483,15 +533,16 @@ A technical limitation must not silently redefine the design model. It is docume
 
 | Item / Punkt | Status |
 |---|---|
-| Project state | **Base Interaction Architecture / Initial Development** |
+| Project state | **Star Citizen set batch v0.8.0 / review candidate** |
 | Repository | **Public** |
 | Development governance | **Nova Development Framework (NDF) v1.1.0 baseline** |
 | Design / UX foundation | **Core Design System (CDS)** |
 | CDS usage model | **Target-state assumption** |
 | Hardware | **CORSAIR XENEON EDGE available for implementation** |
-| Current Work Package | **XEE-WP-006 — Base Control Deck** |
+| Current Work Package | **XEE-WP-011 — Star Citizen set batch / mode boundary** |
 | Branding | **Human-Maintainer approved and integrated** |
-| Release | **No project release yet** |
+| Candidate validation | **Source, browser checks and package validation passed; physical/game acceptance pending** |
+| Release | **No formal project release; v0.8.0 is a review candidate** |
 | Formal CDS conformance | **Not claimed** |
 | License | **Open decision** |
 
@@ -522,6 +573,13 @@ A technical limitation must not silently redefine the design model. It is docume
 | inspect WP-005 evidence rules / Evidence-Regeln prüfen | `evidence/XEE-WP-005/README.md` |
 | inspect Base Control Deck | `docs/control-deck/BASE_CONTROL_DECK.md` |
 | inspect WP-006 evidence rules | `evidence/XEE-WP-006/README.md` |
+| inspect navigation architecture / Navigationsarchitektur prüfen | `docs/navigation/NAVIGATION_ARCHITECTURE.md` |
+| prepare the Star Citizen candidate / Star-Citizen-Kandidat vorbereiten | `docs/flight/SETUP_PREPARATION.md` |
+| inspect Star Citizen sets / Star-Citizen-Sets prüfen | `docs/flight/STAR_CITIZEN_SETS.md` |
+| inspect candidate bindings / Kandidatenbelegungen prüfen | `docs/flight/CONTROL_BINDINGS.json` · `docs/flight/STREAM_DECK_SLOTS.csv` |
+| inspect telemetry limits / Telemetriegrenzen prüfen | `docs/flight/TELEMETRY_OPTIONS.md` |
+| inspect WP-010 evidence rules | `evidence/XEE-WP-010/README.md` |
+| inspect the current set-batch evidence | `evidence/XEE-WP-011/README.md` |
 | check public-repository safety / Public-Safety prüfen | `SECURITY.md` |
 
 ## Repository Structure / Repository-Struktur
@@ -550,19 +608,53 @@ XENEON-Edge-Control-Deck/
 │   ├── PATTERN_MAPPING.md
 │   └── CONSUMER_EXTENSIONS.md
 ├── docs/
+│   ├── control-deck/
+│   │   └── BASE_CONTROL_DECK.md
 │   ├── hardware/
 │   │   └── HARDWARE_BASELINE.md
 │   ├── windows/
 │   │   └── WINDOWS_DISPLAY_TOUCH_BASELINE.md
-│   └── icue/
-│       └── ICUE_FIRMWARE_BASELINE.md
+│   ├── icue/
+│   │   └── ICUE_FIRMWARE_BASELINE.md
+│   ├── navigation/
+│   │   └── NAVIGATION_ARCHITECTURE.md
+│   └── flight/
+│       ├── STAR_CITIZEN_SETS.md
+│       ├── CONTROL_BINDINGS.json
+│       ├── SETUP_PREPARATION.md
+│       ├── STREAM_DECK_SLOTS.csv
+│       └── TELEMETRY_OPTIONS.md
 ├── evidence/
 │   ├── XEE-WP-003/
 │   │   └── README.md
 │   ├── XEE-WP-004/
 │   │   └── README.md
-│   └── XEE-WP-005/
+│   ├── XEE-WP-005/
+│   │   └── README.md
+│   ├── XEE-WP-006/
+│   │   └── README.md
+│   ├── XEE-WP-007/
+│   │   └── README.md
+│   ├── XEE-WP-010/
+│   │   └── README.md
+│   └── XEE-WP-011/
 │       └── README.md
+├── tests/
+│   └── wp010/
+│       ├── all-sets.cjs
+│       ├── flight-actions.cjs
+│       ├── mode-switch.cjs
+│       ├── setup-plan.cjs
+│       └── transport.cjs
+├── tools/
+│   └── build-setup-plan.cjs
+├── widgets/
+│   └── xee-flight-deck/
+│       ├── manifest.json
+│       ├── index.html
+│       ├── scripts/
+│       ├── styles/
+│       └── assets/
 ├── project-system/
 │   ├── PROJECT_MANIFEST.md
 │   ├── PROJECT_PROFILE.md
@@ -574,12 +666,21 @@ XENEON-Edge-Control-Deck/
 │       ├── XEE-WP-002A.md
 │       ├── XEE-WP-003.md
 │       ├── XEE-WP-004.md
-│       └── XEE-WP-005.md
+│       ├── XEE-WP-005.md
+│       ├── XEE-WP-006.md
+│       ├── XEE-WP-007.md
+│       ├── XEE-WP-010.md
+│       ├── XEE-WP-011.md
+│       ├── XEE-WP-012.md
+│       ├── XEE-WP-013.md
+│       └── XEE-WP-014.md
 └── project-brain/
     └── PROJECT_BRAIN.md
 ```
 
-Future structures such as `docs/`, `profiles/` and `evidence/` are introduced only by the Work Packages that own them. Empty directories are not created merely to make the repository look complete.
+Documentation and evidence areas are introduced by the Work Packages that own
+them. Generated delivery folders and empty directories are not required for
+the governed source tree.
 
 ## Language / Sprache
 
