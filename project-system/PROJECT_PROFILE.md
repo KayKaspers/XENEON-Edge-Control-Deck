@@ -204,16 +204,19 @@ The project mark remains an independent geometric X/edge identity and must not i
 
 ## Current phase
 
-**Star Citizen Flight integration**
+**Star Citizen six-set candidate / joint acceptance preparation**
 
-Latest completed Work Package: **XEE-WP-010 - COMPLETE**
+Current Work Package: **XEE-WP-011 - ACTIVE**
 
 ## Next milestone
 
 WP-006 is COMPLETE at `ab71849edfa1209c807969b4668d2f6462c6701d`.
 WP-007 integration verified; M4 base deck and navigation criteria satisfied.
-Next: maintainer selects and authorizes further scope. Smart Profiles requires
-the Stream Deck editor minimized/closed; no unconditional focus guard.
+Next: prepare all 0.8.0 assignments across Flight, Combat, Mining, Salvage,
+Cargo and Ship Utility. Verify native 8x8 capacity/migration, then the applicable
+functions and direct SCM/NAV requests in one joint game session. Smart
+Profiles requires the Stream Deck editor minimized/closed; no unconditional
+focus guard or game telemetry is claimed.
 
 Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
 WP-010 subsequently authorized explicitly on 2026-09-25.

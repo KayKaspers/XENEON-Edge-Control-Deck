@@ -1,7 +1,7 @@
 # Project Brain — XENEON Edge Control Deck
 
 - **Purpose:** Compact current project context
-- **Status:** Star Citizen Flight integration
+- **Status:** Star Citizen six-set candidate / joint acceptance preparation
 - **Date:** 2026-09-25
 - **Authority:** Descriptive project memory; does not replace Human-Maintainer decisions
 
@@ -11,9 +11,9 @@ XENEON Edge Control Deck is a newly created public GitHub project.
 
 The physical CORSAIR XENEON EDGE is available for hands-on implementation.
 
-Latest completed Work Package:
+Current active Work Package:
 
-**XEE-WP-010 — Star Citizen Flight (ATC) — COMPLETE**
+**XEE-WP-011 — Star Citizen set batch / mode boundary (ACTIVE, primary)**
 
 ## Project objective
 
@@ -137,7 +137,6 @@ Control:
 
 - project license
 - CI / automated public quality checks
-- WP-007 maintainer Git integration after v0.3.1 XL physical acceptance
 - profile/export format and backup strategy
 - automation technology, if any
 - versioning/release policy before v1.0
@@ -145,7 +144,10 @@ Control:
 ## Near-term sequence
 
 1. Preserve accepted v0.2.0 as rollback baseline.
-2. Await explicit maintainer authorization for further scope.
+2. Candidate 0.8.0 adds Combat, Mining, Salvage, Cargo and Ship Utility using
+   the retained 0.7.1 cockpit design. Six sets / 24 pages; permanent slots
+   0-17 and 20-55, 8x8 virtual device. Native capacity/migration are pending.
+3. Complete all bindings together and perform one joint game/device test.
 
 ## Completed Work Packages
 
@@ -239,7 +241,17 @@ Flight v0.4.1 implements one ATC action, standard Left Alt + N, tested in
 Star Citizen 4.10.1. Device and restart checks passed per maintainer.
 Explicitly accepted operating condition: Smart Profiles with game-bound ATC
 and empty default, Stream Deck editor minimized/closed. No unconditional focus
-guard or game telemetry. WP-010 COMPLETE; maintainer Git integration verified.
-No subsequent WP is authorized. Navigation v0.3.1 remains rollback.
+guard or game telemetry. WP-010 COMPLETE; WP-011 is primary for the authorized
+six-set 0.8.0 candidate. WP-012/013/014 are its slices awaiting batch review and
+physical acceptance. Slot 1 is SET SCM and 17 SET NAV; old B toggle retired.
+The virtual grid now requests 8x8. New bindings remain unconfirmed in 4.10.1.
+Navigation v0.3.1 remains rollback. GameGlass is a workflow reference, not a
+runtime dependency; no GameGlass profile is installed automatically.
 
 WP-010 integration verified on local and remote main: `c5a97083e91afa03cb3fe6002f69e910ff72695e`.
+
+Maintainer fleet: Golem / Prospector / MOLE; Salvation / Vulture / MOTH;
+Ironclad / HULL A / HULL B. Fleet and workplace notes are in
+`docs/flight/STAR_CITIZEN_SETS.md`. The telemetry inquiry found no documented
+public cockpit-state API; `TELEMETRY_OPTIONS.md` records the limited alternatives.
+No telemetry integration is implemented or inferred from local input history.

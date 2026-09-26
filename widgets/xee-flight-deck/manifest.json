@@ -1,9 +1,9 @@
 {
   "author": "XENEON Edge Control Deck",
   "id": "com.kaykaspers.xee.flight",
-  "name": "XENEON Edge Flight Deck",
-  "description": "WP-010 ATC transport test candidate. Stream Deck slot 0; game state unconfirmed.",
-  "version": "0.4.1",
+  "name": "XENEON Edge Star Citizen Deck",
+  "description": "Flight, Combat, Mining, Salvage, Cargo and Ship Utility controls through Stream Deck. No game telemetry.",
+  "version": "0.8.0",
   "preview_icon": "resources/icon.svg",
   "min_app_version": "5.47",
   "min_framework_version": "1.0.0",

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>tr('XENEON Edge Flight Deck')</title>
+  <title>tr('XENEON Edge Star Citizen Deck')</title>
   <link rel="icon" href="resources/icon.svg" type="image/svg+xml" />
   <link rel="stylesheet" href="styles/main.css" />
 </head>
@@ -15,14 +15,17 @@
   <div class="context"><h1 id="location" tabindex="-1">HOME</h1><div id="page"></div></div>
   <button id="prev" type="button" aria-label="Previous page"><img src="assets/lucide/chevron-left.svg" alt="" aria-hidden="true"><span>PREV</span></button>
   <button id="next" type="button" aria-label="Next page"><img src="assets/lucide/chevron-right.svg" alt="" aria-hidden="true"><span>NEXT</span></button>
+  <button id="flight-mode" type="button" hidden="hidden"><strong>COMBAT</strong><span>SCM anfordern</span></button>
+  <button id="flight-arm" type="button" hidden="hidden"><strong>VERBINDEN</strong><span>Stream Deck</span></button>
  </nav>
  <section id="cards" aria-label="Deck destinations"></section>
- <footer><span id="feedback" role="status" aria-live="polite">Navigation prototype</span><span>FLIGHT TEST / NO GAME TELEMETRY</span></footer>
+ <footer><span id="feedback" role="status" aria-live="polite">Navigation prototype</span><span id="flight-feedback" role="status" aria-live="polite" hidden="hidden"><strong id="flight-state"></strong><span id="flight-detail"></span></span><span>KEINE SPIELTELEMETRIE</span></footer>
 </main>
+  <script src="scripts/catalog.js"></script>
   <script src="scripts/flight.js"></script>
   <script src="scripts/main.js"></script>
   <script>
-    // No subscriptions or app bindings. Host callbacks must not reset navigation.
+    // Transport initialization is owned by the Stream Deck callback.
     window.icueEvents = {
       onICUEInitialized: function() {},
       onDataUpdated: function() {}

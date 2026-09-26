@@ -20,13 +20,18 @@ function icon(name,cls){const img=document.createElement('img');img.src='assets/
 let route='home',scPage=1;
 const el=id=>document.getElementById(id);
 function parent(id){return id.startsWith('sc.')?'sc':'home'}
-function render(focusId){
- Flight.leave();
+function render(focusId,keepArmed=false){
+ Flight.leave(keepArmed);
+ const isFlight=Object.prototype.hasOwnProperty.call(FlightCatalog.sets,route);
+ for(const id of ['prev','next','feedback'])el(id).hidden=isFlight;
+ for(const id of ['flight-mode','flight-arm','flight-feedback'])el(id).hidden=!isFlight;
+ el('cards').setAttribute('aria-label',isFlight?labels.get(route)+'-Steuerung':'Deck destinations');
  el('location').textContent=route.startsWith('sc.')?'STAR CITIZEN / '+labels.get(route):labels.get(route);
  el('page').textContent=route==='sc'?'PAGE '+scPage+' / 2':route==='home'?'CHOOSE A DECK':'NAVIGATION ONLY';
  el('home').disabled=route==='home';el('back').disabled=route==='home';
  el('prev').disabled=route!=='sc'||scPage===1;el('next').disabled=route!=='sc'||scPage===2;
  el('cards').replaceChildren();
+ el('cards').classList.toggle('flight-layout',isFlight);
  const items=route==='home'?domains:route==='sc'?subdecks.slice((scPage-1)*4,scPage*4):[];
  for(const [id,label] of items){
   const b=document.createElement('button');b.type='button';b.className='tile';b.dataset.route=id;
@@ -37,19 +42,19 @@ function render(focusId){
   hint.append(icon('arrow-up-right','link-icon'));
   b.append(icon(art[id][0],'tile-icon'),kicker,name,description,hint);b.addEventListener('click',()=>navigate(id));el('cards').append(b);
  }
- if(route==='sc.flight'){
- Flight.mount(el('cards'));el('page').textContent='ATC / STREAM DECK TEST';
+ if(isFlight){
+ Flight.mount(el('cards'),route,target=>navigate(target,true));
  }else if(!items.length){
   const panel=document.createElement('div');panel.className='placeholder';
   const state=document.createElement('strong');state.className='state';state.textContent='NOT CONNECTED';
   const copy=document.createElement('p');copy.textContent='Navigation destination only. Application controls come later.';
   panel.append(icon(art[route][0],'placeholder-icon'),state,copy);el('cards').append(panel);
  }
- el('feedback').textContent=route==='sc.flight'?'ATC / Stream Deck slot 0 / Spielstatus unbestaetigt':route==='home'?'Choose a domain.':labels.get(route)+(route==='sc'?' — page '+scPage:' — no application action sent.');
+ el('feedback').textContent=route==='home'?'Choose a domain.':labels.get(route)+(route==='sc'?' — page '+scPage:' — no application action sent.');
  const target=focusId&&[...document.querySelectorAll('[data-route]')].find(b=>b.dataset.route===focusId);
  (target||el('location')).focus({preventScroll:true});
 }
-function navigate(id){route=labels.has(id)?id:'home';if(route==='home')scPage=1;render()}
+function navigate(id,keepArmed=false){route=labels.has(id)?id:'home';if(route==='home')scPage=1;render(undefined,keepArmed)}
 el('home').addEventListener('click',()=>navigate('home'));
 el('back').addEventListener('click',()=>{const previous=route;route=parent(route);if(route==='home')scPage=1;render(previous)});
 el('prev').addEventListener('click',()=>{if(route==='sc'&&scPage>1){scPage--;render()}});

@@ -37,10 +37,10 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 | XEE-WP-008 | Discord Integration | P2 | PLANNED | XEE-WP-007 |
 | XEE-WP-009 | OBS Studio Integration | P1 | PLANNED | XEE-WP-007 |
 | XEE-WP-010 | Star Citizen Flight | P0 | COMPLETE | XEE-WP-007 |
-| XEE-WP-011 | Star Citizen Combat | P1 | PLANNED | XEE-WP-010 |
-| XEE-WP-012 | Star Citizen Mining | P1 | PLANNED | XEE-WP-010 |
-| XEE-WP-013 | Star Citizen Salvage | P1 | PLANNED | XEE-WP-010 |
-| XEE-WP-014 | Star Citizen Industrial / Cargo | P2 | PLANNED | XEE-WP-010 |
+| XEE-WP-011 | Star Citizen set batch / mode boundary | P1 | ACTIVE | XEE-WP-010 |
+| XEE-WP-012 | Star Citizen Mining (0.8.0 slice) | P1 | REVIEW | XEE-WP-010, XEE-WP-011 |
+| XEE-WP-013 | Star Citizen Salvage (0.8.0 slice) | P1 | REVIEW | XEE-WP-010, XEE-WP-011 |
+| XEE-WP-014 | Star Citizen Cargo (0.8.0 slice) | P2 | REVIEW | XEE-WP-010, XEE-WP-011 |
 | XEE-WP-015 | Telemetry and System Status | P2 | PLANNED | XEE-WP-007 |
 | XEE-WP-016 | CDS Visual and UX Review | P1 | PLANNED | XEE-WP-008..015 as applicable |
 | XEE-WP-017 | Backup, Export and Recovery | P0 | PLANNED | XEE-WP-005, implemented profiles |
@@ -50,7 +50,10 @@ NOVA_REVIEW != HUMAN_ACCEPTANCE
 ## Current Work Package
 
 WP-006, WP-007 and WP-010 are COMPLETE. v0.4.1 ATC is accepted and integrated
-with the documented Smart Profiles operating condition. No WP is currently active.
+with the documented Smart Profiles operating condition. WP-011 remains the
+sole primary ACTIVE package for the authorized six-set 0.8.0 batch and direct
+SCM/NAV requests. Mining/Salvage/Cargo slices await review and the joint game
+test. Native 8x8 capacity, mapping migration and new bindings remain pending.
 WP-007 completion commit: 9f3c9cdd5bcbdd89de05071a687780247aa10482.
 
 WP-006 v0.2.0: official validation/package and maintainer presentation,
@@ -93,6 +96,9 @@ The completed WP-006 contract is stored at:
 - Branding is governed by the approved XEE-WP-002A baseline and must not imply official CORSAIR affiliation.
 
 Integration verified: `3eb0b44dcfa3e4f3044bb092d03d670d4889f28e` on local main and GitHub main.
-WP-010 was subsequently authorized explicitly; other planned WPs remain inactive.
+WP-010 was subsequently authorized explicitly; WP-011 is the sole primary active
+Work Package. The maintainer explicitly authorized the other Star Citizen sets;
+WP-012/013/014 now record slices of the same candidate awaiting joint acceptance.
+WP-015 stays PLANNED; the telemetry question prompted research only.
 
 WP-010 integration verified on local and remote main: `c5a97083e91afa03cb3fe6002f69e910ff72695e`.

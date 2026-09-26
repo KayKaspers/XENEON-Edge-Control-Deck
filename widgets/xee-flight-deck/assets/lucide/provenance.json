@@ -4,6 +4,22 @@
   "license": "ISC; upstream LICENSE also includes applicable Feather MIT notices",
   "modifications": "none; original SVG geometry and files",
   "entries": [
+{"file":"arrow-left-right.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/arrow-left-right.svg","sha256":"2d64da427cbb3f14e522658459903829575b09ec15162c1a69ea6ad341a4359a"},
+    {"file":"chevrons-left.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/chevrons-left.svg","sha256":"ec966bce841337a305fc7fbc0dab04c650dc9fb7f313d78645ea33378bef06e7"},
+    {"file":"chevrons-right.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/chevrons-right.svg","sha256":"3491f9fe180bf75a058d480f32a0d26ff6a97c6c9a70315c77df7c6b75329d91"},
+    {"file":"crosshair.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/crosshair.svg","sha256":"ae9ed8583286ea03bffae85bb69aee5227540e588b0370cf185f2141ebe25e8d"},
+    {"file":"hand.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/hand.svg","sha256":"fe3771fa2f0a9a3c7736164c9a855beefacc02548084ac1d6fc8da8a8a9180b0"},
+    {"file":"layers.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/layers.svg","sha256":"ce16d0a955e3581cda17f6b2fd5c5bc2034b405f9cecc31c8ebb8495b4afc1bb"},
+    {"file":"magnet.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/magnet.svg","sha256":"0e3b38700bd57da6fc5bd4df9f7c96a2bf51785da0600a1da4e6eb4b1dd3b4df"},
+    {"file":"minus.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/minus.svg","sha256":"a0c743ab6dbf545d8a6e19ef3874f48ede686ce68d25e231bd81f540d97b1f19"},
+    {"file":"move-horizontal.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/move-horizontal.svg","sha256":"46f99abb37f82f822d0cb13eebc35e63ffc55a4c35bbd48a8538eb45763abcf9"},
+    {"file":"plus.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/plus.svg","sha256":"7f6af73bf1ff6c4bca3f18351c8d1bdec6749c0c2530c4de5da85d520c21df17"},
+    {"file":"rotate-ccw.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/rotate-ccw.svg","sha256":"622685386ab4017eabfde01cd74550a20b1924df233b353f73b6b155371f2afd"},
+    {"file":"rotate-cw.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/rotate-cw.svg","sha256":"ddcfe6d87240475946935e77411cd4d15a06f3d28a9b921bafed224ebe953668"},
+    {"file":"shield-off.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/shield-off.svg","sha256":"142aeb6dd57bb8f94d993224946a8deafa375f5e2d511c427984a850bf188145"},
+    {"file":"shield.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/shield.svg","sha256":"be32f6a86df7cbe43a83c439dd8849e5bcf5145e484d23420c20d8b98a78e82b"},
+    {"file":"target.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/target.svg","sha256":"96a6b16628825a1a207a77e9a5818f74c3e74ea3664783ff5c2a44e6347b90df"},
+    {"file":"zap.svg","url":"https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/zap.svg","sha256":"4c395891eab4d1e5627c5d414a16db037317cb2f12453de0f3a1130964c6d444"},
     {
       "file": "rocket.svg",
       "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/rocket.svg",
@@ -83,6 +99,81 @@
       "file": "recycle.svg",
       "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/recycle.svg",
       "sha256": "21ce80a29ae558e16406dfb9143cf7b107c2d76b0174624328ff0e7abeaed7e2"
+    },
+    {
+      "file": "arrow-up-from-line.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/arrow-up-from-line.svg",
+      "sha256": "4b8f99c4836217108bedc4122c4375abcd8ddb45d0453fbf44775df26656c5c8"
+    },
+    {
+      "file": "circle-power.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/circle-power.svg",
+      "sha256": "1cb3cbe7a3e6e01db8e46ffc88dbf6f892daa88b85964b19af72d8ef493b8d90"
+    },
+    {
+      "file": "door-open.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/door-open.svg",
+      "sha256": "1bddb273d0893f65778e2a58aa1af66c8129d8d7634a3552d95be66191ea7526"
+    },
+    {
+      "file": "focus.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/focus.svg",
+      "sha256": "d52fde05ccbd7bf629e05daeb8eadf824c85333aeca78e674db01493bc8b1f10"
+    },
+    {
+      "file": "gauge.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/gauge.svg",
+      "sha256": "d7710543a5085c5a61d0bbac1da8b89ef28e541b38ed739357991dff33d475b5"
+    },
+    {
+      "file": "lightbulb.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/lightbulb.svg",
+      "sha256": "e33bbec15b1e64cca958e086850f951c0dc2201cd5778bb3695fda3cb6ea457d"
+    },
+    {
+      "file": "link-2.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/link-2.svg",
+      "sha256": "5a17fc2afb01f2889deee2c90c95e37b8eb942f5ffd625b028c87995b46e87ab"
+    },
+    {
+      "file": "lock-keyhole.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/lock-keyhole.svg",
+      "sha256": "fc0b8b7590d1d9e9bb0112c5c2e15a78ade0bfeca6d6f8c79fbbe149236d74be"
+    },
+    {
+      "file": "map.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/map.svg",
+      "sha256": "41300a8ef2c2a4cf36ec3f8a730bcb4754543889eb23b98e7435de7a0757752d"
+    },
+    {
+      "file": "orbit.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/orbit.svg",
+      "sha256": "e2b8b7d7f82044181860cbc2dab9b7e8d3c4778fbbce9a62f5c4038175f4faf4"
+    },
+    {
+      "file": "plane-landing.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/plane-landing.svg",
+      "sha256": "0ac76fa9821d20abe882aa21f9700d31ee82190395a08a004f319d2bbcf3779b"
+    },
+    {
+      "file": "power.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/power.svg",
+      "sha256": "1e6b84a659aa43f826cdd8df0a63d349720004e2ccb10c33e415a990a311aa05"
+    },
+    {
+      "file": "radar.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/radar.svg",
+      "sha256": "b948d2b46e2605b0c0adf35b266a1b3cb4afa47ef3247e710f05e654b2c0a1cf"
+    },
+    {
+      "file": "radio-tower.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/radio-tower.svg",
+      "sha256": "d5d2728425fe115bed9f309c03b9dd1e2b7483a9242df87966c37e36ee3381cf"
+    },
+    {
+      "file": "scan-line.svg",
+      "url": "https://raw.githubusercontent.com/lucide-icons/lucide/66d8f9fc394b8530377e5f6112f0b8908ba01280/icons/scan-line.svg",
+      "sha256": "d17ec0ebae568a92e18e18968bb85658fec088bc3d97b92b729df6f7f9c4848e"
     }
   ]
 }

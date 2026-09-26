@@ -1,0 +1,37 @@
+const {chromium}=require(process.env.XEE_PLAYWRIGHT || 'playwright');
+const assert=require('assert/strict'), path=require('path'), url=require('url');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.XEE_CHROME||undefined,headless:true});
+ const page=await browser.newPage({viewport:{width:2536,height:696}});
+ await page.addInitScript(()=>{
+  window.calls=[];window.signals={};
+  const p={};
+  for(const name of ['virtualDeviceCreated','buttonIconUpdated','streamdeckUnreachable','authenticationRequired','authenticationRejected'])p[name]={connect:fn=>{window.signals[name]=fn;}};
+  p.connectStreamDeck=(...a)=>window.calls.push(['connect',...a]);
+  p.sendKeyPress=(...a)=>window.calls.push(['key',...a]);
+  window.plugins={Streamdeck:p};window.pluginStreamdeck_initialized=true;
+  window.uniqueId='{MODE-123}';window.iCUE={isPreview:false};
+ });
+ await page.goto(url.pathToFileURL(path.resolve(__dirname,'../../widgets/xee-flight-deck/index.html')).href);
+ await page.locator('[data-route="sc"]').click();await page.locator('[data-route="sc.flight"]').click();
+ await page.evaluate(()=>signals.virtualDeviceCreated('mode-123',''));
+ await page.locator('#flight-arm').click();
+ await page.evaluate(()=>document.getElementById('flight-mode').click());
+ assert.equal(await page.evaluate(()=>calls.filter(x=>x[0]==='key').length),0);
+ await page.waitForTimeout(1100);await page.locator('#flight-mode').click();
+ assert.equal(await page.locator('#location').textContent(),'STAR CITIZEN / COMBAT');
+ assert.deepEqual(await page.locator('[data-flight-slot]').evaluateAll(items=>items.map(b=>Number(b.dataset.flightSlot))),[20,21,22,23],'Combat opens its targeting set');
+ assert.deepEqual(await page.evaluate(()=>calls.filter(x=>x[0]==='key').map(x=>x.slice(2))),[[1,true],[1,false]]);
+ await page.waitForTimeout(1100);await page.locator('#flight-mode').click();
+ assert.equal(await page.locator('#location').textContent(),'STAR CITIZEN / FLIGHT');
+ assert.deepEqual(await page.evaluate(()=>calls.filter(x=>x[0]==='key').map(x=>x.slice(2))),[[1,true],[1,false],[17,true],[17,false]]);
+ await page.locator('#back').click();await page.locator('[data-route="sc.combat"]').click();
+ assert(await page.locator('#flight-mode').isDisabled(),'Re-entry must be disarmed');
+ assert.equal(await page.evaluate(()=>calls.filter(x=>x[0]==='key').length),4,'Ordinary navigation sends nothing');
+ await page.locator('#flight-arm').click();await page.waitForTimeout(1100);
+ await page.evaluate(()=>plugins.Streamdeck.sendKeyPress=()=>{throw Error('mock failure');});
+ await page.locator('#flight-mode').click();
+ assert.equal(await page.locator('#location').textContent(),'STAR CITIZEN / COMBAT','Failed command must not change deck');
+ assert(await page.locator('#flight-mode').isDisabled());
+ await browser.close();console.log('PASS: explicit SCM slot 1 / NAV slot 17, no automatic send or Combat ATC, failure blocks route change.');
+})().catch(e=>{console.error(e);process.exit(1)});

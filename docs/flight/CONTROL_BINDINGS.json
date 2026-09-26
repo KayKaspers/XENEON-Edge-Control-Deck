@@ -1,0 +1,1300 @@
+{
+  "schema": 1,
+  "version": "0.8.0",
+  "date": "2026-09-25",
+  "device": {
+    "columns": 8,
+    "rows": 8,
+    "documentedMaximum": 64,
+    "installedStreamDeck": "7.6.0.23012",
+    "nativeIcueAcceptance": "PENDING"
+  },
+  "source": {
+    "buildBranch": "sc-alpha-4.10.0",
+    "buildVersion": "4.10.193.11644",
+    "buildChangelist": "12660092",
+    "decodedProfileSHA256": "ad6e941804e8c0f8a4880870cc6b8815dad933c63f546be5fd3099fbf38233e6",
+    "integrity": "CryXML length/structure valid; archive CRC and decoded CRC differ, so no full archive-integrity claim. Static candidates require in-game confirmation.",
+    "keyboardOverrides": 0,
+    "joystickOverrides": 21
+  },
+  "entries": [
+    {
+      "slot": 0,
+      "label": "LANDE-/STARTERLAUBNIS",
+      "sets": [
+        "FLIGHT",
+        "MINING",
+        "SALVAGE",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "START & LANDUNG",
+        "ANFLUG & SUCHE",
+        "ANFLUG & SCHIFF",
+        "ANFLUG & LIEFERUNG",
+        "ZUGANG & KOMMUNIKATION"
+      ],
+      "row": 1,
+      "column": 1,
+      "previousPosition": [
+        1,
+        1
+      ],
+      "action": "v_atc_request",
+      "map": "spaceship_movement",
+      "keyboard": "lalt+n",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "ATC historisch akzeptiert; 0.8.0 Regression offen"
+    },
+    {
+      "slot": 1,
+      "label": "SCM ANFORDERN",
+      "sets": [
+        "FLIGHT",
+        "MINING",
+        "SALVAGE"
+      ],
+      "contexts": [
+        "BERGBAU",
+        "BERGUNG"
+      ],
+      "row": 1,
+      "column": 2,
+      "previousPosition": [
+        1,
+        2
+      ],
+      "action": "v_master_mode_set_scm",
+      "map": "spaceship_movement",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 2,
+      "label": "FAHRWERK",
+      "sets": [
+        "FLIGHT",
+        "COMBAT",
+        "MINING",
+        "SALVAGE",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "START & LANDUNG",
+        "FLUGLAGE",
+        "ANFLUG & SUCHE",
+        "ANFLUG & SCHIFF",
+        "ANFLUG & LIEFERUNG",
+        "ANTRIEB & FAHRWERK"
+      ],
+      "row": 1,
+      "column": 3,
+      "previousPosition": [
+        1,
+        3
+      ],
+      "action": "v_toggle_landing_system",
+      "map": "spaceship_movement",
+      "keyboard": "n",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 3,
+      "label": "SCHIFFSLICHT",
+      "sets": [
+        "FLIGHT",
+        "COMBAT",
+        "SALVAGE",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "SCHIFFSSYSTEME",
+        "FLUGLAGE",
+        "ANFLUG & SCHIFF",
+        "ANFLUG & LIEFERUNG",
+        "ZUGANG & KOMMUNIKATION"
+      ],
+      "row": 1,
+      "column": 4,
+      "previousPosition": [
+        1,
+        4
+      ],
+      "action": "v_lights",
+      "map": "lights_controller",
+      "keyboard": "l",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 4,
+      "label": "FLIGHT READY",
+      "sets": [
+        "FLIGHT",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "START & LANDUNG",
+        "HULL & SCHIFF",
+        "ANTRIEB & FAHRWERK"
+      ],
+      "row": 1,
+      "column": 5,
+      "previousPosition": [
+        1,
+        5
+      ],
+      "action": "v_flightready",
+      "map": "spaceship_general",
+      "keyboard": "ralt+r",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 5,
+      "label": "VTOL",
+      "sets": [
+        "FLIGHT",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "START & LANDUNG",
+        "ANTRIEB & FAHRWERK"
+      ],
+      "row": 1,
+      "column": 6,
+      "previousPosition": [
+        2,
+        1
+      ],
+      "action": "v_vtol_toggle",
+      "map": "spaceship_movement",
+      "keyboard": "k",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 6,
+      "label": "CRUISE CONTROL",
+      "sets": [
+        "FLIGHT",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "FLUGSTEUERUNG",
+        "FLUGASSISTENZ"
+      ],
+      "row": 1,
+      "column": 7,
+      "previousPosition": [
+        2,
+        2
+      ],
+      "action": "v_ifcs_throttle_swap_mode",
+      "map": "spaceship_movement",
+      "keyboard": "lalt+c",
+      "mouse": "",
+      "activation": "press",
+      "note": "Der lokale Kandidat schaltet das Throttle-Verhalten (Sticky/Normal). Gleichheit mit dem bisherigen CRUISE-CONTROL-Label ist nicht belegt; vor Belegung klaeren.",
+      "category": "Zuordnung offen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 7,
+      "label": "COUPLED / DECOUPLED",
+      "sets": [
+        "FLIGHT",
+        "COMBAT",
+        "SALVAGE",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "FLUGSTEUERUNG",
+        "FLUGLAGE",
+        "ANFLUG & SCHIFF",
+        "FLUGASSISTENZ"
+      ],
+      "row": 1,
+      "column": 8,
+      "previousPosition": [
+        2,
+        3
+      ],
+      "action": "v_ifcs_vector_decoupling_toggle",
+      "map": "spaceship_movement",
+      "keyboard": "c",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 8,
+      "label": "SPEED LIMITER",
+      "sets": [
+        "FLIGHT",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "FLUGSTEUERUNG",
+        "FLUGASSISTENZ"
+      ],
+      "row": 2,
+      "column": 1,
+      "previousPosition": [
+        2,
+        4
+      ],
+      "action": "v_ifcs_speed_limiter_toggle",
+      "map": "spaceship_movement",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 9,
+      "label": "ESP",
+      "sets": [
+        "FLIGHT",
+        "COMBAT",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "FLUGSTEUERUNG",
+        "FLUGLAGE",
+        "FLUGASSISTENZ"
+      ],
+      "row": 2,
+      "column": 2,
+      "previousPosition": [
+        2,
+        5
+      ],
+      "action": "v_ifcs_toggle_esp",
+      "map": "spaceship_movement",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "smart_toggle",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 10,
+      "label": "STARMAP",
+      "sets": [
+        "FLIGHT",
+        "MINING",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "AVIONIK",
+        "ANFLUG & SUCHE",
+        "ANFLUG & LIEFERUNG",
+        "AVIONIK"
+      ],
+      "row": 2,
+      "column": 3,
+      "previousPosition": [
+        3,
+        1
+      ],
+      "action": "v_starmap",
+      "map": "spaceship_hud",
+      "keyboard": "f2",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 11,
+      "label": "SCAN MODE",
+      "sets": [
+        "FLIGHT",
+        "MINING",
+        "SALVAGE",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "AVIONIK",
+        "LASERSTEUERUNG",
+        "STRUKTURBERGUNG",
+        "AVIONIK"
+      ],
+      "row": 2,
+      "column": 4,
+      "previousPosition": [
+        3,
+        2
+      ],
+      "action": "v_toggle_scan_mode",
+      "map": "seat_general",
+      "keyboard": "v",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 12,
+      "label": "PING",
+      "sets": [
+        "FLIGHT",
+        "MINING",
+        "SALVAGE",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "AVIONIK",
+        "ANFLUG & SUCHE",
+        "STRUKTURBERGUNG",
+        "AVIONIK"
+      ],
+      "row": 2,
+      "column": 5,
+      "previousPosition": [
+        3,
+        3
+      ],
+      "action": "v_invoke_ping",
+      "map": "spaceship_radar",
+      "keyboard": "tab",
+      "mouse": "",
+      "activation": "hold",
+      "note": "Lokal als hold definiert. Erforderliche Dauer und Stream-Deck-Umsetzung zusammen pruefen; kurzer virtueller Tastendruck reicht als Nachweis nicht.",
+      "category": "Halten pruefen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 13,
+      "label": "QUANTUM TRAVEL",
+      "sets": [
+        "FLIGHT",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "AVIONIK",
+        "AVIONIK"
+      ],
+      "row": 2,
+      "column": 6,
+      "previousPosition": [
+        3,
+        4
+      ],
+      "action": "v_toggle_qdrive_engagement",
+      "map": "spaceship_quantum",
+      "keyboard": "mouse1",
+      "mouse": "",
+      "activation": "delayed_press",
+      "note": "Lokal als delayed_press auf mouse1. Nur vorbereiteter Quantum-Sprung; eigenen Hotkey und geeignetes Halteverhalten pruefen. Keine generische Mausaktion blind zuweisen.",
+      "category": "Halten pruefen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 14,
+      "label": "TÜREN",
+      "sets": [
+        "FLIGHT",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "SCHIFFSSYSTEME",
+        "LADEN & ZUGANG",
+        "ZUGANG & KOMMUNIKATION"
+      ],
+      "row": 2,
+      "column": 7,
+      "previousPosition": [
+        3,
+        5
+      ],
+      "action": "v_toggle_all_doors",
+      "map": "spaceship_general",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 15,
+      "label": "VERRIEGELUNG",
+      "sets": [
+        "FLIGHT",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "SCHIFFSSYSTEME",
+        "LADEN & ZUGANG",
+        "HULL & SCHIFF",
+        "ZUGANG & KOMMUNIKATION"
+      ],
+      "row": 2,
+      "column": 8,
+      "previousPosition": [
+        4,
+        1
+      ],
+      "action": "v_toggle_all_doorlocks",
+      "map": "spaceship_general",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 16,
+      "label": "TRIEBWERKE",
+      "sets": [
+        "FLIGHT",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "SCHIFFSSYSTEME",
+        "HULL & SCHIFF",
+        "ANTRIEB & FAHRWERK"
+      ],
+      "row": 3,
+      "column": 1,
+      "previousPosition": [
+        4,
+        2
+      ],
+      "action": "v_power_toggle_thrusters",
+      "map": "spaceship_power",
+      "keyboard": "i",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 17,
+      "label": "NAV ANFORDERN",
+      "sets": [
+        "FLIGHT",
+        "COMBAT",
+        "MINING",
+        "SALVAGE",
+        "CARGO",
+        "SHIP UTILITY"
+      ],
+      "contexts": [
+        "Kopfzeile FLIGHT"
+      ],
+      "row": 3,
+      "column": 2,
+      "previousPosition": [
+        4,
+        3
+      ],
+      "action": "v_master_mode_set_nav",
+      "map": "spaceship_movement",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 20,
+      "label": "ZIEL IM FADENKREUZ",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "ZIELWAHL"
+      ],
+      "row": 3,
+      "column": 5,
+      "previousPosition": null,
+      "action": "v_target_under_reticle",
+      "map": "spaceship_targeting_advanced",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 21,
+      "label": "FEINDLICHES ZIEL",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "ZIELWAHL"
+      ],
+      "row": 3,
+      "column": 6,
+      "previousPosition": null,
+      "action": "v_target_cycle_hostile_fwd",
+      "map": "spaceship_targeting_advanced",
+      "keyboard": "5",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 22,
+      "label": "ANGREIFER",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "ZIELWAHL"
+      ],
+      "row": 3,
+      "column": 7,
+      "previousPosition": null,
+      "action": "v_target_cycle_attacker_fwd",
+      "map": "spaceship_targeting_advanced",
+      "keyboard": "4",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 23,
+      "label": "ZIEL LÖSEN",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "ZIELWAHL"
+      ],
+      "row": 3,
+      "column": 8,
+      "previousPosition": null,
+      "action": "v_target_unlock",
+      "map": "spaceship_targeting",
+      "keyboard": "lalt+t",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 24,
+      "label": "GUNS MODE",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "WAFFENMODI"
+      ],
+      "row": 4,
+      "column": 1,
+      "previousPosition": null,
+      "action": "v_set_guns_mode",
+      "map": "seat_general",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 25,
+      "label": "MISSILE MODE",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "WAFFENMODI"
+      ],
+      "row": 4,
+      "column": 2,
+      "previousPosition": null,
+      "action": "v_set_missile_mode",
+      "map": "seat_general",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 26,
+      "label": "GIMBAL MODE",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "WAFFENMODI"
+      ],
+      "row": 4,
+      "column": 3,
+      "previousPosition": null,
+      "action": "v_weapon_gimbals_state_toggle",
+      "map": "spaceship_weapons",
+      "keyboard": "g",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 27,
+      "label": "PIP LEAD / LAG",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "WAFFENMODI"
+      ],
+      "row": 4,
+      "column": 4,
+      "previousPosition": null,
+      "action": "v_weapon_pip_toggle_lead_lag",
+      "map": "spaceship_weapons",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 28,
+      "label": "DECOYS",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "ABWEHR & RAKETEN"
+      ],
+      "row": 4,
+      "column": 5,
+      "previousPosition": null,
+      "action": "v_weapon_countermeasure_decoy_launch",
+      "map": "spaceship_defensive",
+      "keyboard": "h",
+      "mouse": "",
+      "activation": "press",
+      "note": "Burst-Verhalten im Spiel pruefen; vordefinierter Tastendruck ist keine Bestaetigung einer bestimmten Decoy-Anzahl.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 29,
+      "label": "NOISE",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "ABWEHR & RAKETEN"
+      ],
+      "row": 4,
+      "column": 6,
+      "previousPosition": null,
+      "action": "v_weapon_countermeasure_noise_launch",
+      "map": "spaceship_defensive",
+      "keyboard": "j",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 30,
+      "label": "RAKETENTYP",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "ABWEHR & RAKETEN"
+      ],
+      "row": 4,
+      "column": 7,
+      "previousPosition": null,
+      "action": "v_weapon_cycle_missile_fwd",
+      "map": "spaceship_missiles",
+      "keyboard": "mwheel_down",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 31,
+      "label": "SALVENGRÖSSE",
+      "sets": [
+        "COMBAT"
+      ],
+      "contexts": [
+        "ABWEHR & RAKETEN"
+      ],
+      "row": 4,
+      "column": 8,
+      "previousPosition": null,
+      "action": "v_weapon_increase_max_missiles",
+      "map": "spaceship_missiles",
+      "keyboard": "g",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 32,
+      "label": "MINING MODE",
+      "sets": [
+        "MINING"
+      ],
+      "contexts": [
+        "BERGBAU",
+        "MINING-MODULE"
+      ],
+      "row": 5,
+      "column": 1,
+      "previousPosition": null,
+      "action": "v_set_mining_mode",
+      "map": "seat_general",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 33,
+      "label": "MINING LASER",
+      "sets": [
+        "MINING"
+      ],
+      "contexts": [
+        "BERGBAU",
+        "LASERSTEUERUNG"
+      ],
+      "row": 5,
+      "column": 2,
+      "previousPosition": null,
+      "action": "v_toggle_mining_laser_fire",
+      "map": "spaceship_mining",
+      "keyboard": "mouse1",
+      "mouse": "",
+      "activation": "smart_toggle",
+      "note": "Smart-Toggle am besetzten Mining-Arbeitsplatz. Eigener Tastaturbind vermeidet generisches mouse1.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 34,
+      "label": "FRACTURE / EXTRACT",
+      "sets": [
+        "MINING"
+      ],
+      "contexts": [
+        "BERGBAU"
+      ],
+      "row": 5,
+      "column": 3,
+      "previousPosition": null,
+      "action": "v_toggle_mining_laser_type",
+      "map": "spaceship_mining",
+      "keyboard": "lalt+mouse1",
+      "mouse": "",
+      "activation": "press",
+      "note": "Mining-Arbeitsmodus, nicht Schiff-Master-Mode; eigener Tastaturbind moeglich.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 35,
+      "label": "LASERLEISTUNG +",
+      "sets": [
+        "MINING"
+      ],
+      "contexts": [
+        "LASERSTEUERUNG"
+      ],
+      "row": 5,
+      "column": 4,
+      "previousPosition": null,
+      "action": "v_increase_mining_throttle",
+      "map": "spaceship_mining",
+      "keyboard": "maxis_z",
+      "mouse": "",
+      "activation": "press",
+      "note": "Die Vorgabe maxis_z ist eine Achse. Fuer diese Taste den diskreten Increase-Befehl separat belegen.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 36,
+      "label": "LASERLEISTUNG −",
+      "sets": [
+        "MINING"
+      ],
+      "contexts": [
+        "LASERSTEUERUNG"
+      ],
+      "row": 5,
+      "column": 5,
+      "previousPosition": null,
+      "action": "v_decrease_mining_throttle",
+      "map": "spaceship_mining",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 37,
+      "label": "MODUL 1",
+      "sets": [
+        "MINING"
+      ],
+      "contexts": [
+        "MINING-MODULE"
+      ],
+      "row": 5,
+      "column": 6,
+      "previousPosition": null,
+      "action": "v_mining_use_consumable1",
+      "map": "spaceship_mining",
+      "keyboard": "lalt+1",
+      "mouse": "",
+      "activation": "press",
+      "note": "Nur passendes ausgeruestetes Aktivmodul; nicht jedes Schiff hat drei belegte Module.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 38,
+      "label": "MODUL 2",
+      "sets": [
+        "MINING"
+      ],
+      "contexts": [
+        "MINING-MODULE"
+      ],
+      "row": 5,
+      "column": 7,
+      "previousPosition": null,
+      "action": "v_mining_use_consumable2",
+      "map": "spaceship_mining",
+      "keyboard": "lalt+2",
+      "mouse": "",
+      "activation": "press",
+      "note": "Nur passendes ausgeruestetes Aktivmodul.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 39,
+      "label": "MODUL 3",
+      "sets": [
+        "MINING"
+      ],
+      "contexts": [
+        "MINING-MODULE"
+      ],
+      "row": 5,
+      "column": 8,
+      "previousPosition": null,
+      "action": "v_mining_use_consumable3",
+      "map": "spaceship_mining",
+      "keyboard": "lalt+3",
+      "mouse": "",
+      "activation": "press",
+      "note": "Nur passendes ausgeruestetes Aktivmodul.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 40,
+      "label": "SALVAGE MODE",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "BERGUNG"
+      ],
+      "row": 6,
+      "column": 1,
+      "previousPosition": null,
+      "action": "v_set_salvage_mode",
+      "map": "seat_general",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 41,
+      "label": "SALVAGE BEAM",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "BERGUNG"
+      ],
+      "row": 6,
+      "column": 2,
+      "previousPosition": null,
+      "action": "v_salvage_toggle_fire_focused",
+      "map": "spaceship_salvage",
+      "keyboard": "",
+      "mouse": "mouse1",
+      "activation": "smart_toggle",
+      "note": "Nur fokussiertes Salvage-Werkzeug am richtigen Arbeitsplatz; eigener Tastaturbind empfohlen.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 42,
+      "label": "BERGUNGSWERKZEUG",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "BERGUNG"
+      ],
+      "row": 6,
+      "column": 3,
+      "previousPosition": null,
+      "action": "v_salvage_cycle_modifiers_focused",
+      "map": "spaceship_salvage",
+      "keyboard": "",
+      "mouse": "mouse2",
+      "activation": "not_declared",
+      "note": "Kandidat ist der Modifier-Wechsel des fokussierten Kopfes, kein pauschaler Wechsel Scraping/Fracture.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 43,
+      "label": "STRAHLABSTAND +",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "STRAHLSTEUERUNG"
+      ],
+      "row": 6,
+      "column": 4,
+      "previousPosition": null,
+      "action": "v_salvage_increase_beam_spacing",
+      "map": "spaceship_salvage",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 44,
+      "label": "STRAHLABSTAND −",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "STRAHLSTEUERUNG"
+      ],
+      "row": 6,
+      "column": 5,
+      "previousPosition": null,
+      "action": "v_salvage_decrease_beam_spacing",
+      "map": "spaceship_salvage",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "press",
+      "note": "Im Spiel einmal pruefen; Dateibelegung allein ist keine Funktionsbestaetigung.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 45,
+      "label": "LINKES WERKZEUG",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "STRAHLSTEUERUNG"
+      ],
+      "row": 6,
+      "column": 6,
+      "previousPosition": null,
+      "action": "v_salvage_cycle_modifiers_left",
+      "map": "spaceship_salvage",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "not_declared",
+      "note": "Salvation hat feste Koepfe. Verfuegbarkeit am tatsaechlichen Schiff pruefen.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 46,
+      "label": "RECHTES WERKZEUG",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "STRAHLSTEUERUNG"
+      ],
+      "row": 6,
+      "column": 7,
+      "previousPosition": null,
+      "action": "v_salvage_cycle_modifiers_right",
+      "map": "spaceship_salvage",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "not_declared",
+      "note": "Salvation hat feste Koepfe. Verfuegbarkeit am tatsaechlichen Schiff pruefen.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 47,
+      "label": "FRACTURE",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "STRUKTURBERGUNG"
+      ],
+      "row": 6,
+      "column": 8,
+      "previousPosition": null,
+      "action": "v_salvage_toggle_fire_fracture",
+      "map": "spaceship_salvage",
+      "keyboard": "ralt+w",
+      "mouse": "",
+      "activation": "smart_toggle",
+      "note": "Smart-Toggle fuer Fracture; bei MOTH am Pilotensitz, nicht automatisch am Schaberturm.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 48,
+      "label": "DISINTEGRATE",
+      "sets": [
+        "SALVAGE"
+      ],
+      "contexts": [
+        "STRUKTURBERGUNG"
+      ],
+      "row": 7,
+      "column": 1,
+      "previousPosition": null,
+      "action": "v_salvage_toggle_fire_disintegrate",
+      "map": "spaceship_salvage",
+      "keyboard": "ralt+s",
+      "mouse": "",
+      "activation": "smart_toggle",
+      "note": "Smart-Toggle fuer Disintegrate; Werkzeug/Schiff und Ziel pruefen.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 49,
+      "label": "TRAKTORANSICHT",
+      "sets": [
+        "CARGO"
+      ],
+      "contexts": [
+        "LADEN & ZUGANG"
+      ],
+      "row": 7,
+      "column": 2,
+      "previousPosition": null,
+      "action": "",
+      "map": "",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "not_declared",
+      "note": "Remote-Turret 1/2/3 existieren als ungebundene Befehle. Welcher Zugang den Traktor dieses Schiffs oeffnet, ist nicht belegt. Slot vorerst leer lassen.",
+      "category": "Zuordnung offen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 50,
+      "label": "FRACHT GREIFEN",
+      "sets": [
+        "CARGO"
+      ],
+      "contexts": [
+        "LADEN & ZUGANG"
+      ],
+      "row": 7,
+      "column": 3,
+      "previousPosition": null,
+      "action": "",
+      "map": "",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "not_declared",
+      "note": "Kein eindeutig bestaetigter schiffsuebergreifender Greifen/Loesen-Befehl zugeordnet. Kein generisches mouse1 einsetzen; Slot vorerst leer lassen.",
+      "category": "Zuordnung offen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 51,
+      "label": "FRACHT NÄHER",
+      "sets": [
+        "CARGO"
+      ],
+      "contexts": [
+        "TRAKTORSTEUERUNG"
+      ],
+      "row": 7,
+      "column": 4,
+      "previousPosition": null,
+      "action": "tractor_beam_vehicle_decrease_distance",
+      "map": "spaceship_salvage",
+      "keyboard": "",
+      "mouse": "mwheel_down",
+      "activation": "press",
+      "note": "Vehicle-Traktor-Reichweite; fuer Handwerkzeuge gibt es separate Befehle. Passenden Tastaturbind zuweisen.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 52,
+      "label": "FRACHT WEITER",
+      "sets": [
+        "CARGO"
+      ],
+      "contexts": [
+        "TRAKTORSTEUERUNG"
+      ],
+      "row": 7,
+      "column": 5,
+      "previousPosition": null,
+      "action": "tractor_beam_vehicle_increase_distance",
+      "map": "spaceship_salvage",
+      "keyboard": "",
+      "mouse": "mwheel_up",
+      "activation": "press",
+      "note": "Vehicle-Traktor-Reichweite; fuer Handwerkzeuge gibt es separate Befehle. Passenden Tastaturbind zuweisen.",
+      "category": "Neu belegen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 53,
+      "label": "NACH LINKS DREHEN",
+      "sets": [
+        "CARGO"
+      ],
+      "contexts": [
+        "TRAKTORSTEUERUNG"
+      ],
+      "row": 7,
+      "column": 6,
+      "previousPosition": null,
+      "action": "",
+      "map": "",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "not_declared",
+      "note": "Handtraktor besitzt Rotation plus Halte-/Achsenbefehle; das belegt kein einzelnes LINKS-Drehen fuer alle Schiffstraktoren. Slot vorerst leer lassen.",
+      "category": "Zuordnung offen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 54,
+      "label": "NACH RECHTS DREHEN",
+      "sets": [
+        "CARGO"
+      ],
+      "contexts": [
+        "TRAKTORSTEUERUNG"
+      ],
+      "row": 7,
+      "column": 7,
+      "previousPosition": null,
+      "action": "",
+      "map": "",
+      "keyboard": "",
+      "mouse": "",
+      "activation": "not_declared",
+      "note": "Handtraktor besitzt Rotation plus Halte-/Achsenbefehle; das belegt kein einzelnes RECHTS-Drehen fuer alle Schiffstraktoren. Slot vorerst leer lassen.",
+      "category": "Zuordnung offen",
+      "acceptance": "Spieltest offen"
+    },
+    {
+      "slot": 55,
+      "label": "FRACHTSPINDEL",
+      "sets": [
+        "CARGO"
+      ],
+      "contexts": [
+        "HULL & SCHIFF"
+      ],
+      "row": 7,
+      "column": 8,
+      "previousPosition": null,
+      "action": "v_transform_cycle",
+      "map": "spaceship_movement",
+      "keyboard": "lalt+k",
+      "mouse": "",
+      "activation": "tap",
+      "note": "Transform-Cycle ist lokal mit lalt+k belegt. In HULL A/B pruefen; nicht als Ironclad-Dachsteuerung verwenden.",
+      "category": "Standardtaste",
+      "acceptance": "Spieltest offen"
+    }
+  ]
+}

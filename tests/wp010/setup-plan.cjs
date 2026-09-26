@@ -1,0 +1,26 @@
+const {chromium}=require(process.env.XEE_PLAYWRIGHT||'playwright');
+const assert=require('assert/strict'),fs=require('fs'),path=require('path'),url=require('url'),cp=require('child_process');
+const out=process.env.XEE_SETUP_OUTPUT;if(!out)throw Error('Set XEE_SETUP_OUTPUT to the generated setup directory.');
+(async()=>{
+ const browser=await chromium.launch({executablePath:process.env.XEE_CHROME||undefined,headless:true});
+ const page=await browser.newPage({viewport:{width:1920,height:1080}}),errors=[],network=[];
+ page.on('pageerror',e=>errors.push(e.message));page.on('request',r=>{if(/^https?:/.test(r.url()))network.push(r.url());});
+ await page.goto(url.pathToFileURL(path.join(out,'Einrichtungsplan.html')).href);
+ assert.equal(await page.locator('.slot').count(),64);assert.equal(await page.locator('.slot:not(:disabled)').count(),54);
+ assert.equal(await page.locator('#progress').textContent(),'0/54 eingerichtet · 0/54 im Spiel geprüft');
+ assert(await page.locator('[data-slot="18"]').isDisabled());assert(await page.locator('[data-slot="63"]').isDisabled());
+ await page.locator('[data-slot="17"]').click();assert.match(await page.locator('#position').textContent(),/ZEILE 3 \/ SPALTE 2/);
+ await page.locator('#binding').fill('TESTBELEGUNG - NICHT IM SPIEL KONFIGURIERT');await page.locator('#notes').fill('Nur automatisierter Plan-Test');await page.locator('#configured').check();
+ await page.reload();await page.locator('[data-slot="17"]').click();assert(await page.locator('#configured').isChecked());assert.equal(await page.locator('#binding').inputValue(),'TESTBELEGUNG - NICHT IM SPIEL KONFIGURIERT');
+ await page.locator('#category').selectOption('Zuordnung offen');assert.equal(await page.locator('.slot:not(.dim):not(:disabled)').count(),5);
+ await page.locator('[data-slot="53"]').click();assert.match(await page.locator('#hint').textContent(),/Slot vorerst leer lassen/);
+ await page.locator('#category').selectOption('');await page.locator('#set').selectOption('FLIGHT');assert(!(await page.locator('[data-slot="1"]').getAttribute('class')).includes('dim'),'SCM header action belongs in Flight setup');
+ const downloadEvent=page.waitForEvent('download');await page.locator('#export').click();const download=await downloadEvent;
+ const saved=JSON.parse(fs.readFileSync(await download.path(),'utf8'));assert.equal(saved.entries.length,54);assert.equal(saved.entries.find(e=>e.slot===17).binding,'TESTBELEGUNG - NICHT IM SPIEL KONFIGURIERT');
+ await page.evaluate(()=>localStorage.clear());await page.reload();assert.equal(await page.locator('#progress').textContent(),'0/54 eingerichtet · 0/54 im Spiel geprüft');
+ await page.screenshot({path:path.join(out,'Einrichtungsplan.png'),fullPage:true});
+ assert.deepEqual(errors,[]);assert.deepEqual(network,[]);
+ const failure=cp.spawnSync(process.execPath,[path.resolve(__dirname,'../../tools/build-setup-plan.cjs'),path.resolve(__dirname,'../..')],{encoding:'utf8'});assert.notEqual(failure.status,0,'Generator refuses output into repository root');
+ await browser.close();fs.writeFileSync(path.join(out,'setup-checks.json'),JSON.stringify({result:'PASS',slots:64,commands:54,openMappings:5,checks:['row-major positions','reserved slots','local notes persist','filters preserve positions','NAV/SCM discoverable','JSON export','offline/no HTTP','output outside Git'],gameAcceptance:'PENDING'},null,2));
+ console.log('PASS: offline setup map, 54 controls, local notes/export, filters, mode slots and repository output guard.');
+})().catch(e=>{console.error(e);process.exit(1)});
